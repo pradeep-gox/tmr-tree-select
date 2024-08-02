@@ -189,10 +189,12 @@
               k = e.sanitize,
               S = e.searchWords,
               x = e.textToHighlight,
-              E = e.unhighlightClassName,
-              O = void 0 === E ? '' : E,
-              C = e.unhighlightStyle,
-              T = (function(e, t) {
+              E = e.unhighlightTag,
+              O = void 0 === E ? 'span' : E,
+              C = e.unhighlightClassName,
+              T = void 0 === C ? '' : C,
+              _ = e.unhighlightStyle,
+              P = (function(e, t) {
                 var n = {}
                 for (var r in e) t.indexOf(r) >= 0 || (Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]))
                 return n
@@ -210,10 +212,11 @@
                 'sanitize',
                 'searchWords',
                 'textToHighlight',
+                'unhighlightTag',
                 'unhighlightClassName',
                 'unhighlightStyle',
               ]),
-              _ = (0, o.findAll)({
+              N = (0, o.findAll)({
                 autoEscape: c,
                 caseSensitive: d,
                 findChunks: h,
@@ -221,30 +224,30 @@
                 searchWords: S,
                 textToHighlight: x,
               }),
-              P = w,
-              N = -1,
-              I = '',
-              D = void 0,
-              L = (0, u.default)(function(e) {
+              I = w,
+              D = -1,
+              L = '',
+              j = void 0,
+              M = (0, u.default)(function(e) {
                 var t = {}
                 for (var n in e) t[n.toLowerCase()] = e[n]
                 return t
               })
             return (0, l.createElement)(
               'span',
-              r({ className: p }, T, {
-                children: _.map(function(e, t) {
+              r({ className: p }, P, {
+                children: N.map(function(e, t) {
                   var r = x.substr(e.start, e.end - e.start)
                   if (e.highlight) {
-                    N++
+                    D++
                     var a = void 0
-                    a = 'object' == typeof m ? (d ? m[r] : (m = L(m))[r.toLowerCase()]) : m
-                    var o = N === +i
-                    ;(I = a + ' ' + (o ? n : '')), (D = !0 === o && null != s ? Object.assign({}, y, s) : y)
-                    var u = { children: r, className: I, key: t, style: D }
-                    return 'string' != typeof P && (u.highlightIndex = N), (0, l.createElement)(P, u)
+                    a = 'object' == typeof m ? (d ? m[r] : (m = M(m))[r.toLowerCase()]) : m
+                    var o = D === +i
+                    ;(L = a + ' ' + (o ? n : '')), (j = !0 === o && null != s ? Object.assign({}, y, s) : y)
+                    var u = { children: r, className: L, key: t, style: j }
+                    return 'string' != typeof I && (u.highlightIndex = D), (0, l.createElement)(I, u)
                   }
-                  return (0, l.createElement)('span', { children: r, className: O, key: t, style: C })
+                  return (0, l.createElement)(O, { children: r, className: T, key: t, style: _ })
                 }),
               })
             )
@@ -263,6 +266,7 @@
             searchWords: i.default.arrayOf(i.default.oneOfType([i.default.string, i.default.instanceOf(RegExp)]))
               .isRequired,
             textToHighlight: i.default.string.isRequired,
+            unhighlightTag: i.default.oneOfType([i.default.node, i.default.func, i.default.string]),
             unhighlightClassName: i.default.string,
             unhighlightStyle: i.default.object,
           }),
