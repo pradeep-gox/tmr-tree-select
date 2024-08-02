@@ -3,13 +3,14 @@ const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   devtool: 'source-map',
   entry: { 'tmr-tree-select': './src/index.js' },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: '[name].js', // Regular version
     libraryTarget: 'umd',
     library: 'TMRTreeSelect',
     umdNamedDefine: true,
@@ -32,8 +33,6 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('production') }),
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
       filename: 'styles.css',
       chunkFilename: '[id].css',
     }),
@@ -70,5 +69,33 @@ module.exports = {
         ],
       },
     ],
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new UglifyJsPlugin({
+        sourceMap: true,
+        uglifyOptions: {
+          output: {
+            comments: false,
+          },
+        },
+      }),
+    ],
+    splitChunks: {
+      cacheGroups: {
+        default: false,
+        vendors: false, // Disable default vendor chunking
+        // Customize further if needed
+      },
+    },
+  },
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: '[name].min.js', // Minified version
+    libraryTarget: 'umd',
+    library: 'TMRTreeSelect',
+    umdNamedDefine: true,
+    globalObject: 'this',
   },
 }

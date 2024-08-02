@@ -2,13 +2,13 @@
   "errors": [],
   "warnings": [],
   "version": "4.47.0",
-  "hash": "75815bdcfd618d116707",
-  "time": 3068,
-  "builtAt": 1722640582715,
+  "hash": "fcca34bc3c8fb40a0b34",
+  "time": 3915,
+  "builtAt": 1722641806305,
   "publicPath": "",
   "outputPath": "/home/prady/Repos/tmr-tree-select/dist",
   "assetsByChunkName": {
-    "tmr-tree-select": ["styles.css", "tmr-tree-select.js", "styles.css.map", "tmr-tree-select.js.map"]
+    "tmr-tree-select": ["styles.css", "tmr-tree-select.min.js", "styles.css.map", "tmr-tree-select.min.js.map"]
   },
   "assets": [
     {
@@ -38,16 +38,16 @@
       "emitted": true
     },
     {
-      "name": "tmr-tree-select.js",
-      "size": 104365,
+      "name": "tmr-tree-select.min.js",
+      "size": 100205,
       "chunks": [0],
       "chunkNames": ["tmr-tree-select"],
       "info": {},
       "emitted": true
     },
     {
-      "name": "tmr-tree-select.js.map",
-      "size": 341596,
+      "name": "tmr-tree-select.min.js.map",
+      "size": 349881,
       "chunks": [0],
       "chunkNames": ["tmr-tree-select"],
       "info": {
@@ -60,7 +60,7 @@
   "entrypoints": {
     "tmr-tree-select": {
       "chunks": [0],
-      "assets": ["styles.css", "tmr-tree-select.js", "styles.css.map", "tmr-tree-select.js.map"],
+      "assets": ["styles.css", "tmr-tree-select.min.js", "styles.css.map", "tmr-tree-select.min.js.map"],
       "children": {},
       "childAssets": {}
     }
@@ -68,7 +68,7 @@
   "namedChunkGroups": {
     "tmr-tree-select": {
       "chunks": [0],
-      "assets": ["styles.css", "tmr-tree-select.js", "styles.css.map", "tmr-tree-select.js.map"],
+      "assets": ["styles.css", "tmr-tree-select.min.js", "styles.css.map", "tmr-tree-select.min.js.map"],
       "children": {},
       "childAssets": {}
     }
@@ -81,8 +81,8 @@
       "entry": true,
       "size": 260040,
       "names": ["tmr-tree-select"],
-      "files": ["styles.css", "tmr-tree-select.js", "styles.css.map", "tmr-tree-select.js.map"],
-      "hash": "a6c2d990e66cbbb97c4c",
+      "files": ["styles.css", "tmr-tree-select.min.js", "styles.css.map", "tmr-tree-select.min.js.map"],
+      "hash": "6b9f3f1f1643ad1148b7",
       "siblings": [],
       "parents": [],
       "children": [],
@@ -3792,18 +3792,18 @@
               "reasons": [
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/trigger/index.js",
-                  "module": "./src/trigger/index.js",
-                  "moduleName": "./src/trigger/index.js",
+                  "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/input/index.js",
+                  "module": "./src/input/index.js",
+                  "moduleName": "./src/input/index.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "../a11y",
                   "loc": "14:0-39"
                 },
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/input/index.js",
-                  "module": "./src/input/index.js",
-                  "moduleName": "./src/input/index.js",
+                  "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/trigger/index.js",
+                  "module": "./src/trigger/index.js",
+                  "moduleName": "./src/trigger/index.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "../a11y",
                   "loc": "14:0-39"
@@ -11806,18 +11806,18 @@
           "reasons": [
             {
               "moduleId": null,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/trigger/index.js",
-              "module": "./src/trigger/index.js",
-              "moduleName": "./src/trigger/index.js",
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/input/index.js",
+              "module": "./src/input/index.js",
+              "moduleName": "./src/input/index.js",
               "type": "harmony side effect evaluation",
               "userRequest": "../a11y",
               "loc": "14:0-39"
             },
             {
               "moduleId": null,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/input/index.js",
-              "module": "./src/input/index.js",
-              "moduleName": "./src/input/index.js",
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/trigger/index.js",
+              "module": "./src/trigger/index.js",
+              "moduleName": "./src/trigger/index.js",
               "type": "harmony side effect evaluation",
               "userRequest": "../a11y",
               "loc": "14:0-39"
@@ -16144,7 +16144,7 @@
           "size": 3578,
           "names": ["mini-css-extract-plugin"],
           "files": ["*"],
-          "hash": "6cfbb0e4c04528a4d8aa",
+          "hash": "873a7146e7d32427df37",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -16370,7 +16370,7 @@
           "size": 2821,
           "names": ["mini-css-extract-plugin"],
           "files": ["*"],
-          "hash": "e5696d70be37184881af",
+          "hash": "81c0d2b940b2c93130a2",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -16596,7 +16596,7 @@
           "size": 2661,
           "names": ["mini-css-extract-plugin"],
           "files": ["*"],
-          "hash": "a23f1b5582a672ec2878",
+          "hash": "f8f23a60bb4b73673229",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -16822,7 +16822,7 @@
           "size": 3202,
           "names": ["mini-css-extract-plugin"],
           "files": ["*"],
-          "hash": "60bb81702c5fe1af94af",
+          "hash": "a9eff2e271ece7f96129",
           "siblings": [],
           "parents": [],
           "children": [],
