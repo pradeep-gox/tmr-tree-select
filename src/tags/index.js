@@ -195,20 +195,18 @@ const Tags = props => {
     })
   )
   const lastItem = children || <span className="placeholder">{texts.placeholder || 'Choose...'}</span>
-  function handleDragEnd(event) {
+  function handleDragEnd(event, f_items) {
     const { active, over } = event
     console.log('active', active)
     console.log('over', over)
-    if (active._id !== over._id) {
-      let i
-      setItems(items => {
-        const oldIndex = items.findIndex(i => i._id === active._id)
-        const newIndex = items.findIndex(i => i._id === over._id)
-        i = arrayMove(items, oldIndex, newIndex)
-        return i
-      })
-      console.log('i', i)
-      onReorder(i)
+    if (active.id !== over.id) {
+      const oldIndex = f_items.findIndex(i => i._id === active.id)
+      const newIndex = f_items.findIndex(i => i._id === over.id)
+      console.log('oldItems', f_items)
+      let newItems = arrayMove(f_items, oldIndex, newIndex)
+      console.log('newItems', newItems)
+      setItems(newItems)
+      onReorder(newItems)
     }
   }
   useEffect(() => {
@@ -218,7 +216,7 @@ const Tags = props => {
   }, [tags])
   return (
     <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={e => handleDragEnd(e, items)}>
         <SortableContext items={items} strategy={verticalListSortingStrategy}>
           {items.map((item, index) => (
             <SortableItemV2

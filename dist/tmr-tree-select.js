@@ -11571,22 +11571,21 @@
                   sensors: b,
                   collisionDetection: ve,
                   onDragEnd: function(e) {
-                    var t = e.active,
-                      n = e.over
-                    if ((console.log('active', t), console.log('over', n), t._id !== n._id)) {
-                      var a = void 0
-                      m(function(e) {
-                        var r = e.findIndex(function(e) {
-                            return e._id === t._id
+                    return (function(e, t) {
+                      var n = e.active,
+                        a = e.over
+                      if ((console.log('active', n), console.log('over', a), n.id !== a.id)) {
+                        var o = t.findIndex(function(e) {
+                            return e._id === n.id
                           }),
-                          o = e.findIndex(function(e) {
-                            return e._id === n._id
+                          i = t.findIndex(function(e) {
+                            return e._id === a.id
                           })
-                        return (a = Ut(e, r, o))
-                      }),
-                        console.log('i', a),
-                        r(a)
-                    }
+                        console.log('oldItems', t)
+                        var l = Ut(t, o, i)
+                        console.log('newItems', l), m(l), r(l)
+                      }
+                    })(e, v)
                   },
                 },
                 s.a.createElement(
