@@ -11563,9 +11563,9 @@
           return (
             Object(u.useEffect)(
               function() {
-                console.log('props', e), console.log('items', v)
+                console.log('props', e), console.log('items', t)
               },
-              [v]
+              [t]
             ),
             s.a.createElement(
               Mt,
@@ -11587,11 +11587,11 @@
                 },
               },
               s.a.createElement(
-                'ul',
-                { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },
+                Qt,
+                { items: v, strategy: Yt },
                 s.a.createElement(
-                  Qt,
-                  { items: v, strategy: Yt },
+                  'ul',
+                  { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },
                   v.map(function(e, t) {
                     return s.a.createElement(
                       un,
@@ -11608,16 +11608,16 @@
                         { tagPrefix: d, tagSuffix: f, tagClassName: p }
                       )
                     )
-                  })
-                ),
-                s.a.createElement(
-                  'li',
-                  { className: 'tag-item' },
-                  y,
+                  }),
                   s.a.createElement(
-                    'span',
-                    { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },
-                    '⌄'
+                    'li',
+                    { className: 'tag-item' },
+                    y,
+                    s.a.createElement(
+                      'span',
+                      { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },
+                      '⌄'
+                    )
                   )
                 )
               )
