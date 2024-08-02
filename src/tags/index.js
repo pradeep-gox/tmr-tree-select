@@ -279,7 +279,7 @@ const Tags = props => {
         onDragStart={handleDragStart}
         onDragEnd={e => handleDragEnd(e, items)}
       >
-        <SortableContext items={items} strategy={rectSortingStrategy}>
+        <SortableContext items={items} strategy={rectSwappingStrategy}>
           {items.map((item, index) => (
             <SortableItemV2
               id={item._id}
