@@ -1,123 +1,183 @@
 import React, { useEffect, useState, forwardRef } from 'react'
-import PropTypes from 'prop-types'
 import Tag from '../tag'
 import { getDataset } from '../utils'
 import './index.css'
-/* import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd' */
-import { SortableContainer, SortableElement, sortableHandle } from 'react-sortable-hoc'
-import arrayMove from 'array-move'
-const DragHandle = sortableHandle(() => <span>::</span>)
-const SortableItem = SortableElement(
-  forwardRef(
-    (
-      {
-        _id,
-        label,
-        tagClassName,
-        dataset,
-        tagLabel,
-        description,
-        onDelete,
-        readOnly,
-        disabled,
-        labelRemove,
-        tagDisabled,
-        tagPrefix,
-        tagSuffix,
-      },
-      ref
-    ) => {
-      /* console.log(label) */
-      return (
-        <div ref={ref}>
-          <li
-            className={['tag-item', tagClassName].filter(Boolean).join(' ')}
-            key={_id}
-            index={_id}
-            {...getDataset(dataset)}
-          >
-            {' '}
-            {/* <DragHandle/> */}
-            <Tag
-              label={tagLabel || label}
-              tagPrefix={tagPrefix}
-              tagSuffix={tagSuffix}
-              id={`${_id}`}
-              onDelete={onDelete}
-              readOnly={readOnly}
-              disabled={disabled || tagDisabled}
-              labelRemove={labelRemove}
-            />
-          </li>
-        </div>
-      )
-    }
-  ),
-  { withRef: true }
-)
-const SortableList = SortableContainer(
-  ({ tags, onDelete, readOnly, disabled, labelRemove, lastItem, tagPrefix, tagSuffix, tagClassName }) => {
-    // console.log('tagsSortable List')
-    //   console.log(tags)
-    return (
-      <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-        {tags.map((tags, index) => (
-          <SortableItem
-            key={index}
-            index={index}
-            onDelete={onDelete}
-            readOnly={readOnly}
-            disabled={disabled}
-            labelRemove={labelRemove}
-            tagDisabled={tags.disabled}
-            {...tags}
-            tagPrefix={tagPrefix}
-            tagSuffix={tagSuffix}
-            tagClassName={tagClassName}
-          />
-        ))}
-        <li className="tag-item">
-          {lastItem}
-          <span className="dropdown-icon" style={{ fontSize: '20px', color: '#bfbfbf' }}>
-            &#x2304;
-          </span>
-        </li>
-      </ul>
-    )
+// import { SortableContainer, SortableElement } from 'react-sortable-hoc'
+import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core'
+import {
+  arrayMove,
+  SortableContext,
+  sortableKeyboardCoordinates,
+  verticalListSortingStrategy,
+  useSortable,
+} from '@dnd-kit/sortable'
+import { CSS } from '@dnd-kit/utilities'
+// const SortableItem = SortableElement(
+//   forwardRef(
+//     (
+//       {
+//         _id,
+//         label,
+//         tagClassName,
+//         dataset,
+//         tagLabel,
+//         description,
+//         onDelete,
+//         readOnly,
+//         disabled,
+//         labelRemove,
+//         tagDisabled,
+//         tagPrefix,
+//         tagSuffix,
+//       },
+//       ref
+//     ) => {
+//       return (
+//         <div ref={ref}>
+//           <li
+//             className={['tag-item', tagClassName].filter(Boolean).join(' ')}
+//             key={_id}
+//             index={_id}
+//             {...getDataset(dataset)}
+//           >
+//             {' '}
+//             <Tag
+//               label={tagLabel || label}
+//               tagPrefix={tagPrefix}
+//               tagSuffix={tagSuffix}
+//               id={`${_id}`}
+//               onDelete={onDelete}
+//               readOnly={readOnly}
+//               disabled={disabled || tagDisabled}
+//               labelRemove={labelRemove}
+//             />
+//           </li>
+//         </div>
+//       )
+//     }
+//   ),
+//   { withRef: true }
+// )
+// const SortableList = SortableContainer(
+//   ({ tags, onDelete, readOnly, disabled, labelRemove, lastItem, tagPrefix, tagSuffix, tagClassName }) => {
+//     return (
+//       <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+//         {tags.map((tags, index) => (
+//           <SortableItem
+//             key={index}
+//             index={index}
+//             onDelete={onDelete}
+//             readOnly={readOnly}
+//             disabled={disabled}
+//             labelRemove={labelRemove}
+//             tagDisabled={tags.disabled}
+//             {...tags}
+//             tagPrefix={tagPrefix}
+//             tagSuffix={tagSuffix}
+//             tagClassName={tagClassName}
+//           />
+//         ))}
+//         <li className="tag-item">
+//           {lastItem}
+//           <span className="dropdown-icon" style={{ fontSize: '20px', color: '#bfbfbf' }}>
+//             &#x2304;
+//           </span>
+//         </li>
+//       </ul>
+//     )
+//   }
+// )
+
+const SortableItemV2 = props => {
+  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: props._id })
+  const {
+    _id,
+    label,
+    tagClassName,
+    dataset,
+    tagLabel,
+    onDelete,
+    readOnly,
+    disabled,
+    labelRemove,
+    tagDisabled,
+    tagPrefix,
+    tagSuffix,
+  } = props
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
   }
-)
-const getTags = (tags = [], onDelete, readOnly, disabled, labelRemove) =>
-  tags.map((tag, index) => {
-    const { _id, label, tagClassName, dataset, tagLabel, description } = tag
-    return {
-      /* <Draggable key={_id} draggableId={_id} index={index}>
-                {provided => (
-                    <li
-                        title={description}
-                        ref={provided.innerRef}
-                        {...provided.draggableProps}
-                        {...provided.dragHandleProps}
-                        className={['tag-item', tagClassName].filter(Boolean).join(' ')}
-                        key={_id}
-                        {...getDataset(dataset)}
-                    >
-                        <Tag
-                            label={tagLabel || label}
-                            id={`${_id}`}
-                            onDelete={onDelete}
-                            readOnly={readOnly}
-                            disabled={disabled || tag.disabled}
-                            labelRemove={labelRemove}
-                        />
-                    </li>
-                )}
-            </Draggable> */
-    }
-  })
-const Tags = props => {
+
+  return (
+    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
+      <li
+        className={['tag-item', tagClassName].filter(Boolean).join(' ')}
+        key={_id}
+        index={_id}
+        {...getDataset(dataset)}
+      >
+        {' '}
+        <Tag
+          label={tagLabel || label}
+          tagPrefix={tagPrefix}
+          tagSuffix={tagSuffix}
+          id={`${_id}`}
+          onDelete={onDelete}
+          readOnly={readOnly}
+          disabled={disabled || tagDisabled}
+          labelRemove={labelRemove}
+        />
+      </li>
+    </div>
+  )
+}
+
+// const Tags = props => {
+//   const {
+//     tags,
+//     onTagRemove,
+//     onReorder,
+//     texts = {},
+//     disabled,
+//     readOnly,
+//     children,
+//     tagPrefix,
+//     tagSuffix,
+//     tagClassName,
+//   } = props
+
+//   const [items, setItems] = useState(tags)
+//   useEffect(() => {
+//     setItems(tags)
+//   }, [tags])
+//   const onSortEnd = ({ oldIndex, newIndex }) => {
+//     let i = arrayMove(items, oldIndex, newIndex)
+//     setItems(i)
+//     onReorder(i)
+//   }
+
+//   const lastItem = children || <span className="placeholder">{texts.placeholder || 'Choose...'}</span>
+//   return (
+//     <SortableList
+//       axis="xy"
+//       lastItem={lastItem}
+//       onSortEnd={onSortEnd}
+//       tags={items}
+//       onDelete={onTagRemove}
+//       readOnly={readOnly}
+//       disabled={disabled}
+//       labelRemove={texts.labelRemove}
+//       tagPrefix={tagPrefix}
+//       tagSuffix={tagSuffix}
+//       tagClassName={tagClassName}
+//     />
+//   )
+// }
+
+const TagsV2 = props => {
   const {
     tags,
-    value,
     onTagRemove,
     onReorder,
     texts = {},
@@ -128,46 +188,59 @@ const Tags = props => {
     tagSuffix,
     tagClassName,
   } = props
-
-  /* console.log('tags')
-     console.log(tags) */
   const [items, setItems] = useState(tags)
-  useEffect(() => {
-    setItems(tags)
-  }, [tags])
-  const onSortEnd = ({ oldIndex, newIndex }) => {
-    let i = arrayMove(items, oldIndex, newIndex)
-    setItems(i)
-    onReorder(i)
-  }
-
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  )
   const lastItem = children || <span className="placeholder">{texts.placeholder || 'Choose...'}</span>
-  return (
-    /*  <DragDropContext onDragEnd={handleOnDragEnd}>
-            <Droppable droppableId="tag-list" direction="horizontal">
-                {provided => (
-                    <ul className="tag-list" {...provided.droppableProps} ref={provided.innerRef}>
-                        {getTags(items, onTagRemove, readOnly, disabled, texts.labelRemove)}
-                        <li className="tag-item">{lastItem}</li>
-                    </ul>
-                )}
-            </Droppable>
-        </DragDropContext> */
+  function handleDragEnd(event) {
+    const { active, over } = event
 
-    <SortableList
-      axis="xy"
-      lastItem={lastItem}
-      onSortEnd={onSortEnd}
-      tags={items}
-      onDelete={onTagRemove}
-      readOnly={readOnly}
-      disabled={disabled}
-      labelRemove={texts.labelRemove}
-      tagPrefix={tagPrefix}
-      tagSuffix={tagSuffix}
-      tagClassName={tagClassName}
-    />
+    if (active.id !== over.id) {
+      let i
+      setItems(items => {
+        const oldIndex = items.indexOf(active.id)
+        const newIndex = items.indexOf(over.id)
+        i = arrayMove(items, oldIndex, newIndex)
+        return i
+      })
+      onReorder(i)
+    }
+  }
+  useEffect(() => {
+    console.log('items', items)
+  }, [items])
+  return (
+    <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+      <SortableContext items={items} strategy={verticalListSortingStrategy}>
+        <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+          {items.map((item, index) => (
+            <SortableItemV2
+              key={index}
+              onDelete={onTagRemove}
+              readOnly={readOnly}
+              disabled={disabled}
+              labelRemove={texts.labelRemove}
+              tagDisabled={item.disabled}
+              {...item}
+              tagPrefix={tagPrefix}
+              tagSuffix={tagSuffix}
+              tagClassName={tagClassName}
+            />
+          ))}
+          <li className="tag-item">
+            {lastItem}
+            <span className="dropdown-icon" style={{ fontSize: '20px', color: '#bfbfbf' }}>
+              &#x2304;
+            </span>
+          </li>
+        </ul>
+      </SortableContext>
+    </DndContext>
   )
 }
 
-export default Tags
+export default TagsV2
