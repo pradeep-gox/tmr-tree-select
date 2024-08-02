@@ -17,6 +17,7 @@ import {
   SortableContext,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
+  rectSortingStrategy,
   rectSwappingStrategy,
   useSortable,
 } from '@dnd-kit/sortable'
@@ -256,6 +257,7 @@ const Tags = props => {
       return (
         <Item
           id={id}
+          label={item.label}
           onDelete={onTagRemove}
           readOnly={readOnly}
           disabled={disabled}
@@ -277,7 +279,7 @@ const Tags = props => {
         onDragStart={handleDragStart}
         onDragEnd={e => handleDragEnd(e, items)}
       >
-        <SortableContext items={items} strategy={rectSwappingStrategy}>
+        <SortableContext items={items} strategy={rectSortingStrategy}>
           {items.map((item, index) => (
             <SortableItemV2
               id={item._id}
