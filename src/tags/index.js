@@ -214,33 +214,33 @@ const TagsV2 = props => {
     console.log('items', tags)
   }, [tags])
   return (
-    <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-      <SortableContext items={items} strategy={verticalListSortingStrategy}>
-        {/* <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}> */}
-        {items.map((item, index) => (
-          <SortableItemV2
-            key={index}
-            id={item._id}
-            onDelete={onTagRemove}
-            readOnly={readOnly}
-            disabled={disabled}
-            labelRemove={texts.labelRemove}
-            tagDisabled={item.disabled}
-            {...item}
-            tagPrefix={tagPrefix}
-            tagSuffix={tagSuffix}
-            tagClassName={tagClassName}
-          />
-        ))}
-        {/* <li className="tag-item">
+    <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+        <SortableContext items={items} strategy={verticalListSortingStrategy}>
+          {items.map((item, index) => (
+            <SortableItemV2
+              key={index}
+              id={item._id}
+              onDelete={onTagRemove}
+              readOnly={readOnly}
+              disabled={disabled}
+              labelRemove={texts.labelRemove}
+              tagDisabled={item.disabled}
+              {...item}
+              tagPrefix={tagPrefix}
+              tagSuffix={tagSuffix}
+              tagClassName={tagClassName}
+            />
+          ))}
+          <li className="tag-item">
             {lastItem}
             <span className="dropdown-icon" style={{ fontSize: '20px', color: '#bfbfbf' }}>
               &#x2304;
             </span>
           </li>
-        </ul> */}
-      </SortableContext>
-    </DndContext>
+        </SortableContext>
+      </DndContext>
+    </ul>
   )
 }
 
