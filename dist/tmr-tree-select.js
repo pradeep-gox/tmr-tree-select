@@ -11547,7 +11547,11 @@
             d = e.tagPrefix,
             f = e.tagSuffix,
             p = e.tagClassName,
-            h = Object(u.useState)(t),
+            h = Object(u.useState)(
+              t.map(function(e) {
+                return ln({}, e, { id: e._id })
+              })
+            ),
             g = on(h, 2),
             v = g[0],
             m = g[1],
@@ -11583,11 +11587,11 @@
                 },
               },
               s.a.createElement(
-                Qt,
-                { items: v, strategy: Yt },
+                'ul',
+                { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },
                 s.a.createElement(
-                  'ul',
-                  { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },
+                  Qt,
+                  { items: v, strategy: Yt },
                   v.map(function(e, t) {
                     return s.a.createElement(
                       un,
@@ -11604,16 +11608,16 @@
                         { tagPrefix: d, tagSuffix: f, tagClassName: p }
                       )
                     )
-                  }),
+                  })
+                ),
+                s.a.createElement(
+                  'li',
+                  { className: 'tag-item' },
+                  y,
                   s.a.createElement(
-                    'li',
-                    { className: 'tag-item' },
-                    y,
-                    s.a.createElement(
-                      'span',
-                      { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },
-                      '⌄'
-                    )
+                    'span',
+                    { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },
+                    '⌄'
                   )
                 )
               )

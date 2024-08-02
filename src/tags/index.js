@@ -188,7 +188,7 @@ const TagsV2 = props => {
     tagSuffix,
     tagClassName,
   } = props
-  const [items, setItems] = useState(tags)
+  const [items, setItems] = useState(tags.map(tag => ({ ...tag, id: tag._id })))
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
@@ -216,8 +216,8 @@ const TagsV2 = props => {
   }, [items])
   return (
     <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-      <SortableContext items={items} strategy={verticalListSortingStrategy}>
-        <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+      <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+        <SortableContext items={items} strategy={verticalListSortingStrategy}>
           {items.map((item, index) => (
             <SortableItemV2
               key={index}
@@ -232,14 +232,14 @@ const TagsV2 = props => {
               tagClassName={tagClassName}
             />
           ))}
-          <li className="tag-item">
-            {lastItem}
-            <span className="dropdown-icon" style={{ fontSize: '20px', color: '#bfbfbf' }}>
-              &#x2304;
-            </span>
-          </li>
-        </ul>
-      </SortableContext>
+        </SortableContext>
+        <li className="tag-item">
+          {lastItem}
+          <span className="dropdown-icon" style={{ fontSize: '20px', color: '#bfbfbf' }}>
+            &#x2304;
+          </span>
+        </li>
+      </ul>
     </DndContext>
   )
 }
