@@ -197,15 +197,17 @@ const Tags = props => {
   const lastItem = children || <span className="placeholder">{texts.placeholder || 'Choose...'}</span>
   function handleDragEnd(event) {
     const { active, over } = event
-
+    console.log('active', active)
+    console.log('over', over)
     if (active._id !== over._id) {
       let i
       setItems(items => {
-        const oldIndex = items.indexOf(active._id)
-        const newIndex = items.indexOf(over._id)
+        const oldIndex = items.findIndex(i => i._id === active._id)
+        const newIndex = items.findIndex(i => i._id === over._id)
         i = arrayMove(items, oldIndex, newIndex)
         return i
       })
+      console.log('i', i)
       onReorder(i)
     }
   }

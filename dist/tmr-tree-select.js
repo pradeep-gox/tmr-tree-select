@@ -11573,13 +11573,18 @@
                   onDragEnd: function(e) {
                     var t = e.active,
                       n = e.over
-                    if (t._id !== n._id) {
+                    if ((console.log('active', t), console.log('over', n), t._id !== n._id)) {
                       var a = void 0
                       m(function(e) {
-                        var r = e.indexOf(t._id),
-                          o = e.indexOf(n._id)
+                        var r = e.findIndex(function(e) {
+                            return e._id === t._id
+                          }),
+                          o = e.findIndex(function(e) {
+                            return e._id === n._id
+                          })
                         return (a = Ut(e, r, o))
                       }),
+                        console.log('i', a),
                         r(a)
                     }
                   },
