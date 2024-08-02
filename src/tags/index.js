@@ -174,7 +174,7 @@ const SortableItemV2 = props => {
 //   )
 // }
 
-const TagsV2 = props => {
+const Tags = props => {
   const {
     tags,
     onTagRemove,
@@ -187,7 +187,7 @@ const TagsV2 = props => {
     tagSuffix,
     tagClassName,
   } = props
-  const [items, setItems] = useState(tags.map(tag => ({ ...tag, id: tag._id })))
+  const [items, setItems] = useState(tags)
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
@@ -198,11 +198,11 @@ const TagsV2 = props => {
   function handleDragEnd(event) {
     const { active, over } = event
 
-    if (active.id !== over.id) {
+    if (active._id !== over._id) {
       let i
       setItems(items => {
-        const oldIndex = items.indexOf(active.id)
-        const newIndex = items.indexOf(over.id)
+        const oldIndex = items.indexOf(active._id)
+        const newIndex = items.indexOf(over._id)
         i = arrayMove(items, oldIndex, newIndex)
         return i
       })
@@ -212,6 +212,7 @@ const TagsV2 = props => {
   useEffect(() => {
     console.log('props', props)
     console.log('items', tags)
+    setItems(tags)
   }, [tags])
   return (
     <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
@@ -244,4 +245,4 @@ const TagsV2 = props => {
   )
 }
 
-export default TagsV2
+export default Tags

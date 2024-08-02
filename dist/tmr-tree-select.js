@@ -11546,11 +11546,7 @@
             d = e.tagPrefix,
             f = e.tagSuffix,
             p = e.tagClassName,
-            h = Object(u.useState)(
-              t.map(function(e) {
-                return ln({}, e, { id: e._id })
-              })
-            ),
+            h = Object(u.useState)(t),
             g = on(h, 2),
             v = g[0],
             m = g[1],
@@ -11562,7 +11558,7 @@
           return (
             Object(u.useEffect)(
               function() {
-                console.log('props', e), console.log('items', t)
+                console.log('props', e), console.log('items', t), m(t)
               },
               [t]
             ),
@@ -11577,11 +11573,11 @@
                   onDragEnd: function(e) {
                     var t = e.active,
                       n = e.over
-                    if (t.id !== n.id) {
+                    if (t._id !== n._id) {
                       var a = void 0
                       m(function(e) {
-                        var r = e.indexOf(t.id),
-                          o = e.indexOf(n.id)
+                        var r = e.indexOf(t._id),
+                          o = e.indexOf(n._id)
                         return (a = Ut(e, r, o))
                       }),
                         r(a)
