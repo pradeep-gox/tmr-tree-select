@@ -11559,7 +11559,7 @@
           return (
             Object(u.useEffect)(
               function() {
-                console.log('items', v)
+                console.log('props', e), console.log('items', v)
               },
               [v]
             ),

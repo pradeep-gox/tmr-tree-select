@@ -211,6 +211,7 @@ const TagsV2 = props => {
     }
   }
   useEffect(() => {
+    console.log('props', props)
     console.log('items', items)
   }, [items])
   return (
