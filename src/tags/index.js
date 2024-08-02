@@ -212,12 +212,12 @@ const TagsV2 = props => {
   }
   useEffect(() => {
     console.log('props', props)
-    console.log('items', items)
-  }, [items])
+    console.log('items', tags)
+  }, [tags])
   return (
     <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-      <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-        <SortableContext items={items} strategy={verticalListSortingStrategy}>
+      <SortableContext items={items} strategy={verticalListSortingStrategy}>
+        <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
           {items.map((item, index) => (
             <SortableItemV2
               key={index}
@@ -232,14 +232,14 @@ const TagsV2 = props => {
               tagClassName={tagClassName}
             />
           ))}
-        </SortableContext>
-        <li className="tag-item">
-          {lastItem}
-          <span className="dropdown-icon" style={{ fontSize: '20px', color: '#bfbfbf' }}>
-            &#x2304;
-          </span>
-        </li>
-      </ul>
+          <li className="tag-item">
+            {lastItem}
+            <span className="dropdown-icon" style={{ fontSize: '20px', color: '#bfbfbf' }}>
+              &#x2304;
+            </span>
+          </li>
+        </ul>
+      </SortableContext>
     </DndContext>
   )
 }
