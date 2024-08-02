@@ -1,14 +1,14 @@
 {
   "errors": [],
   "warnings": [
-    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  tmr-tree-select.js (255 KiB)",
-    "entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.\nEntrypoints:\n  tmr-tree-select (257 KiB)\n      styles.css\n      tmr-tree-select.js\n",
+    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  tmr-tree-select.js (260 KiB)",
+    "entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.\nEntrypoints:\n  tmr-tree-select (262 KiB)\n      styles.css\n      tmr-tree-select.js\n",
     "webpack performance recommendations: \nYou can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.\nFor more info visit https://webpack.js.org/guides/code-splitting/"
   ],
   "version": "4.47.0",
-  "hash": "345f66668e96e4c8ff55",
-  "time": 4447,
-  "builtAt": 1722634348697,
+  "hash": "4f16eb8b7ad95fcf9df1",
+  "time": 5157,
+  "builtAt": 1722636582446,
   "publicPath": "",
   "outputPath": "/home/prady/Repos/tmr-tree-select/dist",
   "assetsByChunkName": {
@@ -43,7 +43,7 @@
     },
     {
       "name": "tmr-tree-select.js",
-      "size": 260865,
+      "size": 265974,
       "chunks": [0],
       "chunkNames": ["tmr-tree-select"],
       "info": {},
@@ -52,7 +52,7 @@
     },
     {
       "name": "tmr-tree-select.js.map",
-      "size": 796916,
+      "size": 805423,
       "chunks": [0],
       "chunkNames": ["tmr-tree-select"],
       "info": {
@@ -86,10 +86,10 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 480737,
+      "size": 482494,
       "names": ["tmr-tree-select"],
       "files": ["styles.css", "tmr-tree-select.js", "styles.css.map", "tmr-tree-select.js.map"],
-      "hash": "63aeaee8820efcd9c565",
+      "hash": "5625cf8b64cdc2f8f326",
       "siblings": [],
       "parents": [],
       "children": [],
@@ -189,18 +189,18 @@
               "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
               "module": "./src/index.js + 31 modules",
               "moduleName": "./src/index.js + 31 modules",
-              "type": "harmony side effect evaluation",
+              "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "5:0-63"
+              "loc": "6:39-52"
             },
             {
               "moduleId": 18,
               "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
               "module": "./src/index.js + 31 modules",
               "moduleName": "./src/index.js + 31 modules",
-              "type": "harmony import specifier",
+              "type": "harmony side effect evaluation",
               "userRequest": "react",
-              "loc": "6:39-52"
+              "loc": "7:0-63"
             },
             {
               "moduleId": 18,
@@ -605,6 +605,15 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
+              "loc": "91:11-21"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
               "loc": "93:46-61"
             },
             {
@@ -641,7 +650,25 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
+              "loc": "95:9-14"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
               "loc": "96:21-27"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "98:4-9"
             },
             {
               "moduleId": 18,
@@ -695,6 +722,15 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
+              "loc": "102:6-11"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
               "loc": "102:16-23"
             },
             {
@@ -731,15 +767,6 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "114:9-14"
-            },
-            {
-              "moduleId": 18,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-              "module": "./src/index.js + 31 modules",
-              "moduleName": "./src/index.js + 31 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
               "loc": "114:16-27"
             },
             {
@@ -749,25 +776,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "117:4-9"
-            },
-            {
-              "moduleId": 18,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-              "module": "./src/index.js + 31 modules",
-              "moduleName": "./src/index.js + 31 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
               "loc": "118:13-18"
-            },
-            {
-              "moduleId": 18,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-              "module": "./src/index.js + 31 modules",
-              "moduleName": "./src/index.js + 31 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "125:6-11"
             },
             {
               "moduleId": 18,
@@ -813,6 +822,15 @@
               "type": "harmony import specifier",
               "userRequest": "react",
               "loc": "139:9-16"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "141:9-14"
             },
             {
               "moduleId": 18,
@@ -938,24 +956,6 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "194:18-26"
-            },
-            {
-              "moduleId": 18,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-              "module": "./src/index.js + 31 modules",
-              "moduleName": "./src/index.js + 31 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "202:29-34"
-            },
-            {
-              "moduleId": 18,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-              "module": "./src/index.js + 31 modules",
-              "moduleName": "./src/index.js + 31 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
               "loc": "203:9-16"
             },
             {
@@ -965,7 +965,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "227:2-11"
+              "loc": "215:18-26"
             },
             {
               "moduleId": 18,
@@ -974,7 +974,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "232:9-14"
+              "loc": "220:19-27"
             },
             {
               "moduleId": 18,
@@ -983,7 +983,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "235:4-9"
+              "loc": "228:29-34"
             },
             {
               "moduleId": 18,
@@ -992,7 +992,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "240:6-11"
+              "loc": "260:2-11"
             },
             {
               "moduleId": 18,
@@ -1001,25 +1001,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "244:17-22"
-            },
-            {
-              "moduleId": 18,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-              "module": "./src/index.js + 31 modules",
-              "moduleName": "./src/index.js + 31 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "258:8-13"
-            },
-            {
-              "moduleId": 18,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-              "module": "./src/index.js + 31 modules",
-              "moduleName": "./src/index.js + 31 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "262:10-15"
+              "loc": "271:13-18"
             },
             {
               "moduleId": 18,
@@ -1029,6 +1011,42 @@
               "type": "harmony import specifier",
               "userRequest": "react",
               "loc": "277:29-34"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "286:9-14"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "289:4-9"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "299:6-11"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "303:17-22"
             },
             {
               "moduleId": 18,
@@ -1055,6 +1073,15 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
+              "loc": "317:8-13"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
               "loc": "321:2-11"
             },
             {
@@ -1064,7 +1091,25 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
+              "loc": "321:10-15"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
               "loc": "324:23-30"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "328:6-11"
             },
             {
               "moduleId": 18,
@@ -4115,7 +4160,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony side effect evaluation",
               "userRequest": "./index.css",
-              "loc": "8:0-21"
+              "loc": "10:0-21"
             }
           ],
           "usedExports": false,
@@ -4649,7 +4694,7 @@
           "name": "./src/index.js + 31 modules",
           "index": 0,
           "index2": 53,
-          "size": 265867,
+          "size": 267624,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -4801,7 +4846,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "../utils",
-                  "loc": "7:0-38"
+                  "loc": "9:0-38"
                 },
                 {
                   "moduleId": null,
@@ -4877,21 +4922,21 @@
                 },
                 {
                   "moduleId": null,
+                  "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/tags/index.js",
+                  "module": "./src/tags/index.js",
+                  "moduleName": "./src/tags/index.js",
+                  "type": "harmony import specifier",
+                  "userRequest": "../utils",
+                  "loc": "100:90-100"
+                },
+                {
+                  "moduleId": null,
                   "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/tree/index.js",
                   "module": "./src/tree/index.js",
                   "moduleName": "./src/tree/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../utils",
                   "loc": "119:23-32"
-                },
-                {
-                  "moduleId": null,
-                  "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/tags/index.js",
-                  "module": "./src/tags/index.js",
-                  "moduleName": "./src/tags/index.js",
-                  "type": "harmony import specifier",
-                  "userRequest": "../utils",
-                  "loc": "123:9-19"
                 },
                 {
                   "moduleId": null,
@@ -5000,18 +5045,18 @@
               "reasons": [
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/input/index.js",
-                  "module": "./src/input/index.js",
-                  "moduleName": "./src/input/index.js",
+                  "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/trigger/index.js",
+                  "module": "./src/trigger/index.js",
+                  "moduleName": "./src/trigger/index.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "../a11y",
                   "loc": "14:0-39"
                 },
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/trigger/index.js",
-                  "module": "./src/trigger/index.js",
-                  "moduleName": "./src/trigger/index.js",
+                  "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/input/index.js",
+                  "module": "./src/input/index.js",
+                  "moduleName": "./src/input/index.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "../a11y",
                   "loc": "14:0-39"
@@ -5126,7 +5171,7 @@
               "name": "./src/tags/index.js",
               "index": 15,
               "index2": 31,
-              "size": 8868,
+              "size": 10625,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -5170,7 +5215,7 @@
               "providedExports": ["default"],
               "optimizationBailout": [],
               "depth": 1,
-              "source": "var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"]) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); } }; }();\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nimport React, { useEffect, useState, forwardRef } from 'react';\nimport Tag from '../tag';\nimport { getDataset } from '../utils';\nimport './index.css';\n// import { SortableContainer, SortableElement } from 'react-sortable-hoc'\nimport { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';\nimport { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';\nimport { CSS } from '@dnd-kit/utilities';\n// const SortableItem = SortableElement(\n//   forwardRef(\n//     (\n//       {\n//         _id,\n//         label,\n//         tagClassName,\n//         dataset,\n//         tagLabel,\n//         description,\n//         onDelete,\n//         readOnly,\n//         disabled,\n//         labelRemove,\n//         tagDisabled,\n//         tagPrefix,\n//         tagSuffix,\n//       },\n//       ref\n//     ) => {\n//       return (\n//         <div ref={ref}>\n//           <li\n//             className={['tag-item', tagClassName].filter(Boolean).join(' ')}\n//             key={_id}\n//             index={_id}\n//             {...getDataset(dataset)}\n//           >\n//             {' '}\n//             <Tag\n//               label={tagLabel || label}\n//               tagPrefix={tagPrefix}\n//               tagSuffix={tagSuffix}\n//               id={`${_id}`}\n//               onDelete={onDelete}\n//               readOnly={readOnly}\n//               disabled={disabled || tagDisabled}\n//               labelRemove={labelRemove}\n//             />\n//           </li>\n//         </div>\n//       )\n//     }\n//   ),\n//   { withRef: true }\n// )\n// const SortableList = SortableContainer(\n//   ({ tags, onDelete, readOnly, disabled, labelRemove, lastItem, tagPrefix, tagSuffix, tagClassName }) => {\n//     return (\n//       <ul className=\"tag-list\" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>\n//         {tags.map((tags, index) => (\n//           <SortableItem\n//             key={index}\n//             index={index}\n//             onDelete={onDelete}\n//             readOnly={readOnly}\n//             disabled={disabled}\n//             labelRemove={labelRemove}\n//             tagDisabled={tags.disabled}\n//             {...tags}\n//             tagPrefix={tagPrefix}\n//             tagSuffix={tagSuffix}\n//             tagClassName={tagClassName}\n//           />\n//         ))}\n//         <li className=\"tag-item\">\n//           {lastItem}\n//           <span className=\"dropdown-icon\" style={{ fontSize: '20px', color: '#bfbfbf' }}>\n//             &#x2304;\n//           </span>\n//         </li>\n//       </ul>\n//     )\n//   }\n// )\n\nvar SortableItemV2 = function SortableItemV2(props) {\n  var _useSortable = useSortable({ id: props.id }),\n      attributes = _useSortable.attributes,\n      listeners = _useSortable.listeners,\n      setNodeRef = _useSortable.setNodeRef,\n      transform = _useSortable.transform,\n      transition = _useSortable.transition;\n\n  var label = props.label,\n      tagClassName = props.tagClassName,\n      dataset = props.dataset,\n      tagLabel = props.tagLabel,\n      onDelete = props.onDelete,\n      readOnly = props.readOnly,\n      disabled = props.disabled,\n      labelRemove = props.labelRemove,\n      tagDisabled = props.tagDisabled,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix;\n\n  var style = {\n    transform: CSS.Transform.toString(transform),\n    transition: transition\n  };\n\n  return React.createElement(\n    'div',\n    _extends({ ref: setNodeRef, style: style }, attributes, listeners),\n    React.createElement(\n      'li',\n      _extends({\n        className: ['tag-item', tagClassName].filter(Boolean).join(' ')\n        // key={props.id}\n        // index={props.id}\n      }, getDataset(dataset)),\n      ' ',\n      React.createElement(Tag, {\n        label: tagLabel || label,\n        tagPrefix: tagPrefix,\n        tagSuffix: tagSuffix,\n        id: '' + props.id,\n        onDelete: onDelete,\n        readOnly: readOnly,\n        disabled: disabled || tagDisabled,\n        labelRemove: labelRemove\n      })\n    )\n  );\n};\n\n// const Tags = props => {\n//   const {\n//     tags,\n//     onTagRemove,\n//     onReorder,\n//     texts = {},\n//     disabled,\n//     readOnly,\n//     children,\n//     tagPrefix,\n//     tagSuffix,\n//     tagClassName,\n//   } = props\n\n//   const [items, setItems] = useState(tags)\n//   useEffect(() => {\n//     setItems(tags)\n//   }, [tags])\n//   const onSortEnd = ({ oldIndex, newIndex }) => {\n//     let i = arrayMove(items, oldIndex, newIndex)\n//     setItems(i)\n//     onReorder(i)\n//   }\n\n//   const lastItem = children || <span className=\"placeholder\">{texts.placeholder || 'Choose...'}</span>\n//   return (\n//     <SortableList\n//       axis=\"xy\"\n//       lastItem={lastItem}\n//       onSortEnd={onSortEnd}\n//       tags={items}\n//       onDelete={onTagRemove}\n//       readOnly={readOnly}\n//       disabled={disabled}\n//       labelRemove={texts.labelRemove}\n//       tagPrefix={tagPrefix}\n//       tagSuffix={tagSuffix}\n//       tagClassName={tagClassName}\n//     />\n//   )\n// }\n\nvar Tags = function Tags(props) {\n  var tags = props.tags,\n      onTagRemove = props.onTagRemove,\n      onReorder = props.onReorder,\n      _props$texts = props.texts,\n      texts = _props$texts === undefined ? {} : _props$texts,\n      disabled = props.disabled,\n      readOnly = props.readOnly,\n      children = props.children,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix,\n      tagClassName = props.tagClassName;\n\n  var _useState = useState(tags),\n      _useState2 = _slicedToArray(_useState, 2),\n      items = _useState2[0],\n      setItems = _useState2[1];\n\n  var sensors = useSensors(useSensor(PointerSensor), useSensor(KeyboardSensor, {\n    coordinateGetter: sortableKeyboardCoordinates\n  }));\n  var lastItem = children || React.createElement(\n    'span',\n    { className: 'placeholder' },\n    texts.placeholder || 'Choose...'\n  );\n  function handleDragEnd(event, f_items) {\n    var active = event.active,\n        over = event.over;\n\n    console.log('active', active);\n    console.log('over', over);\n    if (active.id !== over.id) {\n      var oldIndex = f_items.findIndex(function (i) {\n        return i._id === active.id;\n      });\n      var newIndex = f_items.findIndex(function (i) {\n        return i._id === over.id;\n      });\n      console.log('oldItems', f_items);\n      var newItems = arrayMove(f_items, oldIndex, newIndex);\n      console.log('newItems', newItems);\n      setItems(newItems);\n      onReorder(newItems);\n    }\n  }\n  useEffect(function () {\n    console.log('props', props);\n    console.log('items', tags);\n    setItems(tags);\n  }, [tags]);\n  return React.createElement(\n    'ul',\n    { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },\n    React.createElement(\n      DndContext,\n      { sensors: sensors, collisionDetection: closestCenter, onDragEnd: function onDragEnd(e) {\n          return handleDragEnd(e, items);\n        } },\n      React.createElement(\n        SortableContext,\n        { items: items, strategy: verticalListSortingStrategy },\n        items.map(function (item, index) {\n          return React.createElement(SortableItemV2, _extends({\n            key: index,\n            id: item._id,\n            onDelete: onTagRemove,\n            readOnly: readOnly,\n            disabled: disabled,\n            labelRemove: texts.labelRemove,\n            tagDisabled: item.disabled\n          }, item, {\n            tagPrefix: tagPrefix,\n            tagSuffix: tagSuffix,\n            tagClassName: tagClassName\n          }));\n        }),\n        React.createElement(\n          'li',\n          { className: 'tag-item' },\n          lastItem,\n          React.createElement(\n            'span',\n            { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },\n            '\\u2304'\n          )\n        )\n      )\n    )\n  );\n};\n\nexport default Tags;"
+              "source": "var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"]) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); } }; }();\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nfunction _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }\n\nimport React, { useEffect, useState, forwardRef } from 'react';\nimport Tag from '../tag';\nimport { getDataset } from '../utils';\nimport './index.css';\n// import { SortableContainer, SortableElement } from 'react-sortable-hoc'\nimport { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, DragOverlay } from '@dnd-kit/core';\nimport { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';\nimport { CSS } from '@dnd-kit/utilities';\n// const SortableItem = SortableElement(\n//   forwardRef(\n//     (\n//       {\n//         _id,\n//         label,\n//         tagClassName,\n//         dataset,\n//         tagLabel,\n//         description,\n//         onDelete,\n//         readOnly,\n//         disabled,\n//         labelRemove,\n//         tagDisabled,\n//         tagPrefix,\n//         tagSuffix,\n//       },\n//       ref\n//     ) => {\n//       return (\n//         <div ref={ref}>\n//           <li\n//             className={['tag-item', tagClassName].filter(Boolean).join(' ')}\n//             key={_id}\n//             index={_id}\n//             {...getDataset(dataset)}\n//           >\n//             {' '}\n//             <Tag\n//               label={tagLabel || label}\n//               tagPrefix={tagPrefix}\n//               tagSuffix={tagSuffix}\n//               id={`${_id}`}\n//               onDelete={onDelete}\n//               readOnly={readOnly}\n//               disabled={disabled || tagDisabled}\n//               labelRemove={labelRemove}\n//             />\n//           </li>\n//         </div>\n//       )\n//     }\n//   ),\n//   { withRef: true }\n// )\n// const SortableList = SortableContainer(\n//   ({ tags, onDelete, readOnly, disabled, labelRemove, lastItem, tagPrefix, tagSuffix, tagClassName }) => {\n//     return (\n//       <ul className=\"tag-list\" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>\n//         {tags.map((tags, index) => (\n//           <SortableItem\n//             key={index}\n//             index={index}\n//             onDelete={onDelete}\n//             readOnly={readOnly}\n//             disabled={disabled}\n//             labelRemove={labelRemove}\n//             tagDisabled={tags.disabled}\n//             {...tags}\n//             tagPrefix={tagPrefix}\n//             tagSuffix={tagSuffix}\n//             tagClassName={tagClassName}\n//           />\n//         ))}\n//         <li className=\"tag-item\">\n//           {lastItem}\n//           <span className=\"dropdown-icon\" style={{ fontSize: '20px', color: '#bfbfbf' }}>\n//             &#x2304;\n//           </span>\n//         </li>\n//       </ul>\n//     )\n//   }\n// )\n\nvar Item = forwardRef(function (_ref, ref) {\n  var id = _ref.id,\n      props = _objectWithoutProperties(_ref, ['id']);\n\n  return React.createElement(\n    'div',\n    _extends({}, props, { ref: ref }),\n    React.createElement(\n      'li',\n      _extends({ className: ['tag-item', props.tagClassName].filter(Boolean).join(' ') }, getDataset(props.dataset)),\n      ' ',\n      React.createElement(Tag, {\n        label: props.tagLabel || props.label,\n        tagPrefix: props.tagPrefix,\n        tagSuffix: props.tagSuffix,\n        id: '' + props.id,\n        onDelete: props.onDelete,\n        readOnly: props.readOnly,\n        disabled: props.disabled || props.tagDisabled,\n        labelRemove: props.labelRemove\n      })\n    )\n  );\n});\n\nvar SortableItemV2 = function SortableItemV2(props) {\n  var _useSortable = useSortable({ id: props.id }),\n      attributes = _useSortable.attributes,\n      listeners = _useSortable.listeners,\n      setNodeRef = _useSortable.setNodeRef,\n      transform = _useSortable.transform,\n      transition = _useSortable.transition;\n\n  var label = props.label,\n      tagClassName = props.tagClassName,\n      dataset = props.dataset,\n      tagLabel = props.tagLabel,\n      onDelete = props.onDelete,\n      readOnly = props.readOnly,\n      disabled = props.disabled,\n      labelRemove = props.labelRemove,\n      tagDisabled = props.tagDisabled,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix;\n\n  var style = {\n    transform: CSS.Transform.toString(transform),\n    transition: transition\n  };\n\n  return React.createElement(Item, _extends({\n    ref: setNodeRef,\n    style: style\n  }, attributes, listeners, {\n    id: '' + props.id,\n    label: label,\n    dataset: dataset,\n    tagLabel: tagLabel,\n    onDelete: onDelete,\n    readOnly: readOnly,\n    disabled: disabled,\n    labelRemove: labelRemove,\n    tagDisabled: tagDisabled,\n    tagPrefix: tagPrefix,\n    tagSuffix: tagSuffix,\n    tagClassName: tagClassName\n  }));\n};\n\n// const Tags = props => {\n//   const {\n//     tags,\n//     onTagRemove,\n//     onReorder,\n//     texts = {},\n//     disabled,\n//     readOnly,\n//     children,\n//     tagPrefix,\n//     tagSuffix,\n//     tagClassName,\n//   } = props\n\n//   const [items, setItems] = useState(tags)\n//   useEffect(() => {\n//     setItems(tags)\n//   }, [tags])\n//   const onSortEnd = ({ oldIndex, newIndex }) => {\n//     let i = arrayMove(items, oldIndex, newIndex)\n//     setItems(i)\n//     onReorder(i)\n//   }\n\n//   const lastItem = children || <span className=\"placeholder\">{texts.placeholder || 'Choose...'}</span>\n//   return (\n//     <SortableList\n//       axis=\"xy\"\n//       lastItem={lastItem}\n//       onSortEnd={onSortEnd}\n//       tags={items}\n//       onDelete={onTagRemove}\n//       readOnly={readOnly}\n//       disabled={disabled}\n//       labelRemove={texts.labelRemove}\n//       tagPrefix={tagPrefix}\n//       tagSuffix={tagSuffix}\n//       tagClassName={tagClassName}\n//     />\n//   )\n// }\n\nvar Tags = function Tags(props) {\n  var tags = props.tags,\n      onTagRemove = props.onTagRemove,\n      onReorder = props.onReorder,\n      _props$texts = props.texts,\n      texts = _props$texts === undefined ? {} : _props$texts,\n      disabled = props.disabled,\n      readOnly = props.readOnly,\n      children = props.children,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix,\n      tagClassName = props.tagClassName;\n\n  var _useState = useState(null),\n      _useState2 = _slicedToArray(_useState, 2),\n      activeId = _useState2[0],\n      setActiveId = _useState2[1];\n\n  var _useState3 = useState(tags),\n      _useState4 = _slicedToArray(_useState3, 2),\n      items = _useState4[0],\n      setItems = _useState4[1];\n\n  var sensors = useSensors(useSensor(PointerSensor), useSensor(KeyboardSensor, {\n    coordinateGetter: sortableKeyboardCoordinates\n  }));\n  var lastItem = children || React.createElement(\n    'span',\n    { className: 'placeholder' },\n    texts.placeholder || 'Choose...'\n  );\n\n  function handleDragStart(event) {\n    var active = event.active;\n\n    console.log('active', active);\n    setActiveId(active.id);\n  }\n  function handleDragEnd(event, f_items) {\n    var active = event.active,\n        over = event.over;\n\n    console.log('active', active);\n    console.log('over', over);\n    if (active.id !== over.id) {\n      var oldIndex = f_items.findIndex(function (i) {\n        return i._id === active.id;\n      });\n      var newIndex = f_items.findIndex(function (i) {\n        return i._id === over.id;\n      });\n      console.log('oldItems', f_items);\n      var newItems = arrayMove(f_items, oldIndex, newIndex);\n      console.log('newItems', newItems);\n      setItems(newItems);\n      onReorder(newItems);\n    }\n  }\n  useEffect(function () {\n    console.log('props', props);\n    console.log('items', tags);\n    setItems(tags);\n  }, [tags]);\n  var getActiveItem = function getActiveItem(id) {\n    if (!id) return null;\n    var item = items.find(function (i) {\n      return i._id === id;\n    });\n    if (item) {\n      return React.createElement(Item, {\n        id: id,\n        label: item.label,\n        onDelete: onTagRemove,\n        readOnly: readOnly,\n        disabled: disabled,\n        labelRemove: texts.labelRemove,\n        tagDisabled: item.disabled,\n        tagPrefix: tagPrefix,\n        tagSuffix: tagSuffix,\n        tagClassName: tagClassName\n      });\n    }\n    return null;\n  };\n  return React.createElement(\n    'ul',\n    { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },\n    React.createElement(\n      DndContext,\n      {\n        sensors: sensors,\n        collisionDetection: closestCenter,\n        onDragStart: handleDragStart,\n        onDragEnd: function onDragEnd(e) {\n          return handleDragEnd(e, items);\n        }\n      },\n      React.createElement(\n        SortableContext,\n        { items: items, strategy: verticalListSortingStrategy },\n        items.map(function (item, index) {\n          return React.createElement(SortableItemV2, _extends({\n            key: index,\n            id: item._id,\n            onDelete: onTagRemove,\n            readOnly: readOnly,\n            disabled: disabled,\n            labelRemove: texts.labelRemove,\n            tagDisabled: item.disabled\n          }, item, {\n            tagPrefix: tagPrefix,\n            tagSuffix: tagSuffix,\n            tagClassName: tagClassName\n          }));\n        }),\n        React.createElement(\n          'li',\n          { className: 'tag-item' },\n          lastItem,\n          React.createElement(\n            'span',\n            { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },\n            '\\u2304'\n          )\n        )\n      ),\n      React.createElement(\n        DragOverlay,\n        null,\n        getActiveItem(activeId)\n      )\n    )\n  );\n};\n\nexport default Tags;"
             },
             {
               "id": null,
@@ -5899,7 +5944,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "../tag",
-                  "loc": "6:0-25"
+                  "loc": "8:0-25"
                 },
                 {
                   "moduleId": null,
@@ -5926,7 +5971,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../tag",
-                  "loc": "125:26-29"
+                  "loc": "102:26-29"
                 },
                 {
                   "moduleId": null,
@@ -6001,7 +6046,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "@dnd-kit/utilities",
-                  "loc": "12:0-41"
+                  "loc": "14:0-41"
                 },
                 {
                   "moduleId": null,
@@ -6019,7 +6064,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/utilities",
-                  "loc": "110:15-18"
+                  "loc": "137:15-18"
                 },
                 {
                   "moduleId": null,
@@ -6853,10 +6898,6 @@
               "usedExports": [
                 "CSS",
                 "useUniqueId",
-                "useIsomorphicLayoutEffect",
-                "useCombinedRefs",
-                "isKeyboardEvent",
-                "subtract",
                 "getEventCoordinates",
                 "getWindow",
                 "isDocument",
@@ -6867,13 +6908,17 @@
                 "isNode",
                 "getOwnerDocument",
                 "add",
+                "isKeyboardEvent",
+                "subtract",
                 "useInterval",
                 "usePrevious",
                 "useLazyMemo",
                 "useLatestValue",
                 "useEvent",
+                "useIsomorphicLayoutEffect",
                 "useNodeRef",
-                "findFirstFocusableNode"
+                "findFirstFocusableNode",
+                "useCombinedRefs"
               ],
               "providedExports": [
                 "CSS",
@@ -6954,7 +6999,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "10:0-112"
+                  "loc": "12:0-125"
                 },
                 {
                   "moduleId": null,
@@ -6963,7 +7008,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "199:16-26"
+                  "loc": "225:16-26"
                 },
                 {
                   "moduleId": null,
@@ -6972,7 +7017,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "199:27-36"
+                  "loc": "225:27-36"
                 },
                 {
                   "moduleId": null,
@@ -6981,7 +7026,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "199:37-50"
+                  "loc": "225:37-50"
                 },
                 {
                   "moduleId": null,
@@ -6990,7 +7035,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "199:53-62"
+                  "loc": "225:53-62"
                 },
                 {
                   "moduleId": null,
@@ -6999,7 +7044,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "199:63-77"
+                  "loc": "225:63-77"
                 },
                 {
                   "moduleId": null,
@@ -7008,7 +7053,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "236:6-16"
+                  "loc": "290:6-16"
                 },
                 {
                   "moduleId": null,
@@ -7017,7 +7062,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "237:46-59"
+                  "loc": "293:28-41"
                 },
                 {
                   "moduleId": null,
@@ -7027,6 +7072,15 @@
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
                   "loc": "305:6-19"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/tags/index.js",
+                  "module": "./src/tags/index.js",
+                  "moduleName": "./src/tags/index.js",
+                  "type": "harmony import specifier",
+                  "userRequest": "@dnd-kit/core",
+                  "loc": "329:8-19"
                 },
                 {
                   "moduleId": null,
@@ -7162,6 +7216,7 @@
                 "KeyboardSensor",
                 "DndContext",
                 "closestCenter",
+                "DragOverlay",
                 "useDndContext",
                 "getClientRect",
                 "useDroppable",
@@ -7246,7 +7301,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "@dnd-kit/sortable",
-                  "loc": "11:0-134"
+                  "loc": "13:0-134"
                 },
                 {
                   "moduleId": null,
@@ -7255,7 +7310,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/sortable",
-                  "loc": "90:21-32"
+                  "loc": "117:21-32"
                 },
                 {
                   "moduleId": null,
@@ -7264,7 +7319,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/sortable",
-                  "loc": "200:22-49"
+                  "loc": "226:22-49"
                 },
                 {
                   "moduleId": null,
@@ -7273,7 +7328,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/sortable",
-                  "loc": "221:21-30"
+                  "loc": "254:21-30"
                 },
                 {
                   "moduleId": null,
@@ -7282,7 +7337,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/sortable",
-                  "loc": "241:8-23"
+                  "loc": "300:8-23"
                 },
                 {
                   "moduleId": null,
@@ -7291,7 +7346,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/sortable",
-                  "loc": "242:34-61"
+                  "loc": "301:34-61"
                 }
               ],
               "usedExports": [
@@ -8434,18 +8489,18 @@
           "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
           "module": "./src/index.js + 31 modules",
           "moduleName": "./src/index.js + 31 modules",
-          "type": "harmony side effect evaluation",
+          "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "5:0-63"
+          "loc": "6:39-52"
         },
         {
           "moduleId": 18,
           "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
           "module": "./src/index.js + 31 modules",
           "moduleName": "./src/index.js + 31 modules",
-          "type": "harmony import specifier",
+          "type": "harmony side effect evaluation",
           "userRequest": "react",
-          "loc": "6:39-52"
+          "loc": "7:0-63"
         },
         {
           "moduleId": 18,
@@ -8850,6 +8905,15 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
+          "loc": "91:11-21"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
           "loc": "93:46-61"
         },
         {
@@ -8886,7 +8950,25 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
+          "loc": "95:9-14"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
           "loc": "96:21-27"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "98:4-9"
         },
         {
           "moduleId": 18,
@@ -8940,6 +9022,15 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
+          "loc": "102:6-11"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
           "loc": "102:16-23"
         },
         {
@@ -8976,15 +9067,6 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "114:9-14"
-        },
-        {
-          "moduleId": 18,
-          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-          "module": "./src/index.js + 31 modules",
-          "moduleName": "./src/index.js + 31 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
           "loc": "114:16-27"
         },
         {
@@ -8994,25 +9076,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "117:4-9"
-        },
-        {
-          "moduleId": 18,
-          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-          "module": "./src/index.js + 31 modules",
-          "moduleName": "./src/index.js + 31 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
           "loc": "118:13-18"
-        },
-        {
-          "moduleId": 18,
-          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-          "module": "./src/index.js + 31 modules",
-          "moduleName": "./src/index.js + 31 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "125:6-11"
         },
         {
           "moduleId": 18,
@@ -9058,6 +9122,15 @@
           "type": "harmony import specifier",
           "userRequest": "react",
           "loc": "139:9-16"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "141:9-14"
         },
         {
           "moduleId": 18,
@@ -9183,24 +9256,6 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "194:18-26"
-        },
-        {
-          "moduleId": 18,
-          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-          "module": "./src/index.js + 31 modules",
-          "moduleName": "./src/index.js + 31 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "202:29-34"
-        },
-        {
-          "moduleId": 18,
-          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-          "module": "./src/index.js + 31 modules",
-          "moduleName": "./src/index.js + 31 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
           "loc": "203:9-16"
         },
         {
@@ -9210,7 +9265,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "227:2-11"
+          "loc": "215:18-26"
         },
         {
           "moduleId": 18,
@@ -9219,7 +9274,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "232:9-14"
+          "loc": "220:19-27"
         },
         {
           "moduleId": 18,
@@ -9228,7 +9283,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "235:4-9"
+          "loc": "228:29-34"
         },
         {
           "moduleId": 18,
@@ -9237,7 +9292,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "240:6-11"
+          "loc": "260:2-11"
         },
         {
           "moduleId": 18,
@@ -9246,25 +9301,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "244:17-22"
-        },
-        {
-          "moduleId": 18,
-          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-          "module": "./src/index.js + 31 modules",
-          "moduleName": "./src/index.js + 31 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "258:8-13"
-        },
-        {
-          "moduleId": 18,
-          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-          "module": "./src/index.js + 31 modules",
-          "moduleName": "./src/index.js + 31 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "262:10-15"
+          "loc": "271:13-18"
         },
         {
           "moduleId": 18,
@@ -9274,6 +9311,42 @@
           "type": "harmony import specifier",
           "userRequest": "react",
           "loc": "277:29-34"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "286:9-14"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "289:4-9"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "299:6-11"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "303:17-22"
         },
         {
           "moduleId": 18,
@@ -9300,6 +9373,15 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
+          "loc": "317:8-13"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
           "loc": "321:2-11"
         },
         {
@@ -9309,7 +9391,25 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
+          "loc": "321:10-15"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
           "loc": "324:23-30"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "328:6-11"
         },
         {
           "moduleId": 18,
@@ -12360,7 +12460,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony side effect evaluation",
           "userRequest": "./index.css",
-          "loc": "8:0-21"
+          "loc": "10:0-21"
         }
       ],
       "usedExports": false,
@@ -12894,7 +12994,7 @@
       "name": "./src/index.js + 31 modules",
       "index": 0,
       "index2": 53,
-      "size": 265867,
+      "size": 267624,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -13046,7 +13146,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony side effect evaluation",
               "userRequest": "../utils",
-              "loc": "7:0-38"
+              "loc": "9:0-38"
             },
             {
               "moduleId": null,
@@ -13122,21 +13222,21 @@
             },
             {
               "moduleId": null,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/tags/index.js",
+              "module": "./src/tags/index.js",
+              "moduleName": "./src/tags/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "../utils",
+              "loc": "100:90-100"
+            },
+            {
+              "moduleId": null,
               "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/tree/index.js",
               "module": "./src/tree/index.js",
               "moduleName": "./src/tree/index.js",
               "type": "harmony import specifier",
               "userRequest": "../utils",
               "loc": "119:23-32"
-            },
-            {
-              "moduleId": null,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/tags/index.js",
-              "module": "./src/tags/index.js",
-              "moduleName": "./src/tags/index.js",
-              "type": "harmony import specifier",
-              "userRequest": "../utils",
-              "loc": "123:9-19"
             },
             {
               "moduleId": null,
@@ -13245,18 +13345,18 @@
           "reasons": [
             {
               "moduleId": null,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/input/index.js",
-              "module": "./src/input/index.js",
-              "moduleName": "./src/input/index.js",
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/trigger/index.js",
+              "module": "./src/trigger/index.js",
+              "moduleName": "./src/trigger/index.js",
               "type": "harmony side effect evaluation",
               "userRequest": "../a11y",
               "loc": "14:0-39"
             },
             {
               "moduleId": null,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/trigger/index.js",
-              "module": "./src/trigger/index.js",
-              "moduleName": "./src/trigger/index.js",
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/input/index.js",
+              "module": "./src/input/index.js",
+              "moduleName": "./src/input/index.js",
               "type": "harmony side effect evaluation",
               "userRequest": "../a11y",
               "loc": "14:0-39"
@@ -13371,7 +13471,7 @@
           "name": "./src/tags/index.js",
           "index": 15,
           "index2": 31,
-          "size": 8868,
+          "size": 10625,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -13415,7 +13515,7 @@
           "providedExports": ["default"],
           "optimizationBailout": [],
           "depth": 1,
-          "source": "var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"]) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); } }; }();\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nimport React, { useEffect, useState, forwardRef } from 'react';\nimport Tag from '../tag';\nimport { getDataset } from '../utils';\nimport './index.css';\n// import { SortableContainer, SortableElement } from 'react-sortable-hoc'\nimport { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';\nimport { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';\nimport { CSS } from '@dnd-kit/utilities';\n// const SortableItem = SortableElement(\n//   forwardRef(\n//     (\n//       {\n//         _id,\n//         label,\n//         tagClassName,\n//         dataset,\n//         tagLabel,\n//         description,\n//         onDelete,\n//         readOnly,\n//         disabled,\n//         labelRemove,\n//         tagDisabled,\n//         tagPrefix,\n//         tagSuffix,\n//       },\n//       ref\n//     ) => {\n//       return (\n//         <div ref={ref}>\n//           <li\n//             className={['tag-item', tagClassName].filter(Boolean).join(' ')}\n//             key={_id}\n//             index={_id}\n//             {...getDataset(dataset)}\n//           >\n//             {' '}\n//             <Tag\n//               label={tagLabel || label}\n//               tagPrefix={tagPrefix}\n//               tagSuffix={tagSuffix}\n//               id={`${_id}`}\n//               onDelete={onDelete}\n//               readOnly={readOnly}\n//               disabled={disabled || tagDisabled}\n//               labelRemove={labelRemove}\n//             />\n//           </li>\n//         </div>\n//       )\n//     }\n//   ),\n//   { withRef: true }\n// )\n// const SortableList = SortableContainer(\n//   ({ tags, onDelete, readOnly, disabled, labelRemove, lastItem, tagPrefix, tagSuffix, tagClassName }) => {\n//     return (\n//       <ul className=\"tag-list\" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>\n//         {tags.map((tags, index) => (\n//           <SortableItem\n//             key={index}\n//             index={index}\n//             onDelete={onDelete}\n//             readOnly={readOnly}\n//             disabled={disabled}\n//             labelRemove={labelRemove}\n//             tagDisabled={tags.disabled}\n//             {...tags}\n//             tagPrefix={tagPrefix}\n//             tagSuffix={tagSuffix}\n//             tagClassName={tagClassName}\n//           />\n//         ))}\n//         <li className=\"tag-item\">\n//           {lastItem}\n//           <span className=\"dropdown-icon\" style={{ fontSize: '20px', color: '#bfbfbf' }}>\n//             &#x2304;\n//           </span>\n//         </li>\n//       </ul>\n//     )\n//   }\n// )\n\nvar SortableItemV2 = function SortableItemV2(props) {\n  var _useSortable = useSortable({ id: props.id }),\n      attributes = _useSortable.attributes,\n      listeners = _useSortable.listeners,\n      setNodeRef = _useSortable.setNodeRef,\n      transform = _useSortable.transform,\n      transition = _useSortable.transition;\n\n  var label = props.label,\n      tagClassName = props.tagClassName,\n      dataset = props.dataset,\n      tagLabel = props.tagLabel,\n      onDelete = props.onDelete,\n      readOnly = props.readOnly,\n      disabled = props.disabled,\n      labelRemove = props.labelRemove,\n      tagDisabled = props.tagDisabled,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix;\n\n  var style = {\n    transform: CSS.Transform.toString(transform),\n    transition: transition\n  };\n\n  return React.createElement(\n    'div',\n    _extends({ ref: setNodeRef, style: style }, attributes, listeners),\n    React.createElement(\n      'li',\n      _extends({\n        className: ['tag-item', tagClassName].filter(Boolean).join(' ')\n        // key={props.id}\n        // index={props.id}\n      }, getDataset(dataset)),\n      ' ',\n      React.createElement(Tag, {\n        label: tagLabel || label,\n        tagPrefix: tagPrefix,\n        tagSuffix: tagSuffix,\n        id: '' + props.id,\n        onDelete: onDelete,\n        readOnly: readOnly,\n        disabled: disabled || tagDisabled,\n        labelRemove: labelRemove\n      })\n    )\n  );\n};\n\n// const Tags = props => {\n//   const {\n//     tags,\n//     onTagRemove,\n//     onReorder,\n//     texts = {},\n//     disabled,\n//     readOnly,\n//     children,\n//     tagPrefix,\n//     tagSuffix,\n//     tagClassName,\n//   } = props\n\n//   const [items, setItems] = useState(tags)\n//   useEffect(() => {\n//     setItems(tags)\n//   }, [tags])\n//   const onSortEnd = ({ oldIndex, newIndex }) => {\n//     let i = arrayMove(items, oldIndex, newIndex)\n//     setItems(i)\n//     onReorder(i)\n//   }\n\n//   const lastItem = children || <span className=\"placeholder\">{texts.placeholder || 'Choose...'}</span>\n//   return (\n//     <SortableList\n//       axis=\"xy\"\n//       lastItem={lastItem}\n//       onSortEnd={onSortEnd}\n//       tags={items}\n//       onDelete={onTagRemove}\n//       readOnly={readOnly}\n//       disabled={disabled}\n//       labelRemove={texts.labelRemove}\n//       tagPrefix={tagPrefix}\n//       tagSuffix={tagSuffix}\n//       tagClassName={tagClassName}\n//     />\n//   )\n// }\n\nvar Tags = function Tags(props) {\n  var tags = props.tags,\n      onTagRemove = props.onTagRemove,\n      onReorder = props.onReorder,\n      _props$texts = props.texts,\n      texts = _props$texts === undefined ? {} : _props$texts,\n      disabled = props.disabled,\n      readOnly = props.readOnly,\n      children = props.children,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix,\n      tagClassName = props.tagClassName;\n\n  var _useState = useState(tags),\n      _useState2 = _slicedToArray(_useState, 2),\n      items = _useState2[0],\n      setItems = _useState2[1];\n\n  var sensors = useSensors(useSensor(PointerSensor), useSensor(KeyboardSensor, {\n    coordinateGetter: sortableKeyboardCoordinates\n  }));\n  var lastItem = children || React.createElement(\n    'span',\n    { className: 'placeholder' },\n    texts.placeholder || 'Choose...'\n  );\n  function handleDragEnd(event, f_items) {\n    var active = event.active,\n        over = event.over;\n\n    console.log('active', active);\n    console.log('over', over);\n    if (active.id !== over.id) {\n      var oldIndex = f_items.findIndex(function (i) {\n        return i._id === active.id;\n      });\n      var newIndex = f_items.findIndex(function (i) {\n        return i._id === over.id;\n      });\n      console.log('oldItems', f_items);\n      var newItems = arrayMove(f_items, oldIndex, newIndex);\n      console.log('newItems', newItems);\n      setItems(newItems);\n      onReorder(newItems);\n    }\n  }\n  useEffect(function () {\n    console.log('props', props);\n    console.log('items', tags);\n    setItems(tags);\n  }, [tags]);\n  return React.createElement(\n    'ul',\n    { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },\n    React.createElement(\n      DndContext,\n      { sensors: sensors, collisionDetection: closestCenter, onDragEnd: function onDragEnd(e) {\n          return handleDragEnd(e, items);\n        } },\n      React.createElement(\n        SortableContext,\n        { items: items, strategy: verticalListSortingStrategy },\n        items.map(function (item, index) {\n          return React.createElement(SortableItemV2, _extends({\n            key: index,\n            id: item._id,\n            onDelete: onTagRemove,\n            readOnly: readOnly,\n            disabled: disabled,\n            labelRemove: texts.labelRemove,\n            tagDisabled: item.disabled\n          }, item, {\n            tagPrefix: tagPrefix,\n            tagSuffix: tagSuffix,\n            tagClassName: tagClassName\n          }));\n        }),\n        React.createElement(\n          'li',\n          { className: 'tag-item' },\n          lastItem,\n          React.createElement(\n            'span',\n            { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },\n            '\\u2304'\n          )\n        )\n      )\n    )\n  );\n};\n\nexport default Tags;"
+          "source": "var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"]) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); } }; }();\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nfunction _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }\n\nimport React, { useEffect, useState, forwardRef } from 'react';\nimport Tag from '../tag';\nimport { getDataset } from '../utils';\nimport './index.css';\n// import { SortableContainer, SortableElement } from 'react-sortable-hoc'\nimport { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, DragOverlay } from '@dnd-kit/core';\nimport { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';\nimport { CSS } from '@dnd-kit/utilities';\n// const SortableItem = SortableElement(\n//   forwardRef(\n//     (\n//       {\n//         _id,\n//         label,\n//         tagClassName,\n//         dataset,\n//         tagLabel,\n//         description,\n//         onDelete,\n//         readOnly,\n//         disabled,\n//         labelRemove,\n//         tagDisabled,\n//         tagPrefix,\n//         tagSuffix,\n//       },\n//       ref\n//     ) => {\n//       return (\n//         <div ref={ref}>\n//           <li\n//             className={['tag-item', tagClassName].filter(Boolean).join(' ')}\n//             key={_id}\n//             index={_id}\n//             {...getDataset(dataset)}\n//           >\n//             {' '}\n//             <Tag\n//               label={tagLabel || label}\n//               tagPrefix={tagPrefix}\n//               tagSuffix={tagSuffix}\n//               id={`${_id}`}\n//               onDelete={onDelete}\n//               readOnly={readOnly}\n//               disabled={disabled || tagDisabled}\n//               labelRemove={labelRemove}\n//             />\n//           </li>\n//         </div>\n//       )\n//     }\n//   ),\n//   { withRef: true }\n// )\n// const SortableList = SortableContainer(\n//   ({ tags, onDelete, readOnly, disabled, labelRemove, lastItem, tagPrefix, tagSuffix, tagClassName }) => {\n//     return (\n//       <ul className=\"tag-list\" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>\n//         {tags.map((tags, index) => (\n//           <SortableItem\n//             key={index}\n//             index={index}\n//             onDelete={onDelete}\n//             readOnly={readOnly}\n//             disabled={disabled}\n//             labelRemove={labelRemove}\n//             tagDisabled={tags.disabled}\n//             {...tags}\n//             tagPrefix={tagPrefix}\n//             tagSuffix={tagSuffix}\n//             tagClassName={tagClassName}\n//           />\n//         ))}\n//         <li className=\"tag-item\">\n//           {lastItem}\n//           <span className=\"dropdown-icon\" style={{ fontSize: '20px', color: '#bfbfbf' }}>\n//             &#x2304;\n//           </span>\n//         </li>\n//       </ul>\n//     )\n//   }\n// )\n\nvar Item = forwardRef(function (_ref, ref) {\n  var id = _ref.id,\n      props = _objectWithoutProperties(_ref, ['id']);\n\n  return React.createElement(\n    'div',\n    _extends({}, props, { ref: ref }),\n    React.createElement(\n      'li',\n      _extends({ className: ['tag-item', props.tagClassName].filter(Boolean).join(' ') }, getDataset(props.dataset)),\n      ' ',\n      React.createElement(Tag, {\n        label: props.tagLabel || props.label,\n        tagPrefix: props.tagPrefix,\n        tagSuffix: props.tagSuffix,\n        id: '' + props.id,\n        onDelete: props.onDelete,\n        readOnly: props.readOnly,\n        disabled: props.disabled || props.tagDisabled,\n        labelRemove: props.labelRemove\n      })\n    )\n  );\n});\n\nvar SortableItemV2 = function SortableItemV2(props) {\n  var _useSortable = useSortable({ id: props.id }),\n      attributes = _useSortable.attributes,\n      listeners = _useSortable.listeners,\n      setNodeRef = _useSortable.setNodeRef,\n      transform = _useSortable.transform,\n      transition = _useSortable.transition;\n\n  var label = props.label,\n      tagClassName = props.tagClassName,\n      dataset = props.dataset,\n      tagLabel = props.tagLabel,\n      onDelete = props.onDelete,\n      readOnly = props.readOnly,\n      disabled = props.disabled,\n      labelRemove = props.labelRemove,\n      tagDisabled = props.tagDisabled,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix;\n\n  var style = {\n    transform: CSS.Transform.toString(transform),\n    transition: transition\n  };\n\n  return React.createElement(Item, _extends({\n    ref: setNodeRef,\n    style: style\n  }, attributes, listeners, {\n    id: '' + props.id,\n    label: label,\n    dataset: dataset,\n    tagLabel: tagLabel,\n    onDelete: onDelete,\n    readOnly: readOnly,\n    disabled: disabled,\n    labelRemove: labelRemove,\n    tagDisabled: tagDisabled,\n    tagPrefix: tagPrefix,\n    tagSuffix: tagSuffix,\n    tagClassName: tagClassName\n  }));\n};\n\n// const Tags = props => {\n//   const {\n//     tags,\n//     onTagRemove,\n//     onReorder,\n//     texts = {},\n//     disabled,\n//     readOnly,\n//     children,\n//     tagPrefix,\n//     tagSuffix,\n//     tagClassName,\n//   } = props\n\n//   const [items, setItems] = useState(tags)\n//   useEffect(() => {\n//     setItems(tags)\n//   }, [tags])\n//   const onSortEnd = ({ oldIndex, newIndex }) => {\n//     let i = arrayMove(items, oldIndex, newIndex)\n//     setItems(i)\n//     onReorder(i)\n//   }\n\n//   const lastItem = children || <span className=\"placeholder\">{texts.placeholder || 'Choose...'}</span>\n//   return (\n//     <SortableList\n//       axis=\"xy\"\n//       lastItem={lastItem}\n//       onSortEnd={onSortEnd}\n//       tags={items}\n//       onDelete={onTagRemove}\n//       readOnly={readOnly}\n//       disabled={disabled}\n//       labelRemove={texts.labelRemove}\n//       tagPrefix={tagPrefix}\n//       tagSuffix={tagSuffix}\n//       tagClassName={tagClassName}\n//     />\n//   )\n// }\n\nvar Tags = function Tags(props) {\n  var tags = props.tags,\n      onTagRemove = props.onTagRemove,\n      onReorder = props.onReorder,\n      _props$texts = props.texts,\n      texts = _props$texts === undefined ? {} : _props$texts,\n      disabled = props.disabled,\n      readOnly = props.readOnly,\n      children = props.children,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix,\n      tagClassName = props.tagClassName;\n\n  var _useState = useState(null),\n      _useState2 = _slicedToArray(_useState, 2),\n      activeId = _useState2[0],\n      setActiveId = _useState2[1];\n\n  var _useState3 = useState(tags),\n      _useState4 = _slicedToArray(_useState3, 2),\n      items = _useState4[0],\n      setItems = _useState4[1];\n\n  var sensors = useSensors(useSensor(PointerSensor), useSensor(KeyboardSensor, {\n    coordinateGetter: sortableKeyboardCoordinates\n  }));\n  var lastItem = children || React.createElement(\n    'span',\n    { className: 'placeholder' },\n    texts.placeholder || 'Choose...'\n  );\n\n  function handleDragStart(event) {\n    var active = event.active;\n\n    console.log('active', active);\n    setActiveId(active.id);\n  }\n  function handleDragEnd(event, f_items) {\n    var active = event.active,\n        over = event.over;\n\n    console.log('active', active);\n    console.log('over', over);\n    if (active.id !== over.id) {\n      var oldIndex = f_items.findIndex(function (i) {\n        return i._id === active.id;\n      });\n      var newIndex = f_items.findIndex(function (i) {\n        return i._id === over.id;\n      });\n      console.log('oldItems', f_items);\n      var newItems = arrayMove(f_items, oldIndex, newIndex);\n      console.log('newItems', newItems);\n      setItems(newItems);\n      onReorder(newItems);\n    }\n  }\n  useEffect(function () {\n    console.log('props', props);\n    console.log('items', tags);\n    setItems(tags);\n  }, [tags]);\n  var getActiveItem = function getActiveItem(id) {\n    if (!id) return null;\n    var item = items.find(function (i) {\n      return i._id === id;\n    });\n    if (item) {\n      return React.createElement(Item, {\n        id: id,\n        label: item.label,\n        onDelete: onTagRemove,\n        readOnly: readOnly,\n        disabled: disabled,\n        labelRemove: texts.labelRemove,\n        tagDisabled: item.disabled,\n        tagPrefix: tagPrefix,\n        tagSuffix: tagSuffix,\n        tagClassName: tagClassName\n      });\n    }\n    return null;\n  };\n  return React.createElement(\n    'ul',\n    { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },\n    React.createElement(\n      DndContext,\n      {\n        sensors: sensors,\n        collisionDetection: closestCenter,\n        onDragStart: handleDragStart,\n        onDragEnd: function onDragEnd(e) {\n          return handleDragEnd(e, items);\n        }\n      },\n      React.createElement(\n        SortableContext,\n        { items: items, strategy: verticalListSortingStrategy },\n        items.map(function (item, index) {\n          return React.createElement(SortableItemV2, _extends({\n            key: index,\n            id: item._id,\n            onDelete: onTagRemove,\n            readOnly: readOnly,\n            disabled: disabled,\n            labelRemove: texts.labelRemove,\n            tagDisabled: item.disabled\n          }, item, {\n            tagPrefix: tagPrefix,\n            tagSuffix: tagSuffix,\n            tagClassName: tagClassName\n          }));\n        }),\n        React.createElement(\n          'li',\n          { className: 'tag-item' },\n          lastItem,\n          React.createElement(\n            'span',\n            { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },\n            '\\u2304'\n          )\n        )\n      ),\n      React.createElement(\n        DragOverlay,\n        null,\n        getActiveItem(activeId)\n      )\n    )\n  );\n};\n\nexport default Tags;"
         },
         {
           "id": null,
@@ -14144,7 +14244,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony side effect evaluation",
               "userRequest": "../tag",
-              "loc": "6:0-25"
+              "loc": "8:0-25"
             },
             {
               "moduleId": null,
@@ -14171,7 +14271,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "../tag",
-              "loc": "125:26-29"
+              "loc": "102:26-29"
             },
             {
               "moduleId": null,
@@ -14246,7 +14346,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony side effect evaluation",
               "userRequest": "@dnd-kit/utilities",
-              "loc": "12:0-41"
+              "loc": "14:0-41"
             },
             {
               "moduleId": null,
@@ -14264,7 +14364,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/utilities",
-              "loc": "110:15-18"
+              "loc": "137:15-18"
             },
             {
               "moduleId": null,
@@ -15098,10 +15198,6 @@
           "usedExports": [
             "CSS",
             "useUniqueId",
-            "useIsomorphicLayoutEffect",
-            "useCombinedRefs",
-            "isKeyboardEvent",
-            "subtract",
             "getEventCoordinates",
             "getWindow",
             "isDocument",
@@ -15112,13 +15208,17 @@
             "isNode",
             "getOwnerDocument",
             "add",
+            "isKeyboardEvent",
+            "subtract",
             "useInterval",
             "usePrevious",
             "useLazyMemo",
             "useLatestValue",
             "useEvent",
+            "useIsomorphicLayoutEffect",
             "useNodeRef",
-            "findFirstFocusableNode"
+            "findFirstFocusableNode",
+            "useCombinedRefs"
           ],
           "providedExports": [
             "CSS",
@@ -15199,7 +15299,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony side effect evaluation",
               "userRequest": "@dnd-kit/core",
-              "loc": "10:0-112"
+              "loc": "12:0-125"
             },
             {
               "moduleId": null,
@@ -15208,7 +15308,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "199:16-26"
+              "loc": "225:16-26"
             },
             {
               "moduleId": null,
@@ -15217,7 +15317,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "199:27-36"
+              "loc": "225:27-36"
             },
             {
               "moduleId": null,
@@ -15226,7 +15326,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "199:37-50"
+              "loc": "225:37-50"
             },
             {
               "moduleId": null,
@@ -15235,7 +15335,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "199:53-62"
+              "loc": "225:53-62"
             },
             {
               "moduleId": null,
@@ -15244,7 +15344,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "199:63-77"
+              "loc": "225:63-77"
             },
             {
               "moduleId": null,
@@ -15253,7 +15353,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "236:6-16"
+              "loc": "290:6-16"
             },
             {
               "moduleId": null,
@@ -15262,7 +15362,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "237:46-59"
+              "loc": "293:28-41"
             },
             {
               "moduleId": null,
@@ -15272,6 +15372,15 @@
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
               "loc": "305:6-19"
+            },
+            {
+              "moduleId": null,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/tags/index.js",
+              "module": "./src/tags/index.js",
+              "moduleName": "./src/tags/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "@dnd-kit/core",
+              "loc": "329:8-19"
             },
             {
               "moduleId": null,
@@ -15407,6 +15516,7 @@
             "KeyboardSensor",
             "DndContext",
             "closestCenter",
+            "DragOverlay",
             "useDndContext",
             "getClientRect",
             "useDroppable",
@@ -15491,7 +15601,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony side effect evaluation",
               "userRequest": "@dnd-kit/sortable",
-              "loc": "11:0-134"
+              "loc": "13:0-134"
             },
             {
               "moduleId": null,
@@ -15500,7 +15610,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/sortable",
-              "loc": "90:21-32"
+              "loc": "117:21-32"
             },
             {
               "moduleId": null,
@@ -15509,7 +15619,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/sortable",
-              "loc": "200:22-49"
+              "loc": "226:22-49"
             },
             {
               "moduleId": null,
@@ -15518,7 +15628,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/sortable",
-              "loc": "221:21-30"
+              "loc": "254:21-30"
             },
             {
               "moduleId": null,
@@ -15527,7 +15637,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/sortable",
-              "loc": "241:8-23"
+              "loc": "300:8-23"
             },
             {
               "moduleId": null,
@@ -15536,7 +15646,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/sortable",
-              "loc": "242:34-61"
+              "loc": "301:34-61"
             }
           ],
           "usedExports": [
