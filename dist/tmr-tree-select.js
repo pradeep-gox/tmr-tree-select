@@ -11736,7 +11736,7 @@
             a = t.setNodeRef,
             o = t.transform,
             l = t.transition,
-            i = e._id,
+            i = e.id,
             u = e.label,
             c = e.tagClassName,
             d = e.dataset,
@@ -11752,7 +11752,7 @@
           return s.a.createElement(
             bn,
             mn({ ref: a, style: w }, n, r, {
-              id: '' + i,
+              id: i,
               label: u,
               dataset: d,
               tagLabel: f,
@@ -11836,6 +11836,7 @@
                     yn,
                     mn(
                       {
+                        id: e._id,
                         key: t,
                         onDelete: n,
                         readOnly: i,

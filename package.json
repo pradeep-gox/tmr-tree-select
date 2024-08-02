@@ -1,6 +1,6 @@
 {
   "name": "tmr-tree-select",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Lightweight, customizable and fast Dropdown Tree Select component for React",
   "keywords": [
     "react",

@@ -120,7 +120,7 @@ const Item = forwardRef(({ id, ...props }, ref) => {
 const SortableItemV2 = props => {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: props.id })
   const {
-    _id,
+    id,
     label,
     tagClassName,
     dataset,
@@ -144,7 +144,7 @@ const SortableItemV2 = props => {
       style={style}
       {...attributes}
       {...listeners}
-      id={`${_id}`}
+      id={id}
       label={label}
       dataset={dataset}
       tagLabel={tagLabel}
@@ -280,6 +280,7 @@ const Tags = props => {
         <SortableContext items={items} strategy={rectSwappingStrategy}>
           {items.map((item, index) => (
             <SortableItemV2
+              id={item._id}
               key={index}
               onDelete={onTagRemove}
               readOnly={readOnly}
