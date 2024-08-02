@@ -3,7 +3,15 @@ import Tag from '../tag'
 import { getDataset } from '../utils'
 import './index.css'
 // import { SortableContainer, SortableElement } from 'react-sortable-hoc'
-import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core'
+import {
+  DndContext,
+  closestCenter,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+  DragOverlay,
+} from '@dnd-kit/core'
 import {
   arrayMove,
   SortableContext,
@@ -88,6 +96,26 @@ import { CSS } from '@dnd-kit/utilities'
 //   }
 // )
 
+const Item = forwardRef(({ id, ...props }, ref) => {
+  return (
+    <div {...props} ref={ref}>
+      <li className={['tag-item', props.tagClassName].filter(Boolean).join(' ')} {...getDataset(props.dataset)}>
+        {' '}
+        <Tag
+          label={props.tagLabel || props.label}
+          tagPrefix={props.tagPrefix}
+          tagSuffix={props.tagSuffix}
+          id={`${props.id}`}
+          onDelete={props.onDelete}
+          readOnly={props.readOnly}
+          disabled={props.disabled || props.tagDisabled}
+          labelRemove={props.labelRemove}
+        />
+      </li>
+    </div>
+  )
+})
+
 const SortableItemV2 = props => {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: props.id })
   const {
@@ -109,26 +137,24 @@ const SortableItemV2 = props => {
   }
 
   return (
-    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <li
-        className={['tag-item', tagClassName].filter(Boolean).join(' ')}
-        // key={props.id}
-        // index={props.id}
-        {...getDataset(dataset)}
-      >
-        {' '}
-        <Tag
-          label={tagLabel || label}
-          tagPrefix={tagPrefix}
-          tagSuffix={tagSuffix}
-          id={`${props.id}`}
-          onDelete={onDelete}
-          readOnly={readOnly}
-          disabled={disabled || tagDisabled}
-          labelRemove={labelRemove}
-        />
-      </li>
-    </div>
+    <Item
+      ref={setNodeRef}
+      style={style}
+      {...attributes}
+      {...listeners}
+      id={`${props.id}`}
+      label={label}
+      dataset={dataset}
+      tagLabel={tagLabel}
+      onDelete={onDelete}
+      readOnly={readOnly}
+      disabled={disabled}
+      labelRemove={labelRemove}
+      tagDisabled={tagDisabled}
+      tagPrefix={tagPrefix}
+      tagSuffix={tagSuffix}
+      tagClassName={tagClassName}
+    />
   )
 }
 
@@ -187,6 +213,7 @@ const Tags = props => {
     tagSuffix,
     tagClassName,
   } = props
+  const [activeId, setActiveId] = useState(null)
   const [items, setItems] = useState(tags)
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -195,6 +222,12 @@ const Tags = props => {
     })
   )
   const lastItem = children || <span className="placeholder">{texts.placeholder || 'Choose...'}</span>
+
+  function handleDragStart(event) {
+    const { active } = event
+    console.log('active', active)
+    setActiveId(active.id)
+  }
   function handleDragEnd(event, f_items) {
     const { active, over } = event
     console.log('active', active)
@@ -214,9 +247,35 @@ const Tags = props => {
     console.log('items', tags)
     setItems(tags)
   }, [tags])
+  const getActiveItem = id => {
+    if (!id) return null
+    const item = items.find(i => i._id === id)
+    if (item) {
+      return (
+        <Item
+          id={id}
+          label={item.label}
+          onDelete={onTagRemove}
+          readOnly={readOnly}
+          disabled={disabled}
+          labelRemove={texts.labelRemove}
+          tagDisabled={item.disabled}
+          tagPrefix={tagPrefix}
+          tagSuffix={tagSuffix}
+          tagClassName={tagClassName}
+        />
+      )
+    }
+    return null
+  }
   return (
     <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={e => handleDragEnd(e, items)}>
+      <DndContext
+        sensors={sensors}
+        collisionDetection={closestCenter}
+        onDragStart={handleDragStart}
+        onDragEnd={e => handleDragEnd(e, items)}
+      >
         <SortableContext items={items} strategy={verticalListSortingStrategy}>
           {items.map((item, index) => (
             <SortableItemV2
@@ -240,6 +299,7 @@ const Tags = props => {
             </span>
           </li>
         </SortableContext>
+        <DragOverlay>{getActiveItem(activeId)}</DragOverlay>
       </DndContext>
     </ul>
   )
