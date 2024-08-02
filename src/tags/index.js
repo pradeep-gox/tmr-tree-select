@@ -89,9 +89,8 @@ import { CSS } from '@dnd-kit/utilities'
 // )
 
 const SortableItemV2 = props => {
-  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: props._id })
+  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: props.id })
   const {
-    _id,
     label,
     tagClassName,
     dataset,
@@ -113,8 +112,8 @@ const SortableItemV2 = props => {
     <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
       <li
         className={['tag-item', tagClassName].filter(Boolean).join(' ')}
-        key={_id}
-        index={_id}
+        // key={props.id}
+        // index={props.id}
         {...getDataset(dataset)}
       >
         {' '}
@@ -122,7 +121,7 @@ const SortableItemV2 = props => {
           label={tagLabel || label}
           tagPrefix={tagPrefix}
           tagSuffix={tagSuffix}
-          id={`${_id}`}
+          id={`${props.id}`}
           onDelete={onDelete}
           readOnly={readOnly}
           disabled={disabled || tagDisabled}
@@ -217,28 +216,29 @@ const TagsV2 = props => {
   return (
     <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
       <SortableContext items={items} strategy={verticalListSortingStrategy}>
-        <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-          {items.map((item, index) => (
-            <SortableItemV2
-              key={index}
-              onDelete={onTagRemove}
-              readOnly={readOnly}
-              disabled={disabled}
-              labelRemove={texts.labelRemove}
-              tagDisabled={item.disabled}
-              {...item}
-              tagPrefix={tagPrefix}
-              tagSuffix={tagSuffix}
-              tagClassName={tagClassName}
-            />
-          ))}
-          <li className="tag-item">
+        {/* <ul className="tag-list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}> */}
+        {items.map((item, index) => (
+          <SortableItemV2
+            key={index}
+            id={item._id}
+            onDelete={onTagRemove}
+            readOnly={readOnly}
+            disabled={disabled}
+            labelRemove={texts.labelRemove}
+            tagDisabled={item.disabled}
+            {...item}
+            tagPrefix={tagPrefix}
+            tagSuffix={tagSuffix}
+            tagClassName={tagClassName}
+          />
+        ))}
+        {/* <li className="tag-item">
             {lastItem}
             <span className="dropdown-icon" style={{ fontSize: '20px', color: '#bfbfbf' }}>
               &#x2304;
             </span>
           </li>
-        </ul>
+        </ul> */}
       </SortableContext>
     </DndContext>
   )
