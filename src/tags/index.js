@@ -17,6 +17,7 @@ import {
   SortableContext,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
+  rectSwappingStrategy,
   useSortable,
 } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
@@ -105,7 +106,7 @@ const Item = forwardRef(({ id, ...props }, ref) => {
           label={props.tagLabel || props.label}
           tagPrefix={props.tagPrefix}
           tagSuffix={props.tagSuffix}
-          id={`${props.id}`}
+          id={id}
           onDelete={props.onDelete}
           readOnly={props.readOnly}
           disabled={props.disabled || props.tagDisabled}
@@ -119,6 +120,7 @@ const Item = forwardRef(({ id, ...props }, ref) => {
 const SortableItemV2 = props => {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: props.id })
   const {
+    _id,
     label,
     tagClassName,
     dataset,
@@ -142,7 +144,7 @@ const SortableItemV2 = props => {
       style={style}
       {...attributes}
       {...listeners}
-      id={`${props.id}`}
+      id={`${_id}`}
       label={label}
       dataset={dataset}
       tagLabel={tagLabel}
@@ -254,7 +256,6 @@ const Tags = props => {
       return (
         <Item
           id={id}
-          label={item.label}
           onDelete={onTagRemove}
           readOnly={readOnly}
           disabled={disabled}
@@ -276,11 +277,10 @@ const Tags = props => {
         onDragStart={handleDragStart}
         onDragEnd={e => handleDragEnd(e, items)}
       >
-        <SortableContext items={items} strategy={verticalListSortingStrategy}>
+        <SortableContext items={items} strategy={rectSwappingStrategy}>
           {items.map((item, index) => (
             <SortableItemV2
               key={index}
-              id={item._id}
               onDelete={onTagRemove}
               readOnly={readOnly}
               disabled={disabled}

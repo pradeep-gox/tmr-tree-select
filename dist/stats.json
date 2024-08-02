@@ -1,14 +1,14 @@
 {
   "errors": [],
   "warnings": [
-    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  tmr-tree-select.js (260 KiB)",
+    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  tmr-tree-select.js (259 KiB)",
     "entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.\nEntrypoints:\n  tmr-tree-select (262 KiB)\n      styles.css\n      tmr-tree-select.js\n",
     "webpack performance recommendations: \nYou can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.\nFor more info visit https://webpack.js.org/guides/code-splitting/"
   ],
   "version": "4.47.0",
-  "hash": "4f16eb8b7ad95fcf9df1",
-  "time": 5157,
-  "builtAt": 1722636582446,
+  "hash": "baf14e955519be6faf30",
+  "time": 5000,
+  "builtAt": 1722637300981,
   "publicPath": "",
   "outputPath": "/home/prady/Repos/tmr-tree-select/dist",
   "assetsByChunkName": {
@@ -43,7 +43,7 @@
     },
     {
       "name": "tmr-tree-select.js",
-      "size": 265974,
+      "size": 265648,
       "chunks": [0],
       "chunkNames": ["tmr-tree-select"],
       "info": {},
@@ -52,7 +52,7 @@
     },
     {
       "name": "tmr-tree-select.js.map",
-      "size": 805423,
+      "size": 804556,
       "chunks": [0],
       "chunkNames": ["tmr-tree-select"],
       "info": {
@@ -86,10 +86,10 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 482494,
+      "size": 482510,
       "names": ["tmr-tree-select"],
       "files": ["styles.css", "tmr-tree-select.js", "styles.css.map", "tmr-tree-select.js.map"],
-      "hash": "5625cf8b64cdc2f8f326",
+      "hash": "331d892dd76a925c66d5",
       "siblings": [],
       "parents": [],
       "children": [],
@@ -551,7 +551,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "73:13-18"
+              "loc": "74:13-18"
             },
             {
               "moduleId": 18,
@@ -569,7 +569,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "79:8-13"
+              "loc": "80:8-13"
             },
             {
               "moduleId": 18,
@@ -686,7 +686,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "99:2-15"
+              "loc": "99:2-11"
             },
             {
               "moduleId": 18,
@@ -695,7 +695,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "99:2-11"
+              "loc": "100:2-15"
             },
             {
               "moduleId": 18,
@@ -830,7 +830,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "141:9-14"
+              "loc": "142:9-14"
             },
             {
               "moduleId": 18,
@@ -965,7 +965,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "215:18-26"
+              "loc": "216:18-26"
             },
             {
               "moduleId": 18,
@@ -974,7 +974,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "220:19-27"
+              "loc": "221:19-27"
             },
             {
               "moduleId": 18,
@@ -983,7 +983,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "228:29-34"
+              "loc": "229:29-34"
             },
             {
               "moduleId": 18,
@@ -992,7 +992,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "260:2-11"
+              "loc": "261:2-11"
             },
             {
               "moduleId": 18,
@@ -1001,7 +1001,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "271:13-18"
+              "loc": "272:13-18"
             },
             {
               "moduleId": 18,
@@ -1073,7 +1073,16 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "317:8-13"
+              "loc": "316:8-13"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "320:10-15"
             },
             {
               "moduleId": 18,
@@ -1091,15 +1100,6 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "321:10-15"
-            },
-            {
-              "moduleId": 18,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-              "module": "./src/index.js + 31 modules",
-              "moduleName": "./src/index.js + 31 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
               "loc": "324:23-30"
             },
             {
@@ -1109,7 +1109,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "328:6-11"
+              "loc": "327:6-11"
             },
             {
               "moduleId": 18,
@@ -2816,7 +2816,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "102:6-15"
+              "loc": "103:6-15"
             },
             {
               "moduleId": 18,
@@ -2825,16 +2825,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "103:9-18"
-            },
-            {
-              "moduleId": 18,
-              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-              "module": "./src/index.js + 31 modules",
-              "moduleName": "./src/index.js + 31 modules",
-              "type": "harmony import specifier",
-              "userRequest": "prop-types",
-              "loc": "104:12-21"
+              "loc": "104:9-18"
             },
             {
               "moduleId": 18,
@@ -2888,7 +2879,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "107:15-24"
+              "loc": "107:12-21"
             },
             {
               "moduleId": 18,
@@ -2906,7 +2897,7 @@
               "moduleName": "./src/index.js + 31 modules",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "108:13-22"
+              "loc": "108:15-24"
             },
             {
               "moduleId": 18,
@@ -2925,6 +2916,15 @@
               "type": "harmony import specifier",
               "userRequest": "prop-types",
               "loc": "109:15-24"
+            },
+            {
+              "moduleId": 18,
+              "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+              "module": "./src/index.js + 31 modules",
+              "moduleName": "./src/index.js + 31 modules",
+              "type": "harmony import specifier",
+              "userRequest": "prop-types",
+              "loc": "110:13-22"
             },
             {
               "moduleId": 18,
@@ -4694,7 +4694,7 @@
           "name": "./src/index.js + 31 modules",
           "index": 0,
           "index2": 53,
-          "size": 267624,
+          "size": 267640,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -5171,7 +5171,7 @@
               "name": "./src/tags/index.js",
               "index": 15,
               "index2": 31,
-              "size": 10625,
+              "size": 10594,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -5215,7 +5215,7 @@
               "providedExports": ["default"],
               "optimizationBailout": [],
               "depth": 1,
-              "source": "var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"]) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); } }; }();\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nfunction _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }\n\nimport React, { useEffect, useState, forwardRef } from 'react';\nimport Tag from '../tag';\nimport { getDataset } from '../utils';\nimport './index.css';\n// import { SortableContainer, SortableElement } from 'react-sortable-hoc'\nimport { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, DragOverlay } from '@dnd-kit/core';\nimport { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';\nimport { CSS } from '@dnd-kit/utilities';\n// const SortableItem = SortableElement(\n//   forwardRef(\n//     (\n//       {\n//         _id,\n//         label,\n//         tagClassName,\n//         dataset,\n//         tagLabel,\n//         description,\n//         onDelete,\n//         readOnly,\n//         disabled,\n//         labelRemove,\n//         tagDisabled,\n//         tagPrefix,\n//         tagSuffix,\n//       },\n//       ref\n//     ) => {\n//       return (\n//         <div ref={ref}>\n//           <li\n//             className={['tag-item', tagClassName].filter(Boolean).join(' ')}\n//             key={_id}\n//             index={_id}\n//             {...getDataset(dataset)}\n//           >\n//             {' '}\n//             <Tag\n//               label={tagLabel || label}\n//               tagPrefix={tagPrefix}\n//               tagSuffix={tagSuffix}\n//               id={`${_id}`}\n//               onDelete={onDelete}\n//               readOnly={readOnly}\n//               disabled={disabled || tagDisabled}\n//               labelRemove={labelRemove}\n//             />\n//           </li>\n//         </div>\n//       )\n//     }\n//   ),\n//   { withRef: true }\n// )\n// const SortableList = SortableContainer(\n//   ({ tags, onDelete, readOnly, disabled, labelRemove, lastItem, tagPrefix, tagSuffix, tagClassName }) => {\n//     return (\n//       <ul className=\"tag-list\" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>\n//         {tags.map((tags, index) => (\n//           <SortableItem\n//             key={index}\n//             index={index}\n//             onDelete={onDelete}\n//             readOnly={readOnly}\n//             disabled={disabled}\n//             labelRemove={labelRemove}\n//             tagDisabled={tags.disabled}\n//             {...tags}\n//             tagPrefix={tagPrefix}\n//             tagSuffix={tagSuffix}\n//             tagClassName={tagClassName}\n//           />\n//         ))}\n//         <li className=\"tag-item\">\n//           {lastItem}\n//           <span className=\"dropdown-icon\" style={{ fontSize: '20px', color: '#bfbfbf' }}>\n//             &#x2304;\n//           </span>\n//         </li>\n//       </ul>\n//     )\n//   }\n// )\n\nvar Item = forwardRef(function (_ref, ref) {\n  var id = _ref.id,\n      props = _objectWithoutProperties(_ref, ['id']);\n\n  return React.createElement(\n    'div',\n    _extends({}, props, { ref: ref }),\n    React.createElement(\n      'li',\n      _extends({ className: ['tag-item', props.tagClassName].filter(Boolean).join(' ') }, getDataset(props.dataset)),\n      ' ',\n      React.createElement(Tag, {\n        label: props.tagLabel || props.label,\n        tagPrefix: props.tagPrefix,\n        tagSuffix: props.tagSuffix,\n        id: '' + props.id,\n        onDelete: props.onDelete,\n        readOnly: props.readOnly,\n        disabled: props.disabled || props.tagDisabled,\n        labelRemove: props.labelRemove\n      })\n    )\n  );\n});\n\nvar SortableItemV2 = function SortableItemV2(props) {\n  var _useSortable = useSortable({ id: props.id }),\n      attributes = _useSortable.attributes,\n      listeners = _useSortable.listeners,\n      setNodeRef = _useSortable.setNodeRef,\n      transform = _useSortable.transform,\n      transition = _useSortable.transition;\n\n  var label = props.label,\n      tagClassName = props.tagClassName,\n      dataset = props.dataset,\n      tagLabel = props.tagLabel,\n      onDelete = props.onDelete,\n      readOnly = props.readOnly,\n      disabled = props.disabled,\n      labelRemove = props.labelRemove,\n      tagDisabled = props.tagDisabled,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix;\n\n  var style = {\n    transform: CSS.Transform.toString(transform),\n    transition: transition\n  };\n\n  return React.createElement(Item, _extends({\n    ref: setNodeRef,\n    style: style\n  }, attributes, listeners, {\n    id: '' + props.id,\n    label: label,\n    dataset: dataset,\n    tagLabel: tagLabel,\n    onDelete: onDelete,\n    readOnly: readOnly,\n    disabled: disabled,\n    labelRemove: labelRemove,\n    tagDisabled: tagDisabled,\n    tagPrefix: tagPrefix,\n    tagSuffix: tagSuffix,\n    tagClassName: tagClassName\n  }));\n};\n\n// const Tags = props => {\n//   const {\n//     tags,\n//     onTagRemove,\n//     onReorder,\n//     texts = {},\n//     disabled,\n//     readOnly,\n//     children,\n//     tagPrefix,\n//     tagSuffix,\n//     tagClassName,\n//   } = props\n\n//   const [items, setItems] = useState(tags)\n//   useEffect(() => {\n//     setItems(tags)\n//   }, [tags])\n//   const onSortEnd = ({ oldIndex, newIndex }) => {\n//     let i = arrayMove(items, oldIndex, newIndex)\n//     setItems(i)\n//     onReorder(i)\n//   }\n\n//   const lastItem = children || <span className=\"placeholder\">{texts.placeholder || 'Choose...'}</span>\n//   return (\n//     <SortableList\n//       axis=\"xy\"\n//       lastItem={lastItem}\n//       onSortEnd={onSortEnd}\n//       tags={items}\n//       onDelete={onTagRemove}\n//       readOnly={readOnly}\n//       disabled={disabled}\n//       labelRemove={texts.labelRemove}\n//       tagPrefix={tagPrefix}\n//       tagSuffix={tagSuffix}\n//       tagClassName={tagClassName}\n//     />\n//   )\n// }\n\nvar Tags = function Tags(props) {\n  var tags = props.tags,\n      onTagRemove = props.onTagRemove,\n      onReorder = props.onReorder,\n      _props$texts = props.texts,\n      texts = _props$texts === undefined ? {} : _props$texts,\n      disabled = props.disabled,\n      readOnly = props.readOnly,\n      children = props.children,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix,\n      tagClassName = props.tagClassName;\n\n  var _useState = useState(null),\n      _useState2 = _slicedToArray(_useState, 2),\n      activeId = _useState2[0],\n      setActiveId = _useState2[1];\n\n  var _useState3 = useState(tags),\n      _useState4 = _slicedToArray(_useState3, 2),\n      items = _useState4[0],\n      setItems = _useState4[1];\n\n  var sensors = useSensors(useSensor(PointerSensor), useSensor(KeyboardSensor, {\n    coordinateGetter: sortableKeyboardCoordinates\n  }));\n  var lastItem = children || React.createElement(\n    'span',\n    { className: 'placeholder' },\n    texts.placeholder || 'Choose...'\n  );\n\n  function handleDragStart(event) {\n    var active = event.active;\n\n    console.log('active', active);\n    setActiveId(active.id);\n  }\n  function handleDragEnd(event, f_items) {\n    var active = event.active,\n        over = event.over;\n\n    console.log('active', active);\n    console.log('over', over);\n    if (active.id !== over.id) {\n      var oldIndex = f_items.findIndex(function (i) {\n        return i._id === active.id;\n      });\n      var newIndex = f_items.findIndex(function (i) {\n        return i._id === over.id;\n      });\n      console.log('oldItems', f_items);\n      var newItems = arrayMove(f_items, oldIndex, newIndex);\n      console.log('newItems', newItems);\n      setItems(newItems);\n      onReorder(newItems);\n    }\n  }\n  useEffect(function () {\n    console.log('props', props);\n    console.log('items', tags);\n    setItems(tags);\n  }, [tags]);\n  var getActiveItem = function getActiveItem(id) {\n    if (!id) return null;\n    var item = items.find(function (i) {\n      return i._id === id;\n    });\n    if (item) {\n      return React.createElement(Item, {\n        id: id,\n        label: item.label,\n        onDelete: onTagRemove,\n        readOnly: readOnly,\n        disabled: disabled,\n        labelRemove: texts.labelRemove,\n        tagDisabled: item.disabled,\n        tagPrefix: tagPrefix,\n        tagSuffix: tagSuffix,\n        tagClassName: tagClassName\n      });\n    }\n    return null;\n  };\n  return React.createElement(\n    'ul',\n    { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },\n    React.createElement(\n      DndContext,\n      {\n        sensors: sensors,\n        collisionDetection: closestCenter,\n        onDragStart: handleDragStart,\n        onDragEnd: function onDragEnd(e) {\n          return handleDragEnd(e, items);\n        }\n      },\n      React.createElement(\n        SortableContext,\n        { items: items, strategy: verticalListSortingStrategy },\n        items.map(function (item, index) {\n          return React.createElement(SortableItemV2, _extends({\n            key: index,\n            id: item._id,\n            onDelete: onTagRemove,\n            readOnly: readOnly,\n            disabled: disabled,\n            labelRemove: texts.labelRemove,\n            tagDisabled: item.disabled\n          }, item, {\n            tagPrefix: tagPrefix,\n            tagSuffix: tagSuffix,\n            tagClassName: tagClassName\n          }));\n        }),\n        React.createElement(\n          'li',\n          { className: 'tag-item' },\n          lastItem,\n          React.createElement(\n            'span',\n            { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },\n            '\\u2304'\n          )\n        )\n      ),\n      React.createElement(\n        DragOverlay,\n        null,\n        getActiveItem(activeId)\n      )\n    )\n  );\n};\n\nexport default Tags;"
+              "source": "var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"]) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); } }; }();\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nfunction _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }\n\nimport React, { useEffect, useState, forwardRef } from 'react';\nimport Tag from '../tag';\nimport { getDataset } from '../utils';\nimport './index.css';\n// import { SortableContainer, SortableElement } from 'react-sortable-hoc'\nimport { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, DragOverlay } from '@dnd-kit/core';\nimport { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, rectSwappingStrategy, useSortable } from '@dnd-kit/sortable';\nimport { CSS } from '@dnd-kit/utilities';\n// const SortableItem = SortableElement(\n//   forwardRef(\n//     (\n//       {\n//         _id,\n//         label,\n//         tagClassName,\n//         dataset,\n//         tagLabel,\n//         description,\n//         onDelete,\n//         readOnly,\n//         disabled,\n//         labelRemove,\n//         tagDisabled,\n//         tagPrefix,\n//         tagSuffix,\n//       },\n//       ref\n//     ) => {\n//       return (\n//         <div ref={ref}>\n//           <li\n//             className={['tag-item', tagClassName].filter(Boolean).join(' ')}\n//             key={_id}\n//             index={_id}\n//             {...getDataset(dataset)}\n//           >\n//             {' '}\n//             <Tag\n//               label={tagLabel || label}\n//               tagPrefix={tagPrefix}\n//               tagSuffix={tagSuffix}\n//               id={`${_id}`}\n//               onDelete={onDelete}\n//               readOnly={readOnly}\n//               disabled={disabled || tagDisabled}\n//               labelRemove={labelRemove}\n//             />\n//           </li>\n//         </div>\n//       )\n//     }\n//   ),\n//   { withRef: true }\n// )\n// const SortableList = SortableContainer(\n//   ({ tags, onDelete, readOnly, disabled, labelRemove, lastItem, tagPrefix, tagSuffix, tagClassName }) => {\n//     return (\n//       <ul className=\"tag-list\" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>\n//         {tags.map((tags, index) => (\n//           <SortableItem\n//             key={index}\n//             index={index}\n//             onDelete={onDelete}\n//             readOnly={readOnly}\n//             disabled={disabled}\n//             labelRemove={labelRemove}\n//             tagDisabled={tags.disabled}\n//             {...tags}\n//             tagPrefix={tagPrefix}\n//             tagSuffix={tagSuffix}\n//             tagClassName={tagClassName}\n//           />\n//         ))}\n//         <li className=\"tag-item\">\n//           {lastItem}\n//           <span className=\"dropdown-icon\" style={{ fontSize: '20px', color: '#bfbfbf' }}>\n//             &#x2304;\n//           </span>\n//         </li>\n//       </ul>\n//     )\n//   }\n// )\n\nvar Item = forwardRef(function (_ref, ref) {\n  var id = _ref.id,\n      props = _objectWithoutProperties(_ref, ['id']);\n\n  return React.createElement(\n    'div',\n    _extends({}, props, { ref: ref }),\n    React.createElement(\n      'li',\n      _extends({ className: ['tag-item', props.tagClassName].filter(Boolean).join(' ') }, getDataset(props.dataset)),\n      ' ',\n      React.createElement(Tag, {\n        label: props.tagLabel || props.label,\n        tagPrefix: props.tagPrefix,\n        tagSuffix: props.tagSuffix,\n        id: id,\n        onDelete: props.onDelete,\n        readOnly: props.readOnly,\n        disabled: props.disabled || props.tagDisabled,\n        labelRemove: props.labelRemove\n      })\n    )\n  );\n});\n\nvar SortableItemV2 = function SortableItemV2(props) {\n  var _useSortable = useSortable({ id: props.id }),\n      attributes = _useSortable.attributes,\n      listeners = _useSortable.listeners,\n      setNodeRef = _useSortable.setNodeRef,\n      transform = _useSortable.transform,\n      transition = _useSortable.transition;\n\n  var _id = props._id,\n      label = props.label,\n      tagClassName = props.tagClassName,\n      dataset = props.dataset,\n      tagLabel = props.tagLabel,\n      onDelete = props.onDelete,\n      readOnly = props.readOnly,\n      disabled = props.disabled,\n      labelRemove = props.labelRemove,\n      tagDisabled = props.tagDisabled,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix;\n\n  var style = {\n    transform: CSS.Transform.toString(transform),\n    transition: transition\n  };\n\n  return React.createElement(Item, _extends({\n    ref: setNodeRef,\n    style: style\n  }, attributes, listeners, {\n    id: '' + _id,\n    label: label,\n    dataset: dataset,\n    tagLabel: tagLabel,\n    onDelete: onDelete,\n    readOnly: readOnly,\n    disabled: disabled,\n    labelRemove: labelRemove,\n    tagDisabled: tagDisabled,\n    tagPrefix: tagPrefix,\n    tagSuffix: tagSuffix,\n    tagClassName: tagClassName\n  }));\n};\n\n// const Tags = props => {\n//   const {\n//     tags,\n//     onTagRemove,\n//     onReorder,\n//     texts = {},\n//     disabled,\n//     readOnly,\n//     children,\n//     tagPrefix,\n//     tagSuffix,\n//     tagClassName,\n//   } = props\n\n//   const [items, setItems] = useState(tags)\n//   useEffect(() => {\n//     setItems(tags)\n//   }, [tags])\n//   const onSortEnd = ({ oldIndex, newIndex }) => {\n//     let i = arrayMove(items, oldIndex, newIndex)\n//     setItems(i)\n//     onReorder(i)\n//   }\n\n//   const lastItem = children || <span className=\"placeholder\">{texts.placeholder || 'Choose...'}</span>\n//   return (\n//     <SortableList\n//       axis=\"xy\"\n//       lastItem={lastItem}\n//       onSortEnd={onSortEnd}\n//       tags={items}\n//       onDelete={onTagRemove}\n//       readOnly={readOnly}\n//       disabled={disabled}\n//       labelRemove={texts.labelRemove}\n//       tagPrefix={tagPrefix}\n//       tagSuffix={tagSuffix}\n//       tagClassName={tagClassName}\n//     />\n//   )\n// }\n\nvar Tags = function Tags(props) {\n  var tags = props.tags,\n      onTagRemove = props.onTagRemove,\n      onReorder = props.onReorder,\n      _props$texts = props.texts,\n      texts = _props$texts === undefined ? {} : _props$texts,\n      disabled = props.disabled,\n      readOnly = props.readOnly,\n      children = props.children,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix,\n      tagClassName = props.tagClassName;\n\n  var _useState = useState(null),\n      _useState2 = _slicedToArray(_useState, 2),\n      activeId = _useState2[0],\n      setActiveId = _useState2[1];\n\n  var _useState3 = useState(tags),\n      _useState4 = _slicedToArray(_useState3, 2),\n      items = _useState4[0],\n      setItems = _useState4[1];\n\n  var sensors = useSensors(useSensor(PointerSensor), useSensor(KeyboardSensor, {\n    coordinateGetter: sortableKeyboardCoordinates\n  }));\n  var lastItem = children || React.createElement(\n    'span',\n    { className: 'placeholder' },\n    texts.placeholder || 'Choose...'\n  );\n\n  function handleDragStart(event) {\n    var active = event.active;\n\n    console.log('active', active);\n    setActiveId(active.id);\n  }\n  function handleDragEnd(event, f_items) {\n    var active = event.active,\n        over = event.over;\n\n    console.log('active', active);\n    console.log('over', over);\n    if (active.id !== over.id) {\n      var oldIndex = f_items.findIndex(function (i) {\n        return i._id === active.id;\n      });\n      var newIndex = f_items.findIndex(function (i) {\n        return i._id === over.id;\n      });\n      console.log('oldItems', f_items);\n      var newItems = arrayMove(f_items, oldIndex, newIndex);\n      console.log('newItems', newItems);\n      setItems(newItems);\n      onReorder(newItems);\n    }\n  }\n  useEffect(function () {\n    console.log('props', props);\n    console.log('items', tags);\n    setItems(tags);\n  }, [tags]);\n  var getActiveItem = function getActiveItem(id) {\n    if (!id) return null;\n    var item = items.find(function (i) {\n      return i._id === id;\n    });\n    if (item) {\n      return React.createElement(Item, {\n        id: id,\n        onDelete: onTagRemove,\n        readOnly: readOnly,\n        disabled: disabled,\n        labelRemove: texts.labelRemove,\n        tagDisabled: item.disabled,\n        tagPrefix: tagPrefix,\n        tagSuffix: tagSuffix,\n        tagClassName: tagClassName\n      });\n    }\n    return null;\n  };\n  return React.createElement(\n    'ul',\n    { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },\n    React.createElement(\n      DndContext,\n      {\n        sensors: sensors,\n        collisionDetection: closestCenter,\n        onDragStart: handleDragStart,\n        onDragEnd: function onDragEnd(e) {\n          return handleDragEnd(e, items);\n        }\n      },\n      React.createElement(\n        SortableContext,\n        { items: items, strategy: rectSwappingStrategy },\n        items.map(function (item, index) {\n          return React.createElement(SortableItemV2, _extends({\n            key: index,\n            onDelete: onTagRemove,\n            readOnly: readOnly,\n            disabled: disabled,\n            labelRemove: texts.labelRemove,\n            tagDisabled: item.disabled\n          }, item, {\n            tagPrefix: tagPrefix,\n            tagSuffix: tagSuffix,\n            tagClassName: tagClassName\n          }));\n        }),\n        React.createElement(\n          'li',\n          { className: 'tag-item' },\n          lastItem,\n          React.createElement(\n            'span',\n            { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },\n            '\\u2304'\n          )\n        )\n      ),\n      React.createElement(\n        DragOverlay,\n        null,\n        getActiveItem(activeId)\n      )\n    )\n  );\n};\n\nexport default Tags;"
             },
             {
               "id": null,
@@ -5902,7 +5902,7 @@
               "name": "./src/tag/index.js",
               "index": 16,
               "index2": 16,
-              "size": 4876,
+              "size": 4923,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -5987,7 +5987,7 @@
               "providedExports": ["getTagId", "default"],
               "optimizationBailout": [],
               "depth": 2,
-              "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport PropTypes from 'prop-types';\nimport React, { PureComponent } from 'react';\n\nimport './index.css';\n\nexport var getTagId = function getTagId(id) {\n  return id + '_tag';\n};\n\nvar Tag = function (_PureComponent) {\n  _inherits(Tag, _PureComponent);\n\n  function Tag() {\n    var _ref;\n\n    var _temp, _this, _ret;\n\n    _classCallCheck(this, Tag);\n\n    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tag.__proto__ || Object.getPrototypeOf(Tag)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function (e) {\n      var _this$props = _this.props,\n          id = _this$props.id,\n          onDelete = _this$props.onDelete;\n\n      e.stopPropagation();\n      e.nativeEvent.stopImmediatePropagation();\n      onDelete(id, (e.key || e.keyCode) !== undefined);\n    }, _this.onKeyDown = function (e) {\n      if (e.key === 'Backspace') {\n        _this.handleClick(e);\n        e.preventDefault();\n      }\n    }, _this.onKeyUp = function (e) {\n      if (e.keyCode === 32 || ['Delete', 'Enter'].indexOf(e.key) > -1) {\n        _this.handleClick(e);\n        e.preventDefault();\n      }\n    }, _temp), _possibleConstructorReturn(_this, _ret);\n  }\n\n  _createClass(Tag, [{\n    key: 'render',\n    value: function render() {\n      var _props = this.props,\n          id = _props.id,\n          label = _props.label,\n          _props$labelRemove = _props.labelRemove,\n          labelRemove = _props$labelRemove === undefined ? 'Remove' : _props$labelRemove,\n          readOnly = _props.readOnly,\n          disabled = _props.disabled,\n          tagPrefix = _props.tagPrefix,\n          tagSuffix = _props.tagSuffix;\n\n      var tagId = getTagId(id);\n      var buttonId = id + '_button';\n      var className = ['tag-remove', readOnly && 'readOnly', disabled && 'disabled'].filter(Boolean).join(' ');\n      var isDisabled = readOnly || disabled;\n\n      return React.createElement(\n        'span',\n        { className: 'tag', id: tagId, 'aria-label': label },\n        tagPrefix ? tagPrefix(_extends({}, this.props, { value: this.props.id })) : null,\n        label,\n        tagSuffix ? tagSuffix(_extends({}, this.props, { value: this.props.id })) : null,\n        React.createElement(\n          'button',\n          {\n            id: buttonId,\n            onClick: !isDisabled ? this.handleClick : undefined,\n            onKeyDown: !isDisabled ? this.onKeyDown : undefined,\n            onKeyUp: !isDisabled ? this.onKeyUp : undefined,\n            className: className,\n            type: 'button',\n            'aria-label': labelRemove,\n            'aria-labelledby': buttonId + ' ' + tagId,\n            'aria-disabled': isDisabled\n          },\n          'X'\n        )\n      );\n    }\n  }]);\n\n  return Tag;\n}(PureComponent);\n\nTag.propTypes = {\n  id: PropTypes.string.isRequired,\n  label: PropTypes.string.isRequired,\n  onDelete: PropTypes.func,\n  readOnly: PropTypes.bool,\n  disabled: PropTypes.bool,\n  labelRemove: PropTypes.string,\n  tagPrefix: PropTypes.func,\n  tagSuffix: PropTypes.func\n};\n\n\nexport default Tag;"
+              "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport PropTypes from 'prop-types';\nimport React, { PureComponent } from 'react';\n\nimport './index.css';\n\nexport var getTagId = function getTagId(id) {\n  return id + '_tag';\n};\n\nvar Tag = function (_PureComponent) {\n  _inherits(Tag, _PureComponent);\n\n  function Tag() {\n    var _ref;\n\n    var _temp, _this, _ret;\n\n    _classCallCheck(this, Tag);\n\n    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tag.__proto__ || Object.getPrototypeOf(Tag)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function (e) {\n      console.log('handleClick', _this.props);\n      var _this$props = _this.props,\n          id = _this$props.id,\n          onDelete = _this$props.onDelete;\n\n      e.stopPropagation();\n      e.nativeEvent.stopImmediatePropagation();\n      onDelete(id, (e.key || e.keyCode) !== undefined);\n    }, _this.onKeyDown = function (e) {\n      if (e.key === 'Backspace') {\n        _this.handleClick(e);\n        e.preventDefault();\n      }\n    }, _this.onKeyUp = function (e) {\n      if (e.keyCode === 32 || ['Delete', 'Enter'].indexOf(e.key) > -1) {\n        _this.handleClick(e);\n        e.preventDefault();\n      }\n    }, _temp), _possibleConstructorReturn(_this, _ret);\n  }\n\n  _createClass(Tag, [{\n    key: 'render',\n    value: function render() {\n      var _props = this.props,\n          id = _props.id,\n          label = _props.label,\n          _props$labelRemove = _props.labelRemove,\n          labelRemove = _props$labelRemove === undefined ? 'Remove' : _props$labelRemove,\n          readOnly = _props.readOnly,\n          disabled = _props.disabled,\n          tagPrefix = _props.tagPrefix,\n          tagSuffix = _props.tagSuffix;\n\n      var tagId = getTagId(id);\n      var buttonId = id + '_button';\n      var className = ['tag-remove', readOnly && 'readOnly', disabled && 'disabled'].filter(Boolean).join(' ');\n      var isDisabled = readOnly || disabled;\n\n      return React.createElement(\n        'span',\n        { className: 'tag', id: tagId, 'aria-label': label },\n        tagPrefix ? tagPrefix(_extends({}, this.props, { value: this.props.id })) : null,\n        label,\n        tagSuffix ? tagSuffix(_extends({}, this.props, { value: this.props.id })) : null,\n        React.createElement(\n          'button',\n          {\n            id: buttonId,\n            onClick: !isDisabled ? this.handleClick : undefined,\n            onKeyDown: !isDisabled ? this.onKeyDown : undefined,\n            onKeyUp: !isDisabled ? this.onKeyUp : undefined,\n            className: className,\n            type: 'button',\n            'aria-label': labelRemove,\n            'aria-labelledby': buttonId + ' ' + tagId,\n            'aria-disabled': isDisabled\n          },\n          'X'\n        )\n      );\n    }\n  }]);\n\n  return Tag;\n}(PureComponent);\n\nTag.propTypes = {\n  id: PropTypes.string.isRequired,\n  label: PropTypes.string.isRequired,\n  onDelete: PropTypes.func,\n  readOnly: PropTypes.bool,\n  disabled: PropTypes.bool,\n  labelRemove: PropTypes.string,\n  tagPrefix: PropTypes.func,\n  tagSuffix: PropTypes.func\n};\n\n\nexport default Tag;"
             },
             {
               "id": null,
@@ -6064,7 +6064,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/utilities",
-                  "loc": "137:15-18"
+                  "loc": "138:15-18"
                 },
                 {
                   "moduleId": null,
@@ -7008,7 +7008,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "225:16-26"
+                  "loc": "226:16-26"
                 },
                 {
                   "moduleId": null,
@@ -7017,7 +7017,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "225:27-36"
+                  "loc": "226:27-36"
                 },
                 {
                   "moduleId": null,
@@ -7026,7 +7026,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "225:37-50"
+                  "loc": "226:37-50"
                 },
                 {
                   "moduleId": null,
@@ -7035,7 +7035,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "225:53-62"
+                  "loc": "226:53-62"
                 },
                 {
                   "moduleId": null,
@@ -7044,7 +7044,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "225:63-77"
+                  "loc": "226:63-77"
                 },
                 {
                   "moduleId": null,
@@ -7080,7 +7080,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/core",
-                  "loc": "329:8-19"
+                  "loc": "328:8-19"
                 },
                 {
                   "moduleId": null,
@@ -7301,7 +7301,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony side effect evaluation",
                   "userRequest": "@dnd-kit/sortable",
-                  "loc": "13:0-134"
+                  "loc": "13:0-156"
                 },
                 {
                   "moduleId": null,
@@ -7319,7 +7319,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/sortable",
-                  "loc": "226:22-49"
+                  "loc": "227:22-49"
                 },
                 {
                   "moduleId": null,
@@ -7328,7 +7328,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/sortable",
-                  "loc": "254:21-30"
+                  "loc": "255:21-30"
                 },
                 {
                   "moduleId": null,
@@ -7346,7 +7346,7 @@
                   "moduleName": "./src/tags/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "@dnd-kit/sortable",
-                  "loc": "301:34-61"
+                  "loc": "301:34-54"
                 }
               ],
               "usedExports": [
@@ -7354,7 +7354,7 @@
                 "sortableKeyboardCoordinates",
                 "arrayMove",
                 "SortableContext",
-                "verticalListSortingStrategy"
+                "rectSwappingStrategy"
               ],
               "providedExports": [
                 "SortableContext",
@@ -8851,7 +8851,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "73:13-18"
+          "loc": "74:13-18"
         },
         {
           "moduleId": 18,
@@ -8869,7 +8869,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "79:8-13"
+          "loc": "80:8-13"
         },
         {
           "moduleId": 18,
@@ -8986,7 +8986,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "99:2-15"
+          "loc": "99:2-11"
         },
         {
           "moduleId": 18,
@@ -8995,7 +8995,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "99:2-11"
+          "loc": "100:2-15"
         },
         {
           "moduleId": 18,
@@ -9130,7 +9130,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "141:9-14"
+          "loc": "142:9-14"
         },
         {
           "moduleId": 18,
@@ -9265,7 +9265,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "215:18-26"
+          "loc": "216:18-26"
         },
         {
           "moduleId": 18,
@@ -9274,7 +9274,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "220:19-27"
+          "loc": "221:19-27"
         },
         {
           "moduleId": 18,
@@ -9283,7 +9283,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "228:29-34"
+          "loc": "229:29-34"
         },
         {
           "moduleId": 18,
@@ -9292,7 +9292,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "260:2-11"
+          "loc": "261:2-11"
         },
         {
           "moduleId": 18,
@@ -9301,7 +9301,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "271:13-18"
+          "loc": "272:13-18"
         },
         {
           "moduleId": 18,
@@ -9373,7 +9373,16 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "317:8-13"
+          "loc": "316:8-13"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "320:10-15"
         },
         {
           "moduleId": 18,
@@ -9391,15 +9400,6 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "321:10-15"
-        },
-        {
-          "moduleId": 18,
-          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-          "module": "./src/index.js + 31 modules",
-          "moduleName": "./src/index.js + 31 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
           "loc": "324:23-30"
         },
         {
@@ -9409,7 +9409,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "328:6-11"
+          "loc": "327:6-11"
         },
         {
           "moduleId": 18,
@@ -11116,7 +11116,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "102:6-15"
+          "loc": "103:6-15"
         },
         {
           "moduleId": 18,
@@ -11125,16 +11125,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "103:9-18"
-        },
-        {
-          "moduleId": 18,
-          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
-          "module": "./src/index.js + 31 modules",
-          "moduleName": "./src/index.js + 31 modules",
-          "type": "harmony import specifier",
-          "userRequest": "prop-types",
-          "loc": "104:12-21"
+          "loc": "104:9-18"
         },
         {
           "moduleId": 18,
@@ -11188,7 +11179,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "107:15-24"
+          "loc": "107:12-21"
         },
         {
           "moduleId": 18,
@@ -11206,7 +11197,7 @@
           "moduleName": "./src/index.js + 31 modules",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "108:13-22"
+          "loc": "108:15-24"
         },
         {
           "moduleId": 18,
@@ -11225,6 +11216,15 @@
           "type": "harmony import specifier",
           "userRequest": "prop-types",
           "loc": "109:15-24"
+        },
+        {
+          "moduleId": 18,
+          "moduleIdentifier": "/home/prady/Repos/tmr-tree-select/node_modules/babel-loader/lib/index.js!/home/prady/Repos/tmr-tree-select/src/index.js af30fd24a466aa564df6f371d757da16",
+          "module": "./src/index.js + 31 modules",
+          "moduleName": "./src/index.js + 31 modules",
+          "type": "harmony import specifier",
+          "userRequest": "prop-types",
+          "loc": "110:13-22"
         },
         {
           "moduleId": 18,
@@ -12994,7 +12994,7 @@
       "name": "./src/index.js + 31 modules",
       "index": 0,
       "index2": 53,
-      "size": 267624,
+      "size": 267640,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -13471,7 +13471,7 @@
           "name": "./src/tags/index.js",
           "index": 15,
           "index2": 31,
-          "size": 10625,
+          "size": 10594,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -13515,7 +13515,7 @@
           "providedExports": ["default"],
           "optimizationBailout": [],
           "depth": 1,
-          "source": "var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"]) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); } }; }();\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nfunction _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }\n\nimport React, { useEffect, useState, forwardRef } from 'react';\nimport Tag from '../tag';\nimport { getDataset } from '../utils';\nimport './index.css';\n// import { SortableContainer, SortableElement } from 'react-sortable-hoc'\nimport { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, DragOverlay } from '@dnd-kit/core';\nimport { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';\nimport { CSS } from '@dnd-kit/utilities';\n// const SortableItem = SortableElement(\n//   forwardRef(\n//     (\n//       {\n//         _id,\n//         label,\n//         tagClassName,\n//         dataset,\n//         tagLabel,\n//         description,\n//         onDelete,\n//         readOnly,\n//         disabled,\n//         labelRemove,\n//         tagDisabled,\n//         tagPrefix,\n//         tagSuffix,\n//       },\n//       ref\n//     ) => {\n//       return (\n//         <div ref={ref}>\n//           <li\n//             className={['tag-item', tagClassName].filter(Boolean).join(' ')}\n//             key={_id}\n//             index={_id}\n//             {...getDataset(dataset)}\n//           >\n//             {' '}\n//             <Tag\n//               label={tagLabel || label}\n//               tagPrefix={tagPrefix}\n//               tagSuffix={tagSuffix}\n//               id={`${_id}`}\n//               onDelete={onDelete}\n//               readOnly={readOnly}\n//               disabled={disabled || tagDisabled}\n//               labelRemove={labelRemove}\n//             />\n//           </li>\n//         </div>\n//       )\n//     }\n//   ),\n//   { withRef: true }\n// )\n// const SortableList = SortableContainer(\n//   ({ tags, onDelete, readOnly, disabled, labelRemove, lastItem, tagPrefix, tagSuffix, tagClassName }) => {\n//     return (\n//       <ul className=\"tag-list\" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>\n//         {tags.map((tags, index) => (\n//           <SortableItem\n//             key={index}\n//             index={index}\n//             onDelete={onDelete}\n//             readOnly={readOnly}\n//             disabled={disabled}\n//             labelRemove={labelRemove}\n//             tagDisabled={tags.disabled}\n//             {...tags}\n//             tagPrefix={tagPrefix}\n//             tagSuffix={tagSuffix}\n//             tagClassName={tagClassName}\n//           />\n//         ))}\n//         <li className=\"tag-item\">\n//           {lastItem}\n//           <span className=\"dropdown-icon\" style={{ fontSize: '20px', color: '#bfbfbf' }}>\n//             &#x2304;\n//           </span>\n//         </li>\n//       </ul>\n//     )\n//   }\n// )\n\nvar Item = forwardRef(function (_ref, ref) {\n  var id = _ref.id,\n      props = _objectWithoutProperties(_ref, ['id']);\n\n  return React.createElement(\n    'div',\n    _extends({}, props, { ref: ref }),\n    React.createElement(\n      'li',\n      _extends({ className: ['tag-item', props.tagClassName].filter(Boolean).join(' ') }, getDataset(props.dataset)),\n      ' ',\n      React.createElement(Tag, {\n        label: props.tagLabel || props.label,\n        tagPrefix: props.tagPrefix,\n        tagSuffix: props.tagSuffix,\n        id: '' + props.id,\n        onDelete: props.onDelete,\n        readOnly: props.readOnly,\n        disabled: props.disabled || props.tagDisabled,\n        labelRemove: props.labelRemove\n      })\n    )\n  );\n});\n\nvar SortableItemV2 = function SortableItemV2(props) {\n  var _useSortable = useSortable({ id: props.id }),\n      attributes = _useSortable.attributes,\n      listeners = _useSortable.listeners,\n      setNodeRef = _useSortable.setNodeRef,\n      transform = _useSortable.transform,\n      transition = _useSortable.transition;\n\n  var label = props.label,\n      tagClassName = props.tagClassName,\n      dataset = props.dataset,\n      tagLabel = props.tagLabel,\n      onDelete = props.onDelete,\n      readOnly = props.readOnly,\n      disabled = props.disabled,\n      labelRemove = props.labelRemove,\n      tagDisabled = props.tagDisabled,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix;\n\n  var style = {\n    transform: CSS.Transform.toString(transform),\n    transition: transition\n  };\n\n  return React.createElement(Item, _extends({\n    ref: setNodeRef,\n    style: style\n  }, attributes, listeners, {\n    id: '' + props.id,\n    label: label,\n    dataset: dataset,\n    tagLabel: tagLabel,\n    onDelete: onDelete,\n    readOnly: readOnly,\n    disabled: disabled,\n    labelRemove: labelRemove,\n    tagDisabled: tagDisabled,\n    tagPrefix: tagPrefix,\n    tagSuffix: tagSuffix,\n    tagClassName: tagClassName\n  }));\n};\n\n// const Tags = props => {\n//   const {\n//     tags,\n//     onTagRemove,\n//     onReorder,\n//     texts = {},\n//     disabled,\n//     readOnly,\n//     children,\n//     tagPrefix,\n//     tagSuffix,\n//     tagClassName,\n//   } = props\n\n//   const [items, setItems] = useState(tags)\n//   useEffect(() => {\n//     setItems(tags)\n//   }, [tags])\n//   const onSortEnd = ({ oldIndex, newIndex }) => {\n//     let i = arrayMove(items, oldIndex, newIndex)\n//     setItems(i)\n//     onReorder(i)\n//   }\n\n//   const lastItem = children || <span className=\"placeholder\">{texts.placeholder || 'Choose...'}</span>\n//   return (\n//     <SortableList\n//       axis=\"xy\"\n//       lastItem={lastItem}\n//       onSortEnd={onSortEnd}\n//       tags={items}\n//       onDelete={onTagRemove}\n//       readOnly={readOnly}\n//       disabled={disabled}\n//       labelRemove={texts.labelRemove}\n//       tagPrefix={tagPrefix}\n//       tagSuffix={tagSuffix}\n//       tagClassName={tagClassName}\n//     />\n//   )\n// }\n\nvar Tags = function Tags(props) {\n  var tags = props.tags,\n      onTagRemove = props.onTagRemove,\n      onReorder = props.onReorder,\n      _props$texts = props.texts,\n      texts = _props$texts === undefined ? {} : _props$texts,\n      disabled = props.disabled,\n      readOnly = props.readOnly,\n      children = props.children,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix,\n      tagClassName = props.tagClassName;\n\n  var _useState = useState(null),\n      _useState2 = _slicedToArray(_useState, 2),\n      activeId = _useState2[0],\n      setActiveId = _useState2[1];\n\n  var _useState3 = useState(tags),\n      _useState4 = _slicedToArray(_useState3, 2),\n      items = _useState4[0],\n      setItems = _useState4[1];\n\n  var sensors = useSensors(useSensor(PointerSensor), useSensor(KeyboardSensor, {\n    coordinateGetter: sortableKeyboardCoordinates\n  }));\n  var lastItem = children || React.createElement(\n    'span',\n    { className: 'placeholder' },\n    texts.placeholder || 'Choose...'\n  );\n\n  function handleDragStart(event) {\n    var active = event.active;\n\n    console.log('active', active);\n    setActiveId(active.id);\n  }\n  function handleDragEnd(event, f_items) {\n    var active = event.active,\n        over = event.over;\n\n    console.log('active', active);\n    console.log('over', over);\n    if (active.id !== over.id) {\n      var oldIndex = f_items.findIndex(function (i) {\n        return i._id === active.id;\n      });\n      var newIndex = f_items.findIndex(function (i) {\n        return i._id === over.id;\n      });\n      console.log('oldItems', f_items);\n      var newItems = arrayMove(f_items, oldIndex, newIndex);\n      console.log('newItems', newItems);\n      setItems(newItems);\n      onReorder(newItems);\n    }\n  }\n  useEffect(function () {\n    console.log('props', props);\n    console.log('items', tags);\n    setItems(tags);\n  }, [tags]);\n  var getActiveItem = function getActiveItem(id) {\n    if (!id) return null;\n    var item = items.find(function (i) {\n      return i._id === id;\n    });\n    if (item) {\n      return React.createElement(Item, {\n        id: id,\n        label: item.label,\n        onDelete: onTagRemove,\n        readOnly: readOnly,\n        disabled: disabled,\n        labelRemove: texts.labelRemove,\n        tagDisabled: item.disabled,\n        tagPrefix: tagPrefix,\n        tagSuffix: tagSuffix,\n        tagClassName: tagClassName\n      });\n    }\n    return null;\n  };\n  return React.createElement(\n    'ul',\n    { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },\n    React.createElement(\n      DndContext,\n      {\n        sensors: sensors,\n        collisionDetection: closestCenter,\n        onDragStart: handleDragStart,\n        onDragEnd: function onDragEnd(e) {\n          return handleDragEnd(e, items);\n        }\n      },\n      React.createElement(\n        SortableContext,\n        { items: items, strategy: verticalListSortingStrategy },\n        items.map(function (item, index) {\n          return React.createElement(SortableItemV2, _extends({\n            key: index,\n            id: item._id,\n            onDelete: onTagRemove,\n            readOnly: readOnly,\n            disabled: disabled,\n            labelRemove: texts.labelRemove,\n            tagDisabled: item.disabled\n          }, item, {\n            tagPrefix: tagPrefix,\n            tagSuffix: tagSuffix,\n            tagClassName: tagClassName\n          }));\n        }),\n        React.createElement(\n          'li',\n          { className: 'tag-item' },\n          lastItem,\n          React.createElement(\n            'span',\n            { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },\n            '\\u2304'\n          )\n        )\n      ),\n      React.createElement(\n        DragOverlay,\n        null,\n        getActiveItem(activeId)\n      )\n    )\n  );\n};\n\nexport default Tags;"
+          "source": "var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"]) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); } }; }();\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nfunction _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }\n\nimport React, { useEffect, useState, forwardRef } from 'react';\nimport Tag from '../tag';\nimport { getDataset } from '../utils';\nimport './index.css';\n// import { SortableContainer, SortableElement } from 'react-sortable-hoc'\nimport { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, DragOverlay } from '@dnd-kit/core';\nimport { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, rectSwappingStrategy, useSortable } from '@dnd-kit/sortable';\nimport { CSS } from '@dnd-kit/utilities';\n// const SortableItem = SortableElement(\n//   forwardRef(\n//     (\n//       {\n//         _id,\n//         label,\n//         tagClassName,\n//         dataset,\n//         tagLabel,\n//         description,\n//         onDelete,\n//         readOnly,\n//         disabled,\n//         labelRemove,\n//         tagDisabled,\n//         tagPrefix,\n//         tagSuffix,\n//       },\n//       ref\n//     ) => {\n//       return (\n//         <div ref={ref}>\n//           <li\n//             className={['tag-item', tagClassName].filter(Boolean).join(' ')}\n//             key={_id}\n//             index={_id}\n//             {...getDataset(dataset)}\n//           >\n//             {' '}\n//             <Tag\n//               label={tagLabel || label}\n//               tagPrefix={tagPrefix}\n//               tagSuffix={tagSuffix}\n//               id={`${_id}`}\n//               onDelete={onDelete}\n//               readOnly={readOnly}\n//               disabled={disabled || tagDisabled}\n//               labelRemove={labelRemove}\n//             />\n//           </li>\n//         </div>\n//       )\n//     }\n//   ),\n//   { withRef: true }\n// )\n// const SortableList = SortableContainer(\n//   ({ tags, onDelete, readOnly, disabled, labelRemove, lastItem, tagPrefix, tagSuffix, tagClassName }) => {\n//     return (\n//       <ul className=\"tag-list\" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>\n//         {tags.map((tags, index) => (\n//           <SortableItem\n//             key={index}\n//             index={index}\n//             onDelete={onDelete}\n//             readOnly={readOnly}\n//             disabled={disabled}\n//             labelRemove={labelRemove}\n//             tagDisabled={tags.disabled}\n//             {...tags}\n//             tagPrefix={tagPrefix}\n//             tagSuffix={tagSuffix}\n//             tagClassName={tagClassName}\n//           />\n//         ))}\n//         <li className=\"tag-item\">\n//           {lastItem}\n//           <span className=\"dropdown-icon\" style={{ fontSize: '20px', color: '#bfbfbf' }}>\n//             &#x2304;\n//           </span>\n//         </li>\n//       </ul>\n//     )\n//   }\n// )\n\nvar Item = forwardRef(function (_ref, ref) {\n  var id = _ref.id,\n      props = _objectWithoutProperties(_ref, ['id']);\n\n  return React.createElement(\n    'div',\n    _extends({}, props, { ref: ref }),\n    React.createElement(\n      'li',\n      _extends({ className: ['tag-item', props.tagClassName].filter(Boolean).join(' ') }, getDataset(props.dataset)),\n      ' ',\n      React.createElement(Tag, {\n        label: props.tagLabel || props.label,\n        tagPrefix: props.tagPrefix,\n        tagSuffix: props.tagSuffix,\n        id: id,\n        onDelete: props.onDelete,\n        readOnly: props.readOnly,\n        disabled: props.disabled || props.tagDisabled,\n        labelRemove: props.labelRemove\n      })\n    )\n  );\n});\n\nvar SortableItemV2 = function SortableItemV2(props) {\n  var _useSortable = useSortable({ id: props.id }),\n      attributes = _useSortable.attributes,\n      listeners = _useSortable.listeners,\n      setNodeRef = _useSortable.setNodeRef,\n      transform = _useSortable.transform,\n      transition = _useSortable.transition;\n\n  var _id = props._id,\n      label = props.label,\n      tagClassName = props.tagClassName,\n      dataset = props.dataset,\n      tagLabel = props.tagLabel,\n      onDelete = props.onDelete,\n      readOnly = props.readOnly,\n      disabled = props.disabled,\n      labelRemove = props.labelRemove,\n      tagDisabled = props.tagDisabled,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix;\n\n  var style = {\n    transform: CSS.Transform.toString(transform),\n    transition: transition\n  };\n\n  return React.createElement(Item, _extends({\n    ref: setNodeRef,\n    style: style\n  }, attributes, listeners, {\n    id: '' + _id,\n    label: label,\n    dataset: dataset,\n    tagLabel: tagLabel,\n    onDelete: onDelete,\n    readOnly: readOnly,\n    disabled: disabled,\n    labelRemove: labelRemove,\n    tagDisabled: tagDisabled,\n    tagPrefix: tagPrefix,\n    tagSuffix: tagSuffix,\n    tagClassName: tagClassName\n  }));\n};\n\n// const Tags = props => {\n//   const {\n//     tags,\n//     onTagRemove,\n//     onReorder,\n//     texts = {},\n//     disabled,\n//     readOnly,\n//     children,\n//     tagPrefix,\n//     tagSuffix,\n//     tagClassName,\n//   } = props\n\n//   const [items, setItems] = useState(tags)\n//   useEffect(() => {\n//     setItems(tags)\n//   }, [tags])\n//   const onSortEnd = ({ oldIndex, newIndex }) => {\n//     let i = arrayMove(items, oldIndex, newIndex)\n//     setItems(i)\n//     onReorder(i)\n//   }\n\n//   const lastItem = children || <span className=\"placeholder\">{texts.placeholder || 'Choose...'}</span>\n//   return (\n//     <SortableList\n//       axis=\"xy\"\n//       lastItem={lastItem}\n//       onSortEnd={onSortEnd}\n//       tags={items}\n//       onDelete={onTagRemove}\n//       readOnly={readOnly}\n//       disabled={disabled}\n//       labelRemove={texts.labelRemove}\n//       tagPrefix={tagPrefix}\n//       tagSuffix={tagSuffix}\n//       tagClassName={tagClassName}\n//     />\n//   )\n// }\n\nvar Tags = function Tags(props) {\n  var tags = props.tags,\n      onTagRemove = props.onTagRemove,\n      onReorder = props.onReorder,\n      _props$texts = props.texts,\n      texts = _props$texts === undefined ? {} : _props$texts,\n      disabled = props.disabled,\n      readOnly = props.readOnly,\n      children = props.children,\n      tagPrefix = props.tagPrefix,\n      tagSuffix = props.tagSuffix,\n      tagClassName = props.tagClassName;\n\n  var _useState = useState(null),\n      _useState2 = _slicedToArray(_useState, 2),\n      activeId = _useState2[0],\n      setActiveId = _useState2[1];\n\n  var _useState3 = useState(tags),\n      _useState4 = _slicedToArray(_useState3, 2),\n      items = _useState4[0],\n      setItems = _useState4[1];\n\n  var sensors = useSensors(useSensor(PointerSensor), useSensor(KeyboardSensor, {\n    coordinateGetter: sortableKeyboardCoordinates\n  }));\n  var lastItem = children || React.createElement(\n    'span',\n    { className: 'placeholder' },\n    texts.placeholder || 'Choose...'\n  );\n\n  function handleDragStart(event) {\n    var active = event.active;\n\n    console.log('active', active);\n    setActiveId(active.id);\n  }\n  function handleDragEnd(event, f_items) {\n    var active = event.active,\n        over = event.over;\n\n    console.log('active', active);\n    console.log('over', over);\n    if (active.id !== over.id) {\n      var oldIndex = f_items.findIndex(function (i) {\n        return i._id === active.id;\n      });\n      var newIndex = f_items.findIndex(function (i) {\n        return i._id === over.id;\n      });\n      console.log('oldItems', f_items);\n      var newItems = arrayMove(f_items, oldIndex, newIndex);\n      console.log('newItems', newItems);\n      setItems(newItems);\n      onReorder(newItems);\n    }\n  }\n  useEffect(function () {\n    console.log('props', props);\n    console.log('items', tags);\n    setItems(tags);\n  }, [tags]);\n  var getActiveItem = function getActiveItem(id) {\n    if (!id) return null;\n    var item = items.find(function (i) {\n      return i._id === id;\n    });\n    if (item) {\n      return React.createElement(Item, {\n        id: id,\n        onDelete: onTagRemove,\n        readOnly: readOnly,\n        disabled: disabled,\n        labelRemove: texts.labelRemove,\n        tagDisabled: item.disabled,\n        tagPrefix: tagPrefix,\n        tagSuffix: tagSuffix,\n        tagClassName: tagClassName\n      });\n    }\n    return null;\n  };\n  return React.createElement(\n    'ul',\n    { className: 'tag-list', style: { display: 'flex', flexDirection: 'row', flexWrap: 'wrap' } },\n    React.createElement(\n      DndContext,\n      {\n        sensors: sensors,\n        collisionDetection: closestCenter,\n        onDragStart: handleDragStart,\n        onDragEnd: function onDragEnd(e) {\n          return handleDragEnd(e, items);\n        }\n      },\n      React.createElement(\n        SortableContext,\n        { items: items, strategy: rectSwappingStrategy },\n        items.map(function (item, index) {\n          return React.createElement(SortableItemV2, _extends({\n            key: index,\n            onDelete: onTagRemove,\n            readOnly: readOnly,\n            disabled: disabled,\n            labelRemove: texts.labelRemove,\n            tagDisabled: item.disabled\n          }, item, {\n            tagPrefix: tagPrefix,\n            tagSuffix: tagSuffix,\n            tagClassName: tagClassName\n          }));\n        }),\n        React.createElement(\n          'li',\n          { className: 'tag-item' },\n          lastItem,\n          React.createElement(\n            'span',\n            { className: 'dropdown-icon', style: { fontSize: '20px', color: '#bfbfbf' } },\n            '\\u2304'\n          )\n        )\n      ),\n      React.createElement(\n        DragOverlay,\n        null,\n        getActiveItem(activeId)\n      )\n    )\n  );\n};\n\nexport default Tags;"
         },
         {
           "id": null,
@@ -14202,7 +14202,7 @@
           "name": "./src/tag/index.js",
           "index": 16,
           "index2": 16,
-          "size": 4876,
+          "size": 4923,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -14287,7 +14287,7 @@
           "providedExports": ["getTagId", "default"],
           "optimizationBailout": [],
           "depth": 2,
-          "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport PropTypes from 'prop-types';\nimport React, { PureComponent } from 'react';\n\nimport './index.css';\n\nexport var getTagId = function getTagId(id) {\n  return id + '_tag';\n};\n\nvar Tag = function (_PureComponent) {\n  _inherits(Tag, _PureComponent);\n\n  function Tag() {\n    var _ref;\n\n    var _temp, _this, _ret;\n\n    _classCallCheck(this, Tag);\n\n    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tag.__proto__ || Object.getPrototypeOf(Tag)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function (e) {\n      var _this$props = _this.props,\n          id = _this$props.id,\n          onDelete = _this$props.onDelete;\n\n      e.stopPropagation();\n      e.nativeEvent.stopImmediatePropagation();\n      onDelete(id, (e.key || e.keyCode) !== undefined);\n    }, _this.onKeyDown = function (e) {\n      if (e.key === 'Backspace') {\n        _this.handleClick(e);\n        e.preventDefault();\n      }\n    }, _this.onKeyUp = function (e) {\n      if (e.keyCode === 32 || ['Delete', 'Enter'].indexOf(e.key) > -1) {\n        _this.handleClick(e);\n        e.preventDefault();\n      }\n    }, _temp), _possibleConstructorReturn(_this, _ret);\n  }\n\n  _createClass(Tag, [{\n    key: 'render',\n    value: function render() {\n      var _props = this.props,\n          id = _props.id,\n          label = _props.label,\n          _props$labelRemove = _props.labelRemove,\n          labelRemove = _props$labelRemove === undefined ? 'Remove' : _props$labelRemove,\n          readOnly = _props.readOnly,\n          disabled = _props.disabled,\n          tagPrefix = _props.tagPrefix,\n          tagSuffix = _props.tagSuffix;\n\n      var tagId = getTagId(id);\n      var buttonId = id + '_button';\n      var className = ['tag-remove', readOnly && 'readOnly', disabled && 'disabled'].filter(Boolean).join(' ');\n      var isDisabled = readOnly || disabled;\n\n      return React.createElement(\n        'span',\n        { className: 'tag', id: tagId, 'aria-label': label },\n        tagPrefix ? tagPrefix(_extends({}, this.props, { value: this.props.id })) : null,\n        label,\n        tagSuffix ? tagSuffix(_extends({}, this.props, { value: this.props.id })) : null,\n        React.createElement(\n          'button',\n          {\n            id: buttonId,\n            onClick: !isDisabled ? this.handleClick : undefined,\n            onKeyDown: !isDisabled ? this.onKeyDown : undefined,\n            onKeyUp: !isDisabled ? this.onKeyUp : undefined,\n            className: className,\n            type: 'button',\n            'aria-label': labelRemove,\n            'aria-labelledby': buttonId + ' ' + tagId,\n            'aria-disabled': isDisabled\n          },\n          'X'\n        )\n      );\n    }\n  }]);\n\n  return Tag;\n}(PureComponent);\n\nTag.propTypes = {\n  id: PropTypes.string.isRequired,\n  label: PropTypes.string.isRequired,\n  onDelete: PropTypes.func,\n  readOnly: PropTypes.bool,\n  disabled: PropTypes.bool,\n  labelRemove: PropTypes.string,\n  tagPrefix: PropTypes.func,\n  tagSuffix: PropTypes.func\n};\n\n\nexport default Tag;"
+          "source": "var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nimport PropTypes from 'prop-types';\nimport React, { PureComponent } from 'react';\n\nimport './index.css';\n\nexport var getTagId = function getTagId(id) {\n  return id + '_tag';\n};\n\nvar Tag = function (_PureComponent) {\n  _inherits(Tag, _PureComponent);\n\n  function Tag() {\n    var _ref;\n\n    var _temp, _this, _ret;\n\n    _classCallCheck(this, Tag);\n\n    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tag.__proto__ || Object.getPrototypeOf(Tag)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function (e) {\n      console.log('handleClick', _this.props);\n      var _this$props = _this.props,\n          id = _this$props.id,\n          onDelete = _this$props.onDelete;\n\n      e.stopPropagation();\n      e.nativeEvent.stopImmediatePropagation();\n      onDelete(id, (e.key || e.keyCode) !== undefined);\n    }, _this.onKeyDown = function (e) {\n      if (e.key === 'Backspace') {\n        _this.handleClick(e);\n        e.preventDefault();\n      }\n    }, _this.onKeyUp = function (e) {\n      if (e.keyCode === 32 || ['Delete', 'Enter'].indexOf(e.key) > -1) {\n        _this.handleClick(e);\n        e.preventDefault();\n      }\n    }, _temp), _possibleConstructorReturn(_this, _ret);\n  }\n\n  _createClass(Tag, [{\n    key: 'render',\n    value: function render() {\n      var _props = this.props,\n          id = _props.id,\n          label = _props.label,\n          _props$labelRemove = _props.labelRemove,\n          labelRemove = _props$labelRemove === undefined ? 'Remove' : _props$labelRemove,\n          readOnly = _props.readOnly,\n          disabled = _props.disabled,\n          tagPrefix = _props.tagPrefix,\n          tagSuffix = _props.tagSuffix;\n\n      var tagId = getTagId(id);\n      var buttonId = id + '_button';\n      var className = ['tag-remove', readOnly && 'readOnly', disabled && 'disabled'].filter(Boolean).join(' ');\n      var isDisabled = readOnly || disabled;\n\n      return React.createElement(\n        'span',\n        { className: 'tag', id: tagId, 'aria-label': label },\n        tagPrefix ? tagPrefix(_extends({}, this.props, { value: this.props.id })) : null,\n        label,\n        tagSuffix ? tagSuffix(_extends({}, this.props, { value: this.props.id })) : null,\n        React.createElement(\n          'button',\n          {\n            id: buttonId,\n            onClick: !isDisabled ? this.handleClick : undefined,\n            onKeyDown: !isDisabled ? this.onKeyDown : undefined,\n            onKeyUp: !isDisabled ? this.onKeyUp : undefined,\n            className: className,\n            type: 'button',\n            'aria-label': labelRemove,\n            'aria-labelledby': buttonId + ' ' + tagId,\n            'aria-disabled': isDisabled\n          },\n          'X'\n        )\n      );\n    }\n  }]);\n\n  return Tag;\n}(PureComponent);\n\nTag.propTypes = {\n  id: PropTypes.string.isRequired,\n  label: PropTypes.string.isRequired,\n  onDelete: PropTypes.func,\n  readOnly: PropTypes.bool,\n  disabled: PropTypes.bool,\n  labelRemove: PropTypes.string,\n  tagPrefix: PropTypes.func,\n  tagSuffix: PropTypes.func\n};\n\n\nexport default Tag;"
         },
         {
           "id": null,
@@ -14364,7 +14364,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/utilities",
-              "loc": "137:15-18"
+              "loc": "138:15-18"
             },
             {
               "moduleId": null,
@@ -15308,7 +15308,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "225:16-26"
+              "loc": "226:16-26"
             },
             {
               "moduleId": null,
@@ -15317,7 +15317,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "225:27-36"
+              "loc": "226:27-36"
             },
             {
               "moduleId": null,
@@ -15326,7 +15326,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "225:37-50"
+              "loc": "226:37-50"
             },
             {
               "moduleId": null,
@@ -15335,7 +15335,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "225:53-62"
+              "loc": "226:53-62"
             },
             {
               "moduleId": null,
@@ -15344,7 +15344,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "225:63-77"
+              "loc": "226:63-77"
             },
             {
               "moduleId": null,
@@ -15380,7 +15380,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/core",
-              "loc": "329:8-19"
+              "loc": "328:8-19"
             },
             {
               "moduleId": null,
@@ -15601,7 +15601,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony side effect evaluation",
               "userRequest": "@dnd-kit/sortable",
-              "loc": "13:0-134"
+              "loc": "13:0-156"
             },
             {
               "moduleId": null,
@@ -15619,7 +15619,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/sortable",
-              "loc": "226:22-49"
+              "loc": "227:22-49"
             },
             {
               "moduleId": null,
@@ -15628,7 +15628,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/sortable",
-              "loc": "254:21-30"
+              "loc": "255:21-30"
             },
             {
               "moduleId": null,
@@ -15646,7 +15646,7 @@
               "moduleName": "./src/tags/index.js",
               "type": "harmony import specifier",
               "userRequest": "@dnd-kit/sortable",
-              "loc": "301:34-61"
+              "loc": "301:34-54"
             }
           ],
           "usedExports": [
@@ -15654,7 +15654,7 @@
             "sortableKeyboardCoordinates",
             "arrayMove",
             "SortableContext",
-            "verticalListSortingStrategy"
+            "rectSwappingStrategy"
           ],
           "providedExports": [
             "SortableContext",

@@ -9081,6 +9081,7 @@
             return (
               (n = r = x(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
               (r.handleClick = function(e) {
+                console.log('handleClick', r.props)
                 var t = r.props,
                   n = t.id,
                   a = t.onDelete
@@ -11294,31 +11295,19 @@
             ? { x: i.left - l.left, y: i.top - l.top, scaleX: i.width / l.width, scaleY: i.height / l.height }
             : null
         },
-        nn = { scaleX: 1, scaleY: 1 },
-        rn = e => {
-          var t
-          let { activeIndex: n, activeNodeRect: r, index: a, rects: o, overIndex: l } = e
-          const i = null != (t = o[n]) ? t : r
-          if (!i) return null
-          if (a === n) {
-            const e = o[l]
-            return e ? { x: 0, y: n < l ? e.top + e.height - (i.top + i.height) : e.top - i.top, ...nn } : null
-          }
-          const u = (function(e, t, n) {
-            const r = e[t],
-              a = e[t - 1],
-              o = e[t + 1]
-            if (!r) return 0
-            if (n < t) return a ? r.top - (a.top + a.height) : o ? o.top - (r.top + r.height) : 0
-            return o ? o.top - (r.top + r.height) : a ? r.top - (a.top + a.height) : 0
-          })(o, a, n)
-          return a > n && a <= l
-            ? { x: 0, y: -i.height - u, ...nn }
-            : a < n && a >= l
-            ? { x: 0, y: i.height + u, ...nn }
-            : { x: 0, y: 0, ...nn }
+        nn = e => {
+          let t,
+            n,
+            { activeIndex: r, index: a, rects: o, overIndex: l } = e
+          return (
+            a === r && ((t = o[a]), (n = o[l])),
+            a === l && ((t = o[a]), (n = o[r])),
+            n && t
+              ? { x: n.left - t.left, y: n.top - t.top, scaleX: n.width / t.width, scaleY: n.height / t.height }
+              : null
+          )
         }
-      const an = s.a.createContext({
+      const rn = s.a.createContext({
         activeIndex: -1,
         containerId: 'Sortable',
         disableTransforms: !1,
@@ -11329,7 +11318,7 @@
         strategy: tn,
         disabled: { draggable: !1, droppable: !1 },
       })
-      function on(e) {
+      function an(e) {
         let { children: t, id: n, items: r, strategy: a = tn, disabled: o = !1 } = e
         const { active: l, dragOverlay: i, droppableRects: c, over: d, measureDroppableContainers: f } = Bt(),
           p = H('Sortable', n),
@@ -11369,13 +11358,13 @@
           }),
           [m, p, S.draggable, S.droppable, k, g, b, c, h, a]
         )
-        return s.a.createElement(an.Provider, { value: x }, t)
+        return s.a.createElement(rn.Provider, { value: x }, t)
       }
-      const ln = e => {
+      const on = e => {
           let { id: t, items: n, activeIndex: r, overIndex: a } = e
           return Gt(n, r, a).indexOf(t)
         },
-        un = e => {
+        ln = e => {
           let {
             containerId: t,
             isSorting: n,
@@ -11389,20 +11378,20 @@
           } = e
           return !(!s || !r) && ((i === o || a !== l) && (!!n || (l !== a && t === u)))
         },
-        sn = { duration: 200, easing: 'ease' },
-        cn = q.Transition.toString({ property: 'transform', duration: 0, easing: 'linear' }),
-        dn = { roleDescription: 'sortable' }
-      function fn(e) {
+        un = { duration: 200, easing: 'ease' },
+        sn = q.Transition.toString({ property: 'transform', duration: 0, easing: 'linear' }),
+        cn = { roleDescription: 'sortable' }
+      function dn(e) {
         let {
-          animateLayoutChanges: t = un,
+          animateLayoutChanges: t = ln,
           attributes: n,
           disabled: r,
           data: a,
-          getNewIndex: o = ln,
+          getNewIndex: o = on,
           id: l,
           strategy: i,
           resizeObserverConfig: s,
-          transition: c = sn,
+          transition: c = un,
         } = e
         const {
             items: d,
@@ -11414,7 +11403,7 @@
             overIndex: m,
             useDragOverlay: b,
             strategy: y,
-          } = Object(u.useContext)(an),
+          } = Object(u.useContext)(rn),
           w = (function(e, t) {
             var n, r
             if ('boolean' == typeof e) return { draggable: e, droppable: !1 }
@@ -11484,7 +11473,7 @@
             over: M,
             setActivatorNodeRef: z,
             transform: A,
-          } = At({ id: l, data: S, attributes: { ...dn, ...n }, disabled: w.draggable }),
+          } = At({ id: l, data: S, attributes: { ...cn, ...n }, disabled: w.draggable }),
           U = (function() {
             for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) t[n] = arguments[n]
             return Object(u.useMemo)(
@@ -11584,7 +11573,7 @@
             setDraggableNodeRef: D,
             transform: null != te ? te : Q,
             transition: (function() {
-              if (te || (Z && G.current.newIndex === k)) return cn
+              if (te || (Z && G.current.newIndex === k)) return sn
               if ((Y && !$(N)) || !c) return
               if (V || ee) return q.Transition.toString({ ...c, property: 'transform' })
               return
@@ -11592,7 +11581,7 @@
           }
         )
       }
-      function pn(e) {
+      function fn(e) {
         if (!e) return !1
         const t = e.data.current
         return !!(
@@ -11604,8 +11593,8 @@
           'index' in t.sortable
         )
       }
-      const hn = [Ke.Down, Ke.Right, Ke.Up, Ke.Left],
-        gn = (e, t) => {
+      const pn = [Ke.Down, Ke.Right, Ke.Up, Ke.Left],
+        hn = (e, t) => {
           let {
             context: {
               active: n,
@@ -11616,7 +11605,7 @@
               scrollableAncestors: i,
             },
           } = t
-          if (hn.includes(e.code)) {
+          if (pn.includes(e.code)) {
             if ((e.preventDefault(), !n || !r)) return
             const t = []
             o.getEnabled().forEach(n => {
@@ -11661,10 +11650,10 @@
                 u = null == t ? void 0 : t.node.current
               if (u && l && e && t) {
                 const n = Te(u).some((e, t) => i[t] !== e),
-                  a = vn(e, t),
+                  a = gn(e, t),
                   o = (function(e, t) {
-                    if (!pn(e) || !pn(t)) return !1
-                    if (!vn(e, t)) return !1
+                    if (!fn(e) || !fn(t)) return !1
+                    if (!gn(e, t)) return !1
                     return e.data.current.sortable.index < t.data.current.sortable.index
                   })(e, t),
                   s = n || !a ? { x: 0, y: 0 } : { x: o ? r.width - l.width : 0, y: o ? r.height - l.height : 0 },
@@ -11674,10 +11663,10 @@
             }
           }
         }
-      function vn(e, t) {
-        return !(!pn(e) || !pn(t)) && e.data.current.sortable.containerId === t.data.current.sortable.containerId
+      function gn(e, t) {
+        return !(!fn(e) || !fn(t)) && e.data.current.sortable.containerId === t.data.current.sortable.containerId
       }
-      var mn = function(e, t) {
+      var vn = function(e, t) {
           if (Array.isArray(e)) return e
           if (Symbol.iterator in Object(e))
             return (function(e, t) {
@@ -11704,7 +11693,7 @@
             })(e, t)
           throw new TypeError('Invalid attempt to destructure non-iterable instance')
         },
-        bn =
+        mn =
           Object.assign ||
           function(e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -11713,71 +11702,72 @@
             }
             return e
           }
-      var yn = Object(u.forwardRef)(function(e, t) {
-          e.id
-          var n = (function(e, t) {
-            var n = {}
-            for (var r in e) t.indexOf(r) >= 0 || (Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]))
-            return n
-          })(e, ['id'])
+      var bn = Object(u.forwardRef)(function(e, t) {
+          var n = e.id,
+            r = (function(e, t) {
+              var n = {}
+              for (var r in e) t.indexOf(r) >= 0 || (Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]))
+              return n
+            })(e, ['id'])
           return s.a.createElement(
             'div',
-            bn({}, n, { ref: t }),
+            mn({}, r, { ref: t }),
             s.a.createElement(
               'li',
-              bn({ className: ['tag-item', n.tagClassName].filter(Boolean).join(' ') }, d(n.dataset)),
+              mn({ className: ['tag-item', r.tagClassName].filter(Boolean).join(' ') }, d(r.dataset)),
               ' ',
               s.a.createElement(C, {
-                label: n.tagLabel || n.label,
-                tagPrefix: n.tagPrefix,
-                tagSuffix: n.tagSuffix,
-                id: '' + n.id,
-                onDelete: n.onDelete,
-                readOnly: n.readOnly,
-                disabled: n.disabled || n.tagDisabled,
-                labelRemove: n.labelRemove,
+                label: r.tagLabel || r.label,
+                tagPrefix: r.tagPrefix,
+                tagSuffix: r.tagSuffix,
+                id: n,
+                onDelete: r.onDelete,
+                readOnly: r.readOnly,
+                disabled: r.disabled || r.tagDisabled,
+                labelRemove: r.labelRemove,
               })
             )
           )
         }),
-        wn = function(e) {
-          var t = fn({ id: e.id }),
+        yn = function(e) {
+          var t = dn({ id: e.id }),
             n = t.attributes,
             r = t.listeners,
             a = t.setNodeRef,
             o = t.transform,
             l = t.transition,
-            i = e.label,
-            u = e.tagClassName,
-            c = e.dataset,
-            d = e.tagLabel,
-            f = e.onDelete,
-            p = e.readOnly,
-            h = e.disabled,
-            g = e.labelRemove,
-            v = e.tagDisabled,
-            m = e.tagPrefix,
-            b = e.tagSuffix,
-            y = { transform: q.Transform.toString(o), transition: l }
+            i = e._id,
+            u = e.label,
+            c = e.tagClassName,
+            d = e.dataset,
+            f = e.tagLabel,
+            p = e.onDelete,
+            h = e.readOnly,
+            g = e.disabled,
+            v = e.labelRemove,
+            m = e.tagDisabled,
+            b = e.tagPrefix,
+            y = e.tagSuffix,
+            w = { transform: q.Transform.toString(o), transition: l }
           return s.a.createElement(
-            yn,
-            bn({ ref: a, style: y }, n, r, {
-              id: '' + e.id,
-              label: i,
-              dataset: c,
-              tagLabel: d,
-              onDelete: f,
-              readOnly: p,
-              disabled: h,
-              labelRemove: g,
-              tagDisabled: v,
-              tagPrefix: m,
-              tagSuffix: b,
-              tagClassName: u,
+            bn,
+            mn({ ref: a, style: w }, n, r, {
+              id: '' + i,
+              label: u,
+              dataset: d,
+              tagLabel: f,
+              onDelete: p,
+              readOnly: h,
+              disabled: g,
+              labelRemove: v,
+              tagDisabled: m,
+              tagPrefix: b,
+              tagSuffix: y,
+              tagClassName: c,
             })
           )
         },
-        kn = function(e) {
+        wn = function(e) {
           var t = e.tags,
             n = e.onTagRemove,
             r = e.onReorder,
@@ -11790,17 +11780,17 @@
             f = e.tagSuffix,
             p = e.tagClassName,
             h = Object(u.useState)(null),
-            g = mn(h, 2),
+            g = vn(h, 2),
             v = g[0],
             m = g[1],
             b = Object(u.useState)(t),
-            y = mn(b, 2),
+            y = vn(b, 2),
             w = y[0],
             k = y[1],
             S = (function() {
               for (var e = arguments.length, t = new Array(e), n = 0; n < e; n++) t[n] = arguments[n]
               return Object(u.useMemo)(() => [...t].filter(e => null != e), [...t])
-            })(ue(nt), ue(Je, { coordinateGetter: gn })),
+            })(ue(nt), ue(Je, { coordinateGetter: hn })),
             x = c || s.a.createElement('span', { className: 'placeholder' }, o.placeholder || 'Choose...')
           Object(u.useEffect)(
             function() {
@@ -11839,15 +11829,14 @@
                 },
               },
               s.a.createElement(
-                on,
-                { items: w, strategy: rn },
+                an,
+                { items: w, strategy: nn },
                 w.map(function(e, t) {
                   return s.a.createElement(
-                    wn,
-                    bn(
+                    yn,
+                    mn(
                       {
                         key: t,
-                        id: e._id,
                         onDelete: n,
                         readOnly: i,
                         disabled: l,
@@ -11879,9 +11868,8 @@
                     return t._id === e
                   })
                   return t
-                    ? s.a.createElement(yn, {
+                    ? s.a.createElement(bn, {
                         id: e,
-                        label: t.label,
                         onDelete: n,
                         readOnly: i,
                         disabled: l,
@@ -11897,7 +11885,7 @@
             )
           )
         },
-        Sn =
+        kn =
           Object.assign ||
           function(e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -11906,7 +11894,7 @@
             }
             return e
           },
-        xn = (function() {
+        Sn = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n]
@@ -11920,20 +11908,20 @@
             return n && e(t.prototype, n), r && e(t, r), t
           }
         })()
-      function On(e, t) {
+      function xn(e, t) {
         if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
       }
-      function En(e, t) {
+      function On(e, t) {
         if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
         return !t || ('object' != typeof t && 'function' != typeof t) ? e : t
       }
-      var Cn = (function(e) {
+      var En = (function(e) {
         function t() {
           var e, n, r
-          On(this, t)
+          xn(this, t)
           for (var a = arguments.length, o = Array(a), l = 0; l < a; l++) o[l] = arguments[l]
           return (
-            (n = r = En(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
+            (n = r = On(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
             (r.getAriaAttributes = function() {
               var e = r.props,
                 t = e.mode,
@@ -11953,7 +11941,7 @@
                     s.push(O(e._id))
                   }),
                   (c = g(a.label, s.join(' ')))),
-                Sn(
+                kn(
                   {
                     id: u,
                     role: 'button',
@@ -11970,7 +11958,7 @@
                 (e.key && r.triggerNode && r.triggerNode !== document.activeElement) ||
                 (r.props.showDropdown || 32 !== e.keyCode || e.preventDefault(), r.props.onTrigger(e))
             }),
-            En(r, n)
+            On(r, n)
           )
         }
         return (
@@ -11982,7 +11970,7 @@
             })),
               t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t))
           })(t, e),
-          xn(t, [
+          Sn(t, [
             {
               key: 'render',
               value: function() {
@@ -11996,7 +11984,7 @@
                     .join(' ')
                 return s.a.createElement(
                   'a',
-                  Sn(
+                  kn(
                     {
                       ref: function(t) {
                         e.triggerNode = t
@@ -12015,7 +12003,7 @@
           t
         )
       })(u.PureComponent)
-      Cn.propTypes = {
+      En.propTypes = {
         onTrigger: i.a.func,
         disabled: i.a.bool,
         readOnly: i.a.bool,
@@ -12026,9 +12014,9 @@
         tags: i.a.array,
         tabIndex: i.a.number,
       }
-      var Tn = Cn,
-        _n = function(e, t) {
-          return (_n =
+      var Cn = En,
+        Tn = function(e, t) {
+          return (Tn =
             Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array &&
               function(e, t) {
@@ -12051,8 +12039,8 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
-***************************************************************************** */ var Nn = function() {
-        return (Nn =
+***************************************************************************** */ var _n = function() {
+        return (_n =
           Object.assign ||
           function(e) {
             for (var t, n = 1, r = arguments.length; n < r; n++)
@@ -12060,21 +12048,21 @@ and limitations under the License.
             return e
           }).apply(this, arguments)
       }
-      var Pn = 'Pixel',
-        jn = 'Percent',
-        Dn = { unit: jn, value: 0.8 }
-      function Rn(e) {
+      var Nn = 'Pixel',
+        Pn = 'Percent',
+        jn = { unit: Pn, value: 0.8 }
+      function Dn(e) {
         return 'number' == typeof e
-          ? { unit: jn, value: 100 * e }
+          ? { unit: Pn, value: 100 * e }
           : 'string' == typeof e
           ? e.match(/^(\d*(\.\d+)?)px$/)
-            ? { unit: Pn, value: parseFloat(e) }
+            ? { unit: Nn, value: parseFloat(e) }
             : e.match(/^(\d*(\.\d+)?)%$/)
-            ? { unit: jn, value: parseFloat(e) }
-            : (console.warn('scrollThreshold format is invalid. Valid formats: "120px", "50%"...'), Dn)
-          : (console.warn('scrollThreshold should be string or number'), Dn)
+            ? { unit: Pn, value: parseFloat(e) }
+            : (console.warn('scrollThreshold format is invalid. Valid formats: "120px", "50%"...'), jn)
+          : (console.warn('scrollThreshold should be string or number'), jn)
       }
-      var In = (function(e) {
+      var Rn = (function(e) {
           function t(t) {
             var n = e.call(this, t) || this
             return (
@@ -12194,7 +12182,7 @@ and limitations under the License.
               function n() {
                 this.constructor = e
               }
-              _n(e, t), (e.prototype = null === t ? Object.create(t) : ((n.prototype = t.prototype), new n()))
+              Tn(e, t), (e.prototype = null === t ? Object.create(t) : ((n.prototype = t.prototype), new n()))
             })(t, e),
             (t.prototype.componentDidMount = function() {
               if (void 0 === this.props.dataLength)
@@ -12245,14 +12233,14 @@ and limitations under the License.
               this.props.dataLength !== e.dataLength && ((this.actionTriggered = !1), this.setState({ showLoader: !1 }))
             }),
             (t.getDerivedStateFromProps = function(e, t) {
-              return e.dataLength !== t.prevDataLength ? Nn(Nn({}, t), { prevDataLength: e.dataLength }) : null
+              return e.dataLength !== t.prevDataLength ? _n(_n({}, t), { prevDataLength: e.dataLength }) : null
             }),
             (t.prototype.isElementAtTop = function(e, t) {
               void 0 === t && (t = 0.8)
               var n =
                   e === document.body || e === document.documentElement ? window.screen.availHeight : e.clientHeight,
-                r = Rn(t)
-              return r.unit === Pn
+                r = Dn(t)
+              return r.unit === Nn
                 ? e.scrollTop <= r.value + n - e.scrollHeight + 1
                 : e.scrollTop <= r.value / 100 + n - e.scrollHeight + 1
             }),
@@ -12260,14 +12248,14 @@ and limitations under the License.
               void 0 === t && (t = 0.8)
               var n =
                   e === document.body || e === document.documentElement ? window.screen.availHeight : e.clientHeight,
-                r = Rn(t)
-              return r.unit === Pn
+                r = Dn(t)
+              return r.unit === Nn
                 ? e.scrollTop + n >= e.scrollHeight - r.value
                 : e.scrollTop + n >= (r.value / 100) * e.scrollHeight
             }),
             (t.prototype.render = function() {
               var e = this,
-                t = Nn(
+                t = _n(
                   { height: this.props.height || 'auto', overflow: 'auto', WebkitOverflowScrolling: 'touch' },
                   this.props.style
                 ),
@@ -12314,7 +12302,7 @@ and limitations under the License.
             t
           )
         })(u.Component),
-        Mn = (function() {
+        In = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n]
@@ -12328,27 +12316,27 @@ and limitations under the License.
             return n && e(t.prototype, n), r && e(t, r), t
           }
         })()
-      function Ln(e, t) {
+      function Mn(e, t) {
         if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
       }
-      function zn(e, t) {
+      function Ln(e, t) {
         if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
         return !t || ('object' != typeof t && 'function' != typeof t) ? e : t
       }
-      var Fn = (function(e) {
+      var zn = (function(e) {
         function t() {
           var e, n, r
-          Ln(this, t)
+          Mn(this, t)
           for (var a = arguments.length, o = Array(a), l = 0; l < a; l++) o[l] = arguments[l]
           return (
-            (n = r = zn(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
+            (n = r = Ln(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
             (r.handleClick = function() {
               var e = r.props,
                 t = e.onAction,
                 n = e.actionData
               t && t(n.nodeId, n.action)
             }),
-            zn(r, n)
+            Ln(r, n)
           )
         }
         return (
@@ -12360,7 +12348,7 @@ and limitations under the License.
             })),
               t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t))
           })(t, e),
-          Mn(t, [
+          In(t, [
             {
               key: 'render',
               value: function() {
@@ -12376,7 +12364,7 @@ and limitations under the License.
           t
         )
       })(u.PureComponent)
-      ;(Fn.propTypes = {
+      ;(zn.propTypes = {
         title: i.a.string,
         text: i.a.string,
         className: i.a.string,
@@ -12384,9 +12372,9 @@ and limitations under the License.
         onAction: i.a.func,
         readOnly: i.a.bool,
       }),
-        (Fn.defaultProps = { onAction: function() {} })
-      var An = Fn,
-        Bn =
+        (zn.defaultProps = { onAction: function() {} })
+      var Fn = zn,
+        An =
           Object.assign ||
           function(e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -12395,7 +12383,7 @@ and limitations under the License.
             }
             return e
           },
-        Un = (function() {
+        Bn = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n]
@@ -12409,16 +12397,16 @@ and limitations under the License.
             return n && e(t.prototype, n), r && e(t, r), t
           }
         })()
-      function Vn(e, t) {
+      function Un(e, t) {
         if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
       }
-      function Hn(e, t) {
+      function Vn(e, t) {
         if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
         return !t || ('object' != typeof t && 'function' != typeof t) ? e : t
       }
-      var Wn = (function(e) {
+      var Hn = (function(e) {
         function t() {
-          return Vn(this, t), Hn(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
+          return Un(this, t), Vn(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
         }
         return (
           (function(e, t) {
@@ -12429,7 +12417,7 @@ and limitations under the License.
             })),
               t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t))
           })(t, e),
-          Un(t, [
+          Bn(t, [
             {
               key: 'render',
               value: function() {
@@ -12446,8 +12434,8 @@ and limitations under the License.
                   : t.map(function(e, t) {
                       var a = e.id || 'action-' + t
                       return s.a.createElement(
-                        An,
-                        Bn({ key: a }, r, e, { actionData: { action: Bn({}, e, { id: a }), nodeId: n } })
+                        Fn,
+                        An({ key: a }, r, e, { actionData: { action: An({}, e, { id: a }), nodeId: n } })
                       )
                     })
               },
@@ -12456,9 +12444,9 @@ and limitations under the License.
           t
         )
       })(u.PureComponent)
-      Wn.propTypes = { id: i.a.string.isRequired, actions: i.a.array }
-      var Yn = Wn,
-        Kn =
+      Hn.propTypes = { id: i.a.string.isRequired, actions: i.a.array }
+      var Wn = Hn,
+        Yn =
           Object.assign ||
           function(e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -12467,7 +12455,7 @@ and limitations under the License.
             }
             return e
           },
-        $n = (function() {
+        Kn = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n]
@@ -12481,23 +12469,23 @@ and limitations under the License.
             return n && e(t.prototype, n), r && e(t, r), t
           }
         })()
-      function Qn(e, t) {
+      function $n(e, t) {
         if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
       }
-      function qn(e, t) {
+      function Qn(e, t) {
         if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
         return !t || ('object' != typeof t && 'function' != typeof t) ? e : t
       }
-      var Xn = function(e) {
+      var qn = function(e) {
           var t = e.checked,
             n = e.indeterminate
           return function(e) {
             e && ((e.checked = t), (e.indeterminate = n))
           }
         },
-        Jn = (function(e) {
+        Xn = (function(e) {
           function t() {
-            return Qn(this, t), qn(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
+            return $n(this, t), Qn(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
           }
           return (
             (function(e, t) {
@@ -12508,7 +12496,7 @@ and limitations under the License.
               })),
                 t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t))
             })(t, e),
-            $n(t, [
+            Kn(t, [
               {
                 key: 'render',
                 value: function() {
@@ -12528,7 +12516,7 @@ and limitations under the License.
                     u = o || l
                   return s.a.createElement(
                     'input',
-                    Kn({ type: 'checkbox', ref: Xn({ checked: t, indeterminate: r }), onChange: a, disabled: u }, i)
+                    Yn({ type: 'checkbox', ref: qn({ checked: t, indeterminate: r }), onChange: a, disabled: u }, i)
                   )
                 },
               },
@@ -12536,15 +12524,15 @@ and limitations under the License.
             t
           )
         })(u.PureComponent)
-      Jn.propTypes = {
+      Xn.propTypes = {
         checked: i.a.bool,
         indeterminate: i.a.bool,
         onChange: i.a.func,
         disabled: i.a.bool,
         readOnly: i.a.bool,
       }
-      var Gn = Jn,
-        Zn =
+      var Jn = Xn,
+        Gn =
           Object.assign ||
           function(e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -12553,7 +12541,7 @@ and limitations under the License.
             }
             return e
           },
-        er = (function() {
+        Zn = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n]
@@ -12567,22 +12555,22 @@ and limitations under the License.
             return n && e(t.prototype, n), r && e(t, r), t
           }
         })()
-      function tr(e, t) {
+      function er(e, t) {
         if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
       }
-      function nr(e, t) {
+      function tr(e, t) {
         if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
         return !t || ('object' != typeof t && 'function' != typeof t) ? e : t
       }
-      var rr = function(e) {
+      var nr = function(e) {
           var t = e.checked
           return function(e) {
             e && (e.checked = t)
           }
         },
-        ar = (function(e) {
+        rr = (function(e) {
           function t() {
-            return tr(this, t), nr(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
+            return er(this, t), tr(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments))
           }
           return (
             (function(e, t) {
@@ -12593,7 +12581,7 @@ and limitations under the License.
               })),
                 t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t))
             })(t, e),
-            er(t, [
+            Zn(t, [
               {
                 key: 'render',
                 value: function() {
@@ -12612,7 +12600,7 @@ and limitations under the License.
                     i = a || o
                   return s.a.createElement(
                     'input',
-                    Zn({ type: 'radio', name: t, ref: rr({ checked: n }), onChange: r, disabled: i }, l)
+                    Gn({ type: 'radio', name: t, ref: nr({ checked: n }), onChange: r, disabled: i }, l)
                   )
                 },
               },
@@ -12620,17 +12608,17 @@ and limitations under the License.
             t
           )
         })(u.PureComponent)
-      ar.propTypes = {
+      rr.propTypes = {
         name: i.a.string.isRequired,
         checked: i.a.bool,
         onChange: i.a.func,
         disabled: i.a.bool,
         readOnly: i.a.bool,
       }
-      var or = ar,
-        lr = n(4),
-        ir = n.n(lr),
-        ur =
+      var ar = rr,
+        or = n(4),
+        lr = n.n(or),
+        ir =
           Object.assign ||
           function(e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -12639,7 +12627,7 @@ and limitations under the License.
             }
             return e
           },
-        sr = (function() {
+        ur = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n]
@@ -12653,20 +12641,20 @@ and limitations under the License.
             return n && e(t.prototype, n), r && e(t, r), t
           }
         })()
-      function cr(e, t) {
+      function sr(e, t) {
         if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
       }
-      function dr(e, t) {
+      function cr(e, t) {
         if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
         return !t || ('object' != typeof t && 'function' != typeof t) ? e : t
       }
-      var fr = (function(e) {
+      var dr = (function(e) {
         function t() {
           var e, n, r
-          cr(this, t)
+          sr(this, t)
           for (var a = arguments.length, o = Array(a), l = 0; l < a; l++) o[l] = arguments[l]
           return (
-            (n = r = dr(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
+            (n = r = cr(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
             (r.handleCheckboxChange = function(e) {
               var t = r.props,
                 n = t.mode,
@@ -12675,7 +12663,7 @@ and limitations under the License.
               'simpleSelect' === n || 'radioSelect' === n ? o(a, !0) : o(a, e.target.checked)
               e.stopPropagation(), e.nativeEvent.stopImmediatePropagation()
             }),
-            dr(r, n)
+            cr(r, n)
           )
         }
         return (
@@ -12687,7 +12675,7 @@ and limitations under the License.
             })),
               t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t))
           })(t, e),
-          sr(t, [
+          ur(t, [
             {
               key: 'render',
               value: function() {
@@ -12716,16 +12704,16 @@ and limitations under the License.
                   { title: i, htmlFor: r, className: 'tree-node-label' },
                   'radioSelect' === t
                     ? s.a.createElement(
-                        or,
-                        ur({ name: m, className: 'radio-item', onChange: this.handleCheckboxChange }, b)
+                        ar,
+                        ir({ name: m, className: 'radio-item', onChange: this.handleCheckboxChange }, b)
                       )
                     : l &&
                         s.a.createElement(
-                          Gn,
-                          ur({ name: r, className: y, indeterminate: g && a, onChange: this.handleCheckboxChange }, b)
+                          Jn,
+                          ir({ name: r, className: y, indeterminate: g && a, onChange: this.handleCheckboxChange }, b)
                         ),
                   c ? c(this.props) : null,
-                  s.a.createElement(ir.a, { searchWords: [u], textToHighlight: n }),
+                  s.a.createElement(lr.a, { searchWords: [u], textToHighlight: n }),
                   d ? d(this.props) : null
                 )
               },
@@ -12734,7 +12722,7 @@ and limitations under the License.
           t
         )
       })(u.PureComponent)
-      fr.propTypes = {
+      dr.propTypes = {
         id: i.a.string.isRequired,
         actions: i.a.array,
         title: i.a.string,
@@ -12753,8 +12741,8 @@ and limitations under the License.
         clientId: i.a.string,
         description: i.a.string,
       }
-      var pr = fr,
-        hr = (function() {
+      var fr = dr,
+        pr = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n]
@@ -12768,27 +12756,27 @@ and limitations under the License.
             return n && e(t.prototype, n), r && e(t, r), t
           }
         })()
-      function gr(e, t) {
+      function hr(e, t) {
         if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
       }
-      function vr(e, t) {
+      function gr(e, t) {
         if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
         return !t || ('object' != typeof t && 'function' != typeof t) ? e : t
       }
-      var mr = (function(e) {
+      var vr = (function(e) {
         function t() {
           var e, n, r
-          gr(this, t)
+          hr(this, t)
           for (var a = arguments.length, o = Array(a), l = 0; l < a; l++) o[l] = arguments[l]
           return (
-            (n = r = vr(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
+            (n = r = gr(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
             (r.onToggle = function(e) {
               e.stopPropagation(), e.nativeEvent.stopImmediatePropagation(), r.props.onNodeToggle(r.props.id)
             }),
             (r.onKeyDown = function(e) {
               ;('Enter' !== e.key && 32 !== e.keyCode) || (r.props.onNodeToggle(r.props.id), e.preventDefault())
             }),
-            vr(r, n)
+            gr(r, n)
           )
         }
         return (
@@ -12800,7 +12788,7 @@ and limitations under the License.
             })),
               t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t))
           })(t, e),
-          hr(t, [
+          pr(t, [
             {
               key: 'render',
               value: function() {
@@ -12830,9 +12818,9 @@ and limitations under the License.
           t
         )
       })(u.PureComponent)
-      mr.propTypes = { expanded: i.a.bool, isLeaf: i.a.bool, onNodeToggle: i.a.func, id: i.a.string }
-      var br = mr,
-        yr = (n(16),
+      vr.propTypes = { expanded: i.a.bool, isLeaf: i.a.bool, onNodeToggle: i.a.func, id: i.a.string }
+      var mr = vr,
+        br = (n(16),
         Object.assign ||
           function(e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -12841,7 +12829,7 @@ and limitations under the License.
             }
             return e
           }),
-        wr = (function() {
+        yr = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n]
@@ -12855,23 +12843,23 @@ and limitations under the License.
             return n && e(t.prototype, n), r && e(t, r), t
           }
         })()
-      function kr(e, t) {
+      function wr(e, t) {
         if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
       }
-      function Sr(e, t) {
+      function kr(e, t) {
         if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
         return !t || ('object' != typeof t && 'function' != typeof t) ? e : t
       }
-      var xr = function(e) {
+      var Sr = function(e) {
           return f(e)
         },
-        Or = (function(e) {
+        xr = (function(e) {
           function t() {
             var e, n, r
-            kr(this, t)
+            wr(this, t)
             for (var a = arguments.length, o = Array(a), l = 0; l < a; l++) o[l] = arguments[l]
             return (
-              (n = r = Sr(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
+              (n = r = kr(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
               (r.getAriaAttributes = function() {
                 var e = r.props,
                   t = e._children,
@@ -12894,7 +12882,7 @@ and limitations under the License.
                   c
                 )
               }),
-              Sr(r, n)
+              kr(r, n)
             )
           }
           return (
@@ -12906,7 +12894,7 @@ and limitations under the License.
               })),
                 t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t))
             })(t, e),
-            wr(t, [
+            yr(t, [
               {
                 key: 'render',
                 value: function() {
@@ -12952,8 +12940,8 @@ and limitations under the License.
                         p = e._focused
                       return [
                         'node',
-                        xr(r) && 'leaf',
-                        !xr(r) && 'tree',
+                        Sr(r) && 'leaf',
+                        !Sr(r) && 'tree',
                         l && 'disabled',
                         u && 'hide',
                         t && a && 'match-in-children',
@@ -12971,20 +12959,20 @@ and limitations under the License.
                     P = r + '_li'
                   return s.a.createElement(
                     'li',
-                    yr({ className: _, style: N, id: P }, d(o), this.getAriaAttributes(), {
+                    br({ className: _, style: N, id: P }, d(o), this.getAriaAttributes(), {
                       onClick: function() {
                         return k(r)
                       },
                     }),
-                    s.a.createElement(br, { isLeaf: xr(a), expanded: i, id: r, onNodeToggle: k }),
-                    s.a.createElement(pr, {
+                    s.a.createElement(mr, { isLeaf: Sr(a), expanded: i, id: r, onNodeToggle: k }),
+                    s.a.createElement(fr, {
                       description: C,
                       title: u,
                       label: c,
                       labelPrefix: f,
                       labelSuffix: p,
                       id: r,
-                      isLeaf: xr(a),
+                      isLeaf: Sr(a),
                       partial: h,
                       checked: g,
                       value: v,
@@ -12996,7 +12984,7 @@ and limitations under the License.
                       clientId: E,
                       searchTerm: T,
                     }),
-                    s.a.createElement(Yn, { actions: b, onAction: y, id: r, readOnly: O })
+                    s.a.createElement(Wn, { actions: b, onAction: y, id: r, readOnly: O })
                   )
                 },
               },
@@ -13004,7 +12992,7 @@ and limitations under the License.
             t
           )
         })(u.PureComponent)
-      Or.propTypes = {
+      xr.propTypes = {
         _id: i.a.string.isRequired,
         _depth: i.a.number,
         _children: i.a.array,
@@ -13031,8 +13019,8 @@ and limitations under the License.
         readOnly: i.a.bool,
         clientId: i.a.string,
       }
-      var Er = Or,
-        Cr =
+      var Or = xr,
+        Er =
           Object.assign ||
           function(e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -13041,7 +13029,7 @@ and limitations under the License.
             }
             return e
           },
-        Tr = (function() {
+        Cr = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n]
@@ -13055,7 +13043,7 @@ and limitations under the License.
             return n && e(t.prototype, n), r && e(t, r), t
           }
         })()
-      var _r = (function(e) {
+      var Tr = (function(e) {
         function t(e) {
           !(function(e, t) {
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
@@ -13065,7 +13053,7 @@ and limitations under the License.
             return !t || ('object' != typeof t && 'function' != typeof t) ? e : t
           })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e))
           return (
-            Nr.call(n),
+            _r.call(n),
             (n.currentPage = 1),
             n.computeInstanceProps(e, !0),
             (n.state = { items: n.allVisibleNodes.slice(0, n.props.pageSize) }),
@@ -13081,20 +13069,20 @@ and limitations under the License.
             })),
               t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t))
           })(t, e),
-          Tr(t, [
+          Cr(t, [
             {
               key: 'render',
               value: function() {
                 var e = this.props.searchModeOn
                 return s.a.createElement(
                   'ul',
-                  Cr(
+                  Er(
                     { className: 'root ' + (e ? 'searchModeOn' : ''), ref: this.setNodeRef },
                     this.getAriaAttributes()
                   ),
                   this.state.scrollableTarget &&
                     s.a.createElement(
-                      In,
+                      Rn,
                       {
                         dataLength: this.state.items.length,
                         next: this.loadMore,
@@ -13111,7 +13099,7 @@ and limitations under the License.
           t
         )
       })(u.Component)
-      ;(_r.propTypes = {
+      ;(Tr.propTypes = {
         data: i.a.object,
         keepTreeOnSearch: i.a.bool,
         keepChildrenOnSearch: i.a.bool,
@@ -13129,8 +13117,8 @@ and limitations under the License.
         labelPrefix: i.a.func,
         labelSuffix: i.a.func,
       }),
-        (_r.defaultProps = { pageSize: 100 })
-      var Nr = function() {
+        (Tr.defaultProps = { pageSize: 100 })
+      var _r = function() {
           var e = this
           ;(this.componentWillReceiveProps = function(t) {
             var n = t.activeDescendant === e.props.activeDescendant
@@ -13181,8 +13169,8 @@ and limitations under the License.
                   })(e, a, t) &&
                     b.push(
                       s.a.createElement(
-                        Er,
-                        Cr({ keepTreeOnSearch: n, keepChildrenOnSearch: r, key: e._id }, e, {
+                        Or,
+                        Er({ keepTreeOnSearch: n, keepChildrenOnSearch: r, key: e._id }, e, {
                           searchModeOn: a,
                           onChange: c,
                           onCheckboxChange: d,
@@ -13222,17 +13210,17 @@ and limitations under the License.
               }
             })
         },
-        Pr = _r,
-        jr = n(5),
-        Dr = n.n(jr),
-        Rr = function(e) {
+        Nr = Tr,
+        Pr = n(5),
+        jr = n.n(Pr),
+        Dr = function(e) {
           return e
         },
-        Ir = function(e) {
+        Rr = function(e) {
           var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'children',
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Rr
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Dr
           return (
-            Dr()(e[t], function(e) {
+            jr()(e[t], function(e) {
               return n(e).checked
             }) ||
             e[t].some(function(e) {
@@ -13240,7 +13228,7 @@ and limitations under the License.
             })
           )
         }
-      var Mr = function(e) {
+      var Ir = function(e) {
           var t = e.tree,
             n = e.simple,
             r = e.radio,
@@ -13304,7 +13292,7 @@ and limitations under the License.
                     }),
                     u &&
                       !t.checked &&
-                      ((t.partial = Ir(t)),
+                      ((t.partial = Rr(t)),
                       h ||
                         f(t.children) ||
                         !t.children.every(function(e) {
@@ -13324,14 +13312,14 @@ and limitations under the License.
             rootPrefixId: l,
           })
         },
-        Lr = function e(t, n, r) {
+        Mr = function e(t, n, r) {
           ;(n[t._id] = !0),
             f(t._children) ||
               t._children.forEach(function(t) {
                 return e(r(t), n, r)
               })
         },
-        zr = function(e, t) {
+        Lr = function(e, t) {
           var n = [],
             r = {}
           return (
@@ -13341,16 +13329,16 @@ and limitations under the License.
             n
           )
         },
-        Fr = {
-          getNodesMatching: zr,
+        zr = {
+          getNodesMatching: Lr,
           getVisibleNodes: function(e, t, n) {
-            return zr(e, function(e, r, a) {
-              return n && e._children && e._children.length && !0 !== e.expanded && Lr(e, a, t), !e.hide
+            return Lr(e, function(e, r, a) {
+              return n && e._children && e._children.length && !0 !== e.expanded && Mr(e, a, t), !e.hide
             })
           },
-          markSubTreeVisited: Lr,
+          markSubTreeVisited: Mr,
         },
-        Ar = function(e, t) {
+        Fr = function(e, t) {
           if (Array.isArray(e)) return e
           if (Symbol.iterator in Object(e))
             return (function(e, t) {
@@ -13377,16 +13365,16 @@ and limitations under the License.
             })(e, t)
           throw new TypeError('Invalid attempt to destructure non-iterable instance')
         },
-        Br = 'ArrowUp',
-        Ur = 'ArrowDown',
-        Vr = 'ArrowLeft',
-        Hr = 'ArrowRight',
-        Wr = 'Enter',
-        Yr = 'Home',
-        Kr = 'PageUp',
-        $r = 'End',
-        Qr = 'PageDown',
-        qr = {
+        Ar = 'ArrowUp',
+        Br = 'ArrowDown',
+        Ur = 'ArrowLeft',
+        Vr = 'ArrowRight',
+        Hr = 'Enter',
+        Wr = 'Home',
+        Yr = 'PageUp',
+        Kr = 'End',
+        $r = 'PageDown',
+        Qr = {
           None: 'None',
           FocusPrevious: 'FocusPrevious',
           FocusNext: 'FocusNext',
@@ -13396,79 +13384,79 @@ and limitations under the License.
           ToggleExpanded: 'ToggleExpanded',
           ToggleChecked: 'ToggleChecked',
         },
-        Xr = new Set([qr.FocusPrevious, qr.FocusNext, qr.FocusParent, qr.FocusFirst, qr.FocusLast]),
-        Jr = [Br, Ur, Yr, Kr, $r, Qr],
-        Gr = Jr.concat([Vr, Hr, Wr]),
-        Zr = function(e, t, n, r) {
+        qr = new Set([Qr.FocusPrevious, Qr.FocusNext, Qr.FocusParent, Qr.FocusFirst, Qr.FocusLast]),
+        Xr = [Ar, Br, Wr, Yr, Kr, $r],
+        Jr = Xr.concat([Ur, Vr, Hr]),
+        Gr = function(e, t, n, r) {
           return t.indexOf(e) > -1 || (!n && e === r)
         },
-        ea = function(e, t, n) {
+        Zr = function(e, t, n) {
           if (!e || 0 === e.length) return t
           var r = t
           ;(function(e) {
-            return Zr(e, [qr.FocusFirst, qr.FocusLast], !0)
+            return Gr(e, [Qr.FocusFirst, Qr.FocusLast], !0)
           })(n)
-            ? (r = Ar(e, 1)[0])
-            : [qr.FocusPrevious, qr.FocusNext].indexOf(n) > -1 &&
+            ? (r = Fr(e, 1)[0])
+            : [Qr.FocusPrevious, Qr.FocusNext].indexOf(n) > -1 &&
               (r = (function(e, t) {
                 var n = e.indexOf(t) + 1
                 return n % e.length == 0 ? e[0] : e[n]
               })(e, t))
           return r
         },
-        ta = {
+        ea = {
           isValidKey: function(e, t) {
-            return (t ? Gr : Jr).indexOf(e) > -1
+            return (t ? Jr : Xr).indexOf(e) > -1
           },
           getAction: function(e, t) {
-            return t === Vr
+            return t === Ur
               ? (function(e, t) {
-                  return e && t === Vr
+                  return e && t === Ur
                     ? !0 === e.expanded
-                      ? qr.ToggleExpanded
+                      ? Qr.ToggleExpanded
                       : e._parent
-                      ? qr.FocusParent
-                      : qr.None
-                    : qr.None
+                      ? Qr.FocusParent
+                      : Qr.None
+                    : Qr.None
                 })(e, t)
-              : t === Hr
+              : t === Vr
               ? (function(e, t) {
-                  return e && e._children && t === Hr ? (!0 !== e.expanded ? qr.ToggleExpanded : qr.FocusNext) : qr.None
+                  return e && e._children && t === Vr ? (!0 !== e.expanded ? Qr.ToggleExpanded : Qr.FocusNext) : Qr.None
                 })(e, t)
               : (function(e, t) {
-                  return Zr(e, [Yr, Kr], t, Ur)
+                  return Gr(e, [Wr, Yr], t, Br)
                 })(t, e)
-              ? qr.FocusFirst
+              ? Qr.FocusFirst
               : (function(e, t) {
-                  return Zr(e, [$r, Qr], t, Br)
+                  return Gr(e, [Kr, $r], t, Ar)
                 })(t, e)
-              ? qr.FocusLast
+              ? Qr.FocusLast
               : (function(e, t) {
-                  if (!e) return qr.None
+                  if (!e) return Qr.None
                   switch (t) {
+                    case Ar:
+                      return Qr.FocusPrevious
                     case Br:
-                      return qr.FocusPrevious
-                    case Ur:
-                      return qr.FocusNext
-                    case Wr:
-                      return qr.ToggleChecked
+                      return Qr.FocusNext
+                    case Hr:
+                      return Qr.ToggleChecked
                     default:
-                      return qr.None
+                      return Qr.None
                   }
                 })(e, t)
           },
           getNextFocus: function(e, t, n, r, a) {
-            if (n === qr.FocusParent)
+            if (n === Qr.FocusParent)
               return (function(e, t) {
                 return e && e._parent ? t(e._parent) : e
               })(t, r)
-            if (!Xr.has(n)) return t
-            var o = Fr.getVisibleNodes(e, r, a)
+            if (!qr.has(n)) return t
+            var o = zr.getVisibleNodes(e, r, a)
             return (
               (function(e) {
-                return Zr(e, [qr.FocusPrevious, qr.FocusLast], !0)
+                return Gr(e, [Qr.FocusPrevious, Qr.FocusLast], !0)
               })(n) && (o = o.reverse()),
-              ea(o, t, n)
+              Zr(o, t, n)
             )
           },
           getNextFocusAfterTagDelete: function(e, t, n, r) {
@@ -13483,13 +13471,13 @@ and limitations under the License.
             return (l && l.firstElementChild) || r
           },
           handleFocusNavigationkey: function(e, t, n, r, a) {
-            var o = ta.getNextFocus(e, n, t, r, a)
-            return ta.adjustFocusedProps(n, o), o ? o._id : n && n._id
+            var o = ea.getNextFocus(e, n, t, r, a)
+            return ea.adjustFocusedProps(n, o), o ? o._id : n && n._id
           },
           handleToggleNavigationkey: function(e, t, n, r, a) {
             return (
-              e !== qr.ToggleChecked || n || t.readOnly || t.disabled
-                ? e === qr.ToggleExpanded && a(t._id)
+              e !== Qr.ToggleChecked || n || t.readOnly || t.disabled
+                ? e === Qr.ToggleExpanded && a(t._id)
                 : r(t._id, !0 !== t.checked),
               t && t._id
             )
@@ -13498,8 +13486,8 @@ and limitations under the License.
             e && t && e._id !== t._id && (e._focused = !1), t && (t._focused = !0)
           },
         },
-        na = ta,
-        ra = (function() {
+        ta = ea,
+        na = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n]
@@ -13513,7 +13501,7 @@ and limitations under the License.
             return n && e(t.prototype, n), r && e(t, r), t
           }
         })()
-      var aa = (function() {
+      var ra = (function() {
           function e(t) {
             var n = t.data,
               r = t.mode,
@@ -13528,7 +13516,7 @@ and limitations under the License.
               (this.radioSelect = 'radioSelect' === r),
               (this.hierarchical = 'hierarchical' === r),
               (this.searchPredicate = l)
-            var i = Mr({
+            var i = Ir({
                 tree: JSON.parse(JSON.stringify(n)),
                 simple: this.simpleSelect,
                 radio: this.radioSelect,
@@ -13546,7 +13534,7 @@ and limitations under the License.
               (this.simpleSelect || this.radioSelect) && c && (this.currentChecked = c._id)
           }
           return (
-            ra(e, [
+            na(e, [
               {
                 key: 'getNodeById',
                 value: function(e) {
@@ -13671,7 +13659,7 @@ and limitations under the License.
                 value: function(e) {
                   for (var t = e._parent; t; ) {
                     var n = this.getNodeById(t)
-                    ;(n.checked = !1), (n.partial = Ir(n, '_children', this.getNodeById.bind(this))), (t = n._parent)
+                    ;(n.checked = !1), (n.partial = Rr(n, '_children', this.getNodeById.bind(this))), (t = n._parent)
                   }
                 },
               },
@@ -13683,7 +13671,7 @@ and limitations under the License.
                     ;(r.checked = r._children.every(function(e) {
                       return t.getNodeById(e).checked
                     })),
-                      (r.partial = Ir(r, '_children', this.getNodeById.bind(this))),
+                      (r.partial = Rr(r, '_children', this.getNodeById.bind(this))),
                       (n = r._parent)
                   }
                 },
@@ -13730,9 +13718,9 @@ and limitations under the License.
                 value: function(e, t, n, r, a, o, l) {
                   var i = this,
                     u = e && this.getNodeById(e),
-                    s = na.getAction(u, n)
-                  return Xr.has(s)
-                    ? na.handleFocusNavigationkey(
+                    s = ta.getAction(u, n)
+                  return qr.has(s)
+                    ? ta.handleFocusNavigationkey(
                         t,
                         s,
                         u,
@@ -13742,7 +13730,7 @@ and limitations under the License.
                         a
                       )
                     : u && t.has(u._id)
-                    ? na.handleToggleNavigationkey(s, u, r, o, l)
+                    ? ta.handleToggleNavigationkey(s, u, r, o, l)
                     : e
                 },
               },
@@ -13768,11 +13756,11 @@ and limitations under the License.
                     ? this.currentChecked
                       ? [this.getNodeById(this.currentChecked)]
                       : []
-                    : Fr.getNodesMatching(this.tree, function(t, n, r) {
+                    : zr.getNodesMatching(this.tree, function(t, n, r) {
                         return (
                           t.checked &&
                             !e.hierarchical &&
-                            Fr.markSubTreeVisited(t, r, function(t) {
+                            zr.markSubTreeVisited(t, r, function(t) {
                               return e.getNodeById(t)
                             }),
                           t.checked
@@ -13784,7 +13772,7 @@ and limitations under the License.
             e
           )
         })(),
-        oa = (n(17),
+        aa = (n(17),
         Object.assign ||
           function(e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -13793,7 +13781,7 @@ and limitations under the License.
             }
             return e
           }),
-        la = (function() {
+        oa = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n]
@@ -13815,7 +13803,7 @@ and limitations under the License.
        * license MIT
        * see https://github.com/dowjones/tmr-tree-select
        */
-      var ia = (function(e) {
+      var la = (function(e) {
         function t(e) {
           !(function(e, t) {
             if (!(e instanceof t)) throw new TypeError('Cannot call a class as a function')
@@ -13835,21 +13823,21 @@ and limitations under the License.
               ;(a = a || []),
                 (t = t.map(function(e) {
                   var t = e.children.map(function(e) {
-                    var t = oa({}, e)
+                    var t = aa({}, e)
                     return (
-                      (t = a.includes(e.value) ? oa({}, t, { isDefaultValue: !0 }) : oa({}, t, { isDefaultValue: !1 }))
+                      (t = a.includes(e.value) ? aa({}, t, { isDefaultValue: !0 }) : aa({}, t, { isDefaultValue: !1 }))
                         .children &&
                         (t.children = t.children.map(function(e) {
                           return a.includes(e.value)
-                            ? oa({}, e, { isDefaultValue: !0 })
-                            : oa({}, e, { isDefaultValue: !1 })
+                            ? aa({}, e, { isDefaultValue: !0 })
+                            : aa({}, e, { isDefaultValue: !1 })
                         })),
                       t
                     )
                   })
-                  return oa({}, e, { children: t })
+                  return aa({}, e, { children: t })
                 })),
-                (n.treeManager = new aa({
+                (n.treeManager = new ra({
                   data: t,
                   mode: r,
                   showPartiallySelected: l,
@@ -13875,7 +13863,7 @@ and limitations under the License.
                 n.setState(function(e) {
                   var t = e.currentFocus && n.treeManager.getNodeById(e.currentFocus)
                   return (
-                    t && (t._focused = !0), oa({ showDropdown: /initial|always/.test(o) || !0 === e.showDropdown }, u)
+                    t && (t._focused = !0), aa({ showDropdown: /initial|always/.test(o) || !0 === e.showDropdown }, u)
                   )
                 })
             }),
@@ -13894,7 +13882,7 @@ and limitations under the License.
                       ? document.addEventListener('click', n.handleOutsideClick, !1)
                       : document.removeEventListener('click', n.handleOutsideClick, !1)),
                   t ? n.props.onFocus() : n.props.onBlur(),
-                  t ? { showDropdown: t } : oa({ showDropdown: t }, n.resetSearchState())
+                  t ? { showDropdown: t } : aa({ showDropdown: t }, n.resetSearchState())
                 )
               }, t)
             }),
@@ -13924,11 +13912,11 @@ and limitations under the License.
             (n.onTagRemove = function(e, t) {
               var r = n.state.tags
               n.onCheckboxChange(e, !1, function(a) {
-                t && na.getNextFocusAfterTagDelete(e, r, a, n.searchInput).focus()
+                t && ta.getNextFocusAfterTagDelete(e, r, a, n.searchInput).focus()
               })
             }),
             (n.onTagReorder = function(e) {
-              n.setState(oa({}, n.state, { tags: e })), n.props.onChange({}, e)
+              n.setState(aa({}, n.state, { tags: e })), n.props.onChange({}, e)
             }),
             (n.onNodeToggle = function(e) {
               n.treeManager.toggleNodeExpandState(e)
@@ -13986,7 +13974,7 @@ and limitations under the License.
                 }
               ;((m && !b) || u) && Object.assign(k, n.resetSearchState()),
                 m && !b && document.removeEventListener('click', n.handleOutsideClick, !1),
-                na.adjustFocusedProps(y, w),
+                ta.adjustFocusedProps(y, w),
                 n.setState(k, function() {
                   r && r(v)
                 }),
@@ -14017,8 +14005,8 @@ and limitations under the License.
                 s = o.currentFocus,
                 c = n.treeManager,
                 d = u ? c.matchTree : c.tree
-              if (l || (!na.isValidKey(e.key, !1) && !/^\w$/i.test(e.key)))
-                if (l && na.isValidKey(e.key, !0)) {
+              if (l || (!ta.isValidKey(e.key, !1) && !/^\w$/i.test(e.key)))
+                if (l && ta.isValidKey(e.key, !0)) {
                   var f = c.handleNavigationKey(s, d, e.key, r, !u, n.onCheckboxChange, n.onNodeToggle)
                   f !== s &&
                     n.setState({ currentFocus: f }, function() {
@@ -14048,7 +14036,7 @@ and limitations under the License.
               var e = n.props,
                 t = e.mode,
                 r = e.texts
-              return 'radioSelect' !== t ? {} : oa({ role: 'radiogroup' }, g(r.label))
+              return 'radioSelect' !== t ? {} : aa({ role: 'radiogroup' }, g(r.label))
             }),
             (n.state = { searchModeOn: !1, currentFocus: void 0, searchTerm: '' }),
             (n.clientId = e.id || p.get(n)),
@@ -14064,7 +14052,7 @@ and limitations under the License.
             })),
               t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t))
           })(t, e),
-          la(t, [
+          oa(t, [
             {
               key: 'componentWillMount',
               value: function() {
@@ -14120,7 +14108,7 @@ and limitations under the License.
                   }),
                   w = s.a.createElement(
                     y,
-                    oa(
+                    aa(
                       {
                         inputRef: function(t) {
                           e.searchInput = t
@@ -14157,24 +14145,24 @@ and limitations under the License.
                         .join(' '),
                     },
                     s.a.createElement(
-                      Tn,
-                      oa({ onTrigger: this.onTrigger, showDropdown: g }, b, { tags: m, tabIndex: i }),
+                      Cn,
+                      aa({ onTrigger: this.onTrigger, showDropdown: g }, b, { tags: m, tabIndex: i }),
                       s.a.createElement(
-                        kn,
-                        oa({ tags: m, onReorder: this.onTagReorder, onTagRemove: this.onTagRemove }, b),
+                        wn,
+                        aa({ tags: m, onReorder: this.onTagReorder, onTagRemove: this.onTagRemove }, b),
                         !l && w
                       )
                     ),
                     g &&
                       s.a.createElement(
                         'div',
-                        oa({ className: 'dropdown-content' }, this.getAriaAttributes()),
+                        aa({ className: 'dropdown-content' }, this.getAriaAttributes()),
                         l && w,
                         this.state.allNodesHidden
                           ? s.a.createElement('span', { className: 'no-matches' }, o.noMatches || 'No matches found')
                           : s.a.createElement(
-                              Pr,
-                              oa(
+                              Nr,
+                              aa(
                                 {
                                   data: this.state.tree,
                                   keepTreeOnSearch: this.props.keepTreeOnSearch,
@@ -14199,7 +14187,7 @@ and limitations under the License.
           t
         )
       })(u.Component)
-      ;(ia.propTypes = {
+      ;(la.propTypes = {
         data: i.a.oneOfType([i.a.object, i.a.array]).isRequired,
         clearSearchOnChange: i.a.bool,
         keepTreeOnSearch: i.a.bool,
@@ -14233,7 +14221,7 @@ and limitations under the License.
         tagSuffix: i.a.func,
         tagClassName: i.a.string,
       }),
-        (ia.defaultProps = {
+        (la.defaultProps = {
           onAction: function() {},
           onFocus: function() {},
           onBlur: function() {},
@@ -14243,7 +14231,7 @@ and limitations under the License.
           inlineSearchInput: !1,
           tabIndex: 0,
         })
-      t.default = ia
+      t.default = la
     },
   ])
 })

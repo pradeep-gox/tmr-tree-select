@@ -18,6 +18,7 @@ class Tag extends PureComponent {
   }
 
   handleClick = e => {
+    console.log('handleClick', this.props)
     const { id, onDelete } = this.props
     e.stopPropagation()
     e.nativeEvent.stopImmediatePropagation()
