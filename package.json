@@ -191,6 +191,11 @@
     "*.{js,json,css,md,ts}": [
       "prettier --write",
       "git add -f"
+    ],
+    "ignore": [
+      "docs",
+      "dist",
+      "node_modules"
     ]
   },
   "husky": {
