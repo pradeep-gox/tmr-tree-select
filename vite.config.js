@@ -31,7 +31,6 @@ export default defineConfig({
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {
-        // This will ensure UMD build goes to root of dist
         dir: path.resolve(__dirname, 'dist'),
         entryFileNames: 'index.min.js',
         format: 'umd',
@@ -41,7 +40,6 @@ export default defineConfig({
         },
       },
     },
-    // Adjust for specific output directory structure
     outDir: path.resolve(__dirname, 'dist'),
   },
 })
