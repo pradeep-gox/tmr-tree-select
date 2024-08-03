@@ -1,13 +1,9 @@
-/* eslint-disable global-require */
-
-module.exports = () => ({
-  sourceMap: true,
+module.exports = {
   plugins: [
-    require('postcss-import')(),
-    require('postcss-nested')(),
-    require('postcss-cssnext')({
-      browsers: ['ie >= 10', 'last 2 versions'],
-      warnForDuplicates: false,
+    require('postcss-preset-env')({
+      stage: 1,
+      // Other options can be specified here
     }),
+    // Add more PostCSS plugins as needed
   ],
-})
+}
